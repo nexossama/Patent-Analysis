@@ -7,7 +7,7 @@
 	<!-- Boxicons -->
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 	<!-- My CSS -->
-	<link rel="stylesheet" href="styleHome.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='style/styleHome.css') }}">
 	<style>
 		.btn {
 			border: none;
@@ -198,7 +198,7 @@
 				<span class="num">3</span>
 			</a>
 			<a href="#" class="profile">
-				<img src="user.png">
+				<img src="{{ url_for('static', filename='media/user.png') }}">
 			</a>
 		</nav>
 		<!-- NAVBAR -->
@@ -406,8 +406,8 @@
 	</section>
 	<!-- CONTENT -->
 	
-
-	<script src="scriptHome.js"></script>
+	<!-- SCRIPT -->
+	<script src="{{ url_for('static', filename='js/scriptHome.js') }}"></script>
 	<script>
 		// Get the modal
 		var modal = document.getElementById("myModal");

@@ -8,6 +8,7 @@
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 	<!-- My CSS -->
 	<link rel="stylesheet" href="{{ url_for('static', filename='style/styleHome.css') }}">
+	<!-- Additional styles -->
 	<style>
 		.btn {
 			border: none;
@@ -115,7 +116,7 @@
 			border-width : 0px;
 		}
 	</style>
-
+	<link rel="icon" href="{{ url_for('static', filename='media/fichier.png') }}" type="image/x-icon">
 	<title>E-Patente</title>
 </head>
 <body>
@@ -137,7 +138,7 @@
 			<li>
 				<a href="#">
 					<i class='bx bxs-shopping-bag-alt' ></i>
-					<span class="text">My Store</span>
+					<span class="text">My Patents</span>
 				</a>
 			</li>
 			<!-- <li>
@@ -205,6 +206,7 @@
 
 		<!-- MAIN -->
 		<main>
+			
 			<!-- The Modal -->
 			<div id="myModal" class="modal">
 				<div class="modal-content">
@@ -259,7 +261,7 @@
 
 			<div class="head-title">
 				<div class="left">
-					<h1>HOME</h1>
+					<h1>Hello {{ session['email'] }}</h1>
 					<!-- <ul class="breadcrumb">
 						<li>
 							<a href="#">Dashboard</a>
@@ -297,7 +299,6 @@
 				</li>
 			</ul>
 
-
 			<div class="table-data">
 				<div class="order">
 					<div class="head">
@@ -316,54 +317,20 @@
 							<tr>
 								<th>Id</th>
 								<th>Title</th>
-								<th>Field</th>
-                                <th><input type="checkbox"></th>
+								<th>Date</th>
+								<th><input type="checkbox"></th>
 							</tr>
 						</thead>
 						<tbody>
+							{% for document in mongodb_documents %}
 							<tr>
-								<td>
-									<p>J1234</p>
-									<!-- <p>John Doe</p> -->
-								</td>
-								<td>BLaBla</td>
-								<td><span class="status completed">Available</span></td>
-                                <td><input type="checkbox"></td>
+								<td>{{ document.code }}</td>
+								<td>{{ document.title }}</td>
+								<td>{{ document.pub_date }}</td>
+								<!-- <td><span class="status completed">Available</span></td> -->
+								<td><input type="checkbox"></td>
 							</tr>
-							<tr>
-								<td>
-									<!-- <img src="img/people.png"> -->
-									<p>M5649</p>
-								</td>
-								<td>BLibli</td>
-								<td><span class="status pending">Soon</span></td>
-                                <td><input type="checkbox"></td>
-							</tr>
-							<tr>
-								<td>
-									<!-- <img src="img/people.png"> -->
-									<p>P6743</p>
-								</td>
-								<td>BLeble</td>
-								<td><span class="status process">Process</span></td>
-                                <td><input type="checkbox"></td>
-							</tr>
-							<!-- <tr>
-								<td>
-									<img src="img/people.png">
-									<p>John Doe</p>
-								</td>
-								<td>01-10-2021</td>
-								<td><span class="status pending">Pending</span></td>
-							</tr>
-							<tr>
-								<td>
-									<img src="img/people.png">
-									<p>John Doe</p>
-								</td>
-								<td>01-10-2021</td>
-								<td><span class="status completed">Completed</span></td>
-							</tr> -->
+							{% endfor %}
 						</tbody>
 					</table>
 				</div>
@@ -372,7 +339,7 @@
 						<h3>Panier</h3>
                         <a href="#" class="btn-download">
                             <i class='bx bxs-cloud-download' ></i>
-                            <span class="text">Download PDF</span>
+                            <span class="text">PDF</span>
                         </a>
 						<i class='bx bx-plus' ></i>
 						<i class='bx bx-filter' ></i>

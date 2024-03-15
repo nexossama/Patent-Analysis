@@ -124,20 +124,6 @@ function validateInputsInscription(){
       setSuccess(password2);
   }
 
-  if(question.value === 'noVal') {
-    setError(question, 'Veillez choisir une question');
-    valid = false;
-  } else {
-    setSuccess(question);
-  }
-
-  if(answer.value === '') {
-    setError(answer, 'Veillez repondre au question');
-    valid = false;
-  } else {
-    setSuccess(answer);
-  }
-
   if(captcha2.value === '') {
     setError(captcha2, 'Veillez entrer le code');
     valid = false;

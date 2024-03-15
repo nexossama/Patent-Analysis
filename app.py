@@ -17,6 +17,7 @@ def fetch_patents():
         mongodb_documents.append(patent)
     return mongodb_documents
 
+# todo
 def fetch_panier(user):
     mongodb_documents = []
     for panier in user:

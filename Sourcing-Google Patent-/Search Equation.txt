@@ -1,0 +1,15 @@
+0. ("artificial intelligence" OR AI) AND "education"
+
+1. "artificial intelligence" AND "education"AND ("machine learning" OR "deep learning" OR NLP)
+   
+2. (AI OR "artificial intelligence") AND ("education" OR learning) AND ("machine learning" OR "deep learning" OR NLP)
+
+3. ("artificial intelligence" OR AI OR ML OR DL) AND ("education" OR learning) AND ("machine learning" OR "deep learning" OR NLP)
+
+4. ("educational technology" OR "learning technology") AND ("artificial intelligence" OR AI OR ML OR DL OR NLP)
+
+5. ("educational innovation" OR "learning innovation") AND ("artificial intelligence" OR AI OR ML OR DL OR NLP)
+
+6. ("adaptive learning" OR "personalized learning") AND ("artificial intelligence" OR AI OR ML OR DL OR NLP)
+
+7. ("educational data mining" OR "learning analytics") AND ("artificial intelligence" OR AI OR ML OR DL OR NLP)

@@ -1,9 +1,11 @@
 import json
 import requests
+import os
 from bs4 import BeautifulSoup
 from google_patent_scraper import scraper_class
 from extract_urls import return_urls
 from extract_title import extract_title
+from extract_applicants import extract_applicants
 # Initialize scraper class
 scraper = scraper_class(return_abstract=True)
 
@@ -39,10 +41,14 @@ for url in url_list:
         codes.append(code)
         result_dict['code'] = code
         result_dict['title'] = extract_title(code)
+        result_dict['link']=url
+        result_dict['source']='google patent'
+        result_dict['applicants']=extract_applicants(url)
         result_list.append(result_dict)
 
 
     print("------ URL:",url,' -------------')
+
 
 l=[]
 with open('codes.txt','r') as f:
@@ -61,16 +67,22 @@ with open('codes.txt', 'w') as f:
         f.write(code + '\n')
 
 
-# Write the list of dictionaries to a JSON file
-if len(result_list) != 0:
+# Check if the file exists
+if os.path.exists('output.json') and os.path.getsize('output.json') > 0:
     # Read existing data from the JSON file
     with open('output.json', 'r') as json_file:
         existing_data = json.load(json_file)
+else:
+    existing_data = []
 
-    existing_data += result_list
+existing_data += result_list
 
-    with open('output.json', 'w') as json_file:
-        json.dump(existing_data, json_file, indent=4)
 
-    print("Data appended to output.json")
+# Write the updated data back to the JSON file
+with open('output.json', 'w') as json_file:
+    json.dump(existing_data, json_file, indent=4)
+
+print("Data appended to output.json")
+
+
 

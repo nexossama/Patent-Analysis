@@ -1,4 +1,6 @@
-((ta="artificial intelligence" or ta="AI") or (ta="machine learning") or (ta="deep learning" or ta="DL") ) and (ta="teaching")
-((ta="artificial intelligence" or ta="AI") or (ta="machine learning") or (ta="deep learning" or ta="DL") ) and (ta="education")
-((ta="artificial intelligence" or ta="AI") or (ta="machine learning") or (ta="deep learning" or ta="DL") ) and (ta="student")
-((ta="artificial intelligence" or ta="AI") or (ta="machine learning") or (ta="deep learning" or ta="DL") ) and (ta="classroom")
+Nous avons utilisé 4 équations de recherche due à la limitation imposée par OPS qui ne dépasse pas 2000 résultats par recherches, donc il faut être plus spécifique dans nos recherches 
+
+data1.json,((ta="artificial intelligence" or ta="AI") or (ta="machine learning") or (ta="deep learning" or ta="DL") ) and (ta="teaching")
+data2.json,((ta="artificial intelligence" or ta="AI") or (ta="machine learning") or (ta="deep learning" or ta="DL") ) and (ta="education")
+data3.json,((ta="artificial intelligence" or ta="AI") or (ta="machine learning") or (ta="deep learning" or ta="DL") ) and (ta="student")
+data4.json,((ta="artificial intelligence" or ta="AI") or (ta="machine learning") or (ta="deep learning" or ta="DL") ) and (ta="classroom")

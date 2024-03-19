@@ -1,3 +1,4 @@
 ((ta="artificial intelligence" or ta="AI") or (ta="machine learning") or (ta="deep learning" or ta="DL") ) and (ta="teaching")
 ((ta="artificial intelligence" or ta="AI") or (ta="machine learning") or (ta="deep learning" or ta="DL") ) and (ta="education")
-
+((ta="artificial intelligence" or ta="AI") or (ta="machine learning") or (ta="deep learning" or ta="DL") ) and (ta="student")
+((ta="artificial intelligence" or ta="AI") or (ta="machine learning") or (ta="deep learning" or ta="DL") ) and (ta="classroom")

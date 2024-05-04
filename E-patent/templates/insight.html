@@ -220,13 +220,7 @@
 		<!-- NAVBAR -->
 		<nav>
 			<i class='bx bx-menu' ></i>
-			<!-- <a href="#" class="nav-link">Categories</a> -->
-			<!-- <form action="#">
-				<div class="form-input">
-					<input type="search" placeholder="Search...">
-					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
-				</div>
-			</form> -->
+
             <form action=""></form>
 			<input type="checkbox" id="switch-mode" hidden>
 			<label for="switch-mode" class="switch-mode"></label>
@@ -239,49 +233,7 @@
 
 		<!-- MAIN -->
 		<main>
-			
-			<!-- The Modal -->
-			<div id="myModal" class="modal">
-				<div class="modal-content">
-				<span class="close">&times;</span>
-				<p>Choose your filter: </p> <br>
-				<h3>SEARCH TERMS :</h3>
-				<h4>
-				<input value="Title" class="filtre status" type="checkbox"> Title
-				<input value="Abstract" class="filtre status" type="checkbox"> Abstract
-				<input value="Both" class="filtre status" type="checkbox"> Both
-				</h4>
-				<h4><label for="year">SELECT A YEAR :</label> </h4>
 
-					<select id="year">
-					</select>
-
-				<h3>SEARCH TERMS :</h3>
-				<h4>
-				<input value="Inventor" class="filtre status" type="checkbox"> Inventor
-				<input value="Assignee" class="filtre status" type="checkbox"> Assignee
-				<input value="Both" class="filtre status" type="checkbox"> Both
-				</h4>
-
-				<h3>Source :</h3>
-				<h4>
-				<input value="google_patent" class="filtre status" type="checkbox"> Google Patent
-				<input value="epo" class="filtre status" type="checkbox"> EPO
-				<input value="uspto" class="filtre status" type="checkbox"> USPTO
-				<input value="all" class="filtre status" type="checkbox"> All
-
-				</h4>
-
-
-				<h4><label for="year">Patent Office :</label> </h4>
-				<select id="patent_office">
-				</select>
-
-				<br>
-
-				<button id="filterOkBtn" class="btn filterOkBtn">Filter</button>
-				</div>
-			</div>
 
 			<div class="head-title">
 				<div class="left">
@@ -305,109 +257,40 @@
 						<p>Total Seleted Patents</p>
 					</span>
 				</li>
-
+				<li>
+					<i class='bx bxs-group' ></i>
+					<span class="text">
+						<h3>{{ selected_patents|length }}</h3>
+						<p>Total Seleted Patents</p>
+					</span>
+				</li>
 			</ul>
 
-			<div class="table-data">
-				<div class="order">
-					<div class="head">
-						<h3>Patents</h3>
-                        <form  action="{{ url_for('search_patents') }}" method="GET">
-                            <div class="form-input">
-                                <input  type="search"  name="query" placeholder="Search...">
-                                <button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
-                            </div>
-                        </form>
-						<!-- <i class='bx bx-search' ></i> -->
-						<i id="filterModalBtn" class='bx bx-filter' ></i>
-					</div>
+			<ul class="box-info">
+				<li>
+					<i class='bx bxs-calendar-check' ></i>
+					<span class="text">
+						<h3>{{ all_patents|length }}</h3>
+						<p>Total Patents</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-group' ></i>
+					<span class="text">
+						<h3>{{ selected_patents|length }}</h3>
+						<p>Total Seleted Patents</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-group' ></i>
+					<span class="text">
+						<h3>{{ selected_patents|length }}</h3>
+						<p>Total Seleted Patents</p>
+					</span>
+				</li>
+			</ul>
 
 
-
-
-					<table>
-						<thead>
-							<tr>
-								<th>Id</th>
-								<th style="width: 500px;">Title</th>
-								<th>Source</th>
-								<th>Add</th>
-							</tr>
-						</thead>
-						<tbody>
-							{% for patent in all_patents %}
-							<tr>
-								<td>{{ patent.code }}</td>
-								<td><a href="/patent/{{ patent._id }}" target="_blank">{{ patent.title }}</a></td>
-								<td>{{ patent.source }}</td>
-								<td><button class="add-btn" data-record-id="{{ patent._id }}"><i class='bx bx-plus'></i></button></td>
-							</tr>
-							{% endfor %}
-						</tbody>
-					</table>
-					<div id="pagination" class="w-100 bg-transparent pt-0 mt-0">
-						<div style="width: fit-content;" class="m-auto bg-light p-1 m-0 rounded">
-							<ul class="pagination m-0">
-								<li class="page-item {% if previous == 0 %}disabled{% endif %}">
-									<a class="page-link" href="?page={{ previous }}&rows={{ rowNbr }}">&laquo;</a>
-								</li>
-								{% for j in range(1, nbrPages + 1) %}
-								<li class="page-item {% if page == j %}active{% endif %}">
-									<a class="page-link" href="?page={{ j }}&rows={{ rowNbr }}">{{ j }}</a>
-								</li>
-								{% endfor %}
-								<li class="page-item {% if next == (nbrPages + 1) %}disabled{% endif %}">
-									<a class="page-link" href="?page={{ next }}&rows={{ rowNbr }}">&raquo;</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					
-
-				</div>
-
-
-					<div class="todo">
-					<div class="head">
-						<h3>Selected</h3>
-					</div>
-
-
-
-						<table>
-							<thead>
-								<tr>
-									<th>ID</th>
-									<th>Delete</th>
-								</tr>
-							</thead>
-							<tbody>
-								{% for patent in selected_patents %}
-								<tr>
-									<td>{{ patent.code }}</td>
-									<td><button class="delete-btn" data-record-id="{{ patent._id }}"><i class='bx bx-trash'></i></button></td>
-
-								</tr>
-								{% endfor %}
-							</tbody>
-						</table>
-
-
-
-						<!-- <li class="not-completed">
-							<p>Todo List</p>
-							<i class='bx bx-dots-vertical-rounded' ></i>
-						</li>
-						<li class="completed">
-							<p>Todo List</p>
-							<i class='bx bx-dots-vertical-rounded' ></i>
-						</li>
-						<li class="not-completed">
-							<p>Todo List</p>
-							<i class='bx bx-dots-vertical-rounded' ></i>
-						</li> -->
-				</div>
-			</div>
 		</main>
 		<!-- MAIN -->
 	</section>

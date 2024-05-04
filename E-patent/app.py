@@ -5,13 +5,17 @@ from pymongo import MongoClient
 from werkzeug.security import generate_password_hash, check_password_hash
 from search import search_title
 app = Flask(__name__)
+
 app.secret_key = "secret_key"  
 
-# Connect to MongoDB Atlas
 client = MongoClient("mongodb+srv://aymanemaghouti:FwbFRrymX6wjJPxG@patents.js05fnq.mongodb.net/?retryWrites=true&w=majority")
 db = client.get_database("patent_db")
+
+
+# Access the google_patents collection
+patents_collection = db.google_patents
+
 users_collection = db.users
-patents_collection = db.patent_records
 user_records = db.user_records
 
 def fetch_patents():
@@ -22,10 +26,8 @@ def fetch_patents():
 
 # todo
 def fetch_panier(user):
-    # Fetch all patents
     all_patents = fetch_patents()
 
-    # Fetch patents selected by the user
     selected_patents = []
     for patent in all_patents:
         for patent_id in user.get('patents', []):
@@ -54,7 +56,6 @@ def search_patents():
     user_email = session['email']
     user = users_collection.find_one({'email': user_email})
     query = request.args.get('query', '')
-    print(query)
     search_results = search_title(query)
     selected_patents = fetch_panier(user)
     return render_template('home.html', all_patents=search_results,selected_patents=selected_patents)
@@ -103,17 +104,22 @@ def delete_patent():
 
 @app.route('/patent/<patent_id>')
 def patent_details(patent_id):
-    # Fetch patent details from the database based on the provided patent ID
+    print(patent_id)
     patent = patents_collection.find_one({'_id': ObjectId(patent_id)})
+    print(patent)
 
     if patent:
-        patent['inventor_name'] = json.loads(patent['inventor_name'])
-        patent['assignee_name_orig'] = json.loads(patent['assignee_name_orig'])
-        patent['assignee_name_current'] = json.loads(patent['assignee_name_current'])
+
+        if patent['source'] == 'google patenffft':
+
+            patent['inventor_name'] = json.loads(patent['inventor_name'])
+            patent['assignee_name_orig'] = json.loads(patent['assignee_name_orig'])
+            patent['assignee_name_current'] = json.loads(patent['assignee_name_current'])
+
         return render_template('patent_details.html', patent=patent)
     else:
         # If patent is not found, render an error page or redirect to another route
-        return render_template('error.html', message='Patent not found')
+        return render_template('patent_details.html', message='Patent not found')
 
 
 

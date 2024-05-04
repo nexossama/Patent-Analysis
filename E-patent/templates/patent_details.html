@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -45,26 +46,22 @@
         <div class="details">
             <p><strong>Title:</strong> {{ patent.title }}</p>
             <p><strong>Inventor Name:</strong>
-
-                 {% set inventors = patent.inventor_name %}
-                    {% for inventor in inventors %}
-                        {% if inventor.inventor_name %}
-                            {{ inventor.inventor_name }}
-                            {% if not loop.last %}, {% endif %}
-                        {% endif %}
-                    {% endfor %}
-
+                {% for inventor in patent.inventor_name %}
+                    {{ inventor }}{% if not loop.last %}, {% endif %}
+                {% endfor %}
 
             </p>
             <p><strong>Assignee Name (Original):</strong>
-                {% for assignee in patent.assignee_name_orig %}
-                    {{ assignee.assignee_name }}{% if not loop.last %}, {% endif %}
+                 {% for assignee in  patent.assignee_name_orig %}
+                    {{ assignee }}{% if not loop.last %}, {% endif %}
                 {% endfor %}
+
             </p>
             <p><strong>Assignee Name (Current):</strong>
-                {% for assignee in patent.assignee_name_current %}
-                    {{ assignee.assignee_name }}{% if not loop.last %}, {% endif %}
+                 {% for assignee in  patent.assignee_name_current %}
+                    {{ assignee }}{% if not loop.last %}, {% endif %}
                 {% endfor %}
+
             </p>
             <p><strong>Publication Date:</strong> {{ patent.pub_date }}</p>
             <p><strong>Priority Date:</strong> {{ patent.priority_date }}</p>
@@ -72,6 +69,7 @@
             <p><strong>Filing Date:</strong> {{ patent.filing_date }}</p>
             <p><strong>Abstract:</strong> {{ patent.abstract_text }}</p>
             <p><strong>Patent Code:</strong> {{ patent.code }}</p>
+            <p><strong>Country:</strong> {{ patent.country }}</p>
             <p><strong>Source:</strong> {{ patent.source }}</p>
             <p><strong>Applicants:</strong>
                 {% for applicant in patent.applicants %}

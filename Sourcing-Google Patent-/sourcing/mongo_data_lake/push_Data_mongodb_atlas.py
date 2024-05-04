@@ -3,18 +3,20 @@ from pymongo.server_api import ServerApi
 import json
 
 
-uri = "mongodb+srv://<username>:<password>.js05fnq.mongodb.net/?retryWrites=true&w=majority&appName=Patents"
+uri = "mongodb+srv://aymanemaghouti:FwbFRrymX6wjJPxG@patents.js05fnq.mongodb.net/?retryWrites=true&w=majority&appName=Patents"
 
 client = MongoClient(uri, server_api=ServerApi('1'))
 
 
 
 db = client['patent_db']
-collection = db['patent_records']
+collection = db['ops_records']
 
-with open('../output.json') as f:
+with open('data4.json') as f:
     data = json.load(f)
 
+
+print(data)
 collection.insert_many(data)
 
 print("Data inserted successfully.")

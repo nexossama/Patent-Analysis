@@ -12,7 +12,8 @@ patents_collection = db.google_patents
 id = '65f93f43618cd872b5ef50d0'
 
 # Query the collection for the document with the given ID
-patent = patents_collection.find_one({'_id': ObjectId(id)})
+# patent = patents_collection.find_one({'_id': ObjectId(id)})
+patent = patents_collection.find()[0]
 
 # Print the retrieved document
 print(patent)

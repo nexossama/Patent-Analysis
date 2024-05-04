@@ -14,7 +14,6 @@ db = client.get_database("patent_db")
 
 # Access the google_patents collection
 patents_collection = db.google_patents
-
 users_collection = db.users
 user_records = db.user_records
 
@@ -23,6 +22,10 @@ def fetch_patents():
     for patent in patents_collection.find({}):
         mongodb_documents.append(patent)
     return mongodb_documents
+
+def fetch_total_patents_count():
+    total_documents_count = patents_collection.count_documents({})
+    return total_documents_count
 
 # todo
 def fetch_panier(user):
@@ -46,7 +49,7 @@ def home():
 
         selected_patents = fetch_panier(user)
 
-        return render_template('home.html', username=session['email'], all_patents=[], selected_patents=selected_patents)
+        return render_template('home.html', patents=[], selected_patents=selected_patents)
     else:
             return render_template('login.html')
 
@@ -55,12 +58,37 @@ def home():
 def search_patents():
     user_email = session['email']
     user = users_collection.find_one({'email': user_email})
-    query = request.args.get('query', '')
-    search_results = search_title(query)
     selected_patents = fetch_panier(user)
-    return render_template('home.html', all_patents=search_results,selected_patents=selected_patents)
+    
+    per_page = 5
+    page = request.args.get('page', 1, type=int)
+    offset = (page - 1) * per_page
+    
+    query = request.args.get('query', '')
+    patent_items = search_title(query, offset, per_page)
 
+    # start = (page - 1) * per_page
+    # end = start + per_page
+    # total_pages = (len(search_results) + per_page - 1) // per_page
+    # patent_items = search_results[start:end]
+    # patents_params = {
+    #     'page_num': page,
+    #     'items': patent_items,
+    #     'total_pages': total_pages
+    # }
 
+    more = True
+    if len(patent_items) < per_page:
+    # if patent_items:
+        more = False
+    
+    patents = {
+        'patent_items': patent_items,
+        'selected_patents': selected_patents,
+    }
+
+    return render_template('home.html', patents=patents, page=page,
+                            more=more, query=query)
 
 
 @app.route('/add_to_cart', methods=['POST'])

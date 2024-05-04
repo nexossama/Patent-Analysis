@@ -404,9 +404,30 @@ body {
 }
 
 
+/* Start Keyword Styling */
+#content main .keyword {
+	display: inline-block;
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border-radius: 15px;
+	font-size: smaller;
+	display: flex;
+    align-items: center;
+}
 
+#content main .keyword span {
+	font-weight: bold;
+    color: #333;
+}
+/* End Keyword Styling */
 
-
+/* Start Table Footer Styling */
+#content main .table-footer {
+	display: flex;
+	justify-content: space-between;
+}
+/* End Table Footer Styling */
 #content main .table-data {
 	display: flex;
 	flex-wrap: wrap;

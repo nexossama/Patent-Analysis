@@ -294,15 +294,15 @@
 				<li>
 					<i class='bx bxs-calendar-check' ></i>
 					<span class="text">
-						<h3>{{ all_patents|length }}</h3>
+						<h3>{{ patents.total_patents_count }}</h3>
 						<p>Total Patents</p>
 					</span>
 				</li>
 				<li>
 					<i class='bx bxs-group' ></i>
 					<span class="text">
-						<h3>{{ selected_patents|length }}</h3>
-						<p>Total Seleted Patents</p>
+						<h3>{{ patents.selected_patents|length }}</h3>
+						<p>Total Selected Patents</p>
 					</span>
 				</li>
 
@@ -312,19 +312,15 @@
 				<div class="order">
 					<div class="head">
 						<h3>Patents</h3>
-                        <form  action="{{ url_for('search_patents') }}" method="GET">
-                            <div class="form-input">
-                                <input  type="search"  name="query" placeholder="Search...">
-                                <button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
-                            </div>
-                        </form>
+						<form  action="{{ url_for('search_patents') }}" method="GET">
+							<div class="form-input">
+								<input  type="search"  name="query" placeholder="Search...">
+								<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+							</div>
+						</form>
 						<!-- <i class='bx bx-search' ></i> -->
 						<i id="filterModalBtn" class='bx bx-filter' ></i>
 					</div>
-
-
-
-
 					<table>
 						<thead>
 							<tr>
@@ -335,65 +331,56 @@
 							</tr>
 						</thead>
 						<tbody>
-							{% for patent in all_patents %}
+							{% for patent in patents.patent_items %}
 							<tr>
 								<td>{{ patent.code }}</td>
 								<td><a href="/patent/{{ patent._id }}" target="_blank">{{ patent.title }}</a></td>
 								<td>{{ patent.source }}</td>
 								<td><button class="add-btn" data-record-id="{{ patent._id }}"><i class='bx bx-plus'></i></button></td>
 							</tr>
-							{% endfor %}
+							{% endfor %}		
 						</tbody>
-					</table>
-					<div id="pagination" class="w-100 bg-transparent pt-0 mt-0">
-						<div style="width: fit-content;" class="m-auto bg-light p-1 m-0 rounded">
-							<ul class="pagination m-0">
-								<li class="page-item {% if previous == 0 %}disabled{% endif %}">
-									<a class="page-link" href="?page={{ previous }}&rows={{ rowNbr }}">&laquo;</a>
-								</li>
-								{% for j in range(1, nbrPages + 1) %}
-								<li class="page-item {% if page == j %}active{% endif %}">
-									<a class="page-link" href="?page={{ j }}&rows={{ rowNbr }}">{{ j }}</a>
-								</li>
-								{% endfor %}
-								<li class="page-item {% if next == (nbrPages + 1) %}disabled{% endif %}">
-									<a class="page-link" href="?page={{ next }}&rows={{ rowNbr }}">&raquo;</a>
-								</li>
-							</ul>
+					</table>	
+					<!-- pagination buttons -->
+					{% if page %}
+						<div class="table-footer">
+							<div class="keyword">
+								<span>{{ query }}</span>
+							</div>
+							<nav class='pagination'>	
+								{% if page > 1 %}
+									<a href="{{ url_for('search_patents', page=page-1, query=query) }}">Previous</a>
+								{% endif %}
+									<span>Page {{ page }} of {{ total_pages }}</span>
+								{% if page < total_pages %}
+									<a href="{{ url_for('search_patents', page=page+1, query=query) }}">Next</a>
+								{% endif %}
+							</nav>
 						</div>
-					</div>
-					
-
+					{% endif %}
 				</div>
 
-
-					<div class="todo">
+				<div class="todo">
 					<div class="head">
 						<h3>Selected</h3>
 					</div>
+					<table>
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Delete</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for patent in selected_patents %}
+							<tr>
+								<td>{{ patent.code }}</td>
+								<td><button class="delete-btn" data-record-id="{{ patent._id }}"><i class='bx bx-trash'></i></button></td>
 
-
-
-						<table>
-							<thead>
-								<tr>
-									<th>ID</th>
-									<th>Delete</th>
-								</tr>
-							</thead>
-							<tbody>
-								{% for patent in selected_patents %}
-								<tr>
-									<td>{{ patent.code }}</td>
-									<td><button class="delete-btn" data-record-id="{{ patent._id }}"><i class='bx bx-trash'></i></button></td>
-
-								</tr>
-								{% endfor %}
-							</tbody>
-						</table>
-
-
-
+							</tr>
+							{% endfor %}
+						</tbody>
+					</table>
 						<!-- <li class="not-completed">
 							<p>Todo List</p>
 							<i class='bx bx-dots-vertical-rounded' ></i>
@@ -413,33 +400,12 @@
 	</section>
 	<!-- CONTENT -->
 
+
+
+
 	<!-- SCRIPT -->
-
-
-
-
-
-
+	<!-- ----------------------------- SCRIPT ------------------------------- -->
 	<script src="{{ url_for('static', filename='js/scriptHome.js') }}"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script>

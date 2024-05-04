@@ -283,7 +283,7 @@
 				<li>
 					<i class='bx bxs-calendar-check' ></i>
 					<span class="text">
-						<h3>{{ patents.patent_items|length }}</h3>
+						<h3>{{ patents.total_patents_count }}</h3>
 						<p>Total Patents</p>
 					</span>
 				</li>
@@ -291,7 +291,7 @@
 					<i class='bx bxs-group' ></i>
 					<span class="text">
 						<h3>{{ patents.selected_patents|length }}</h3>
-						<p>Total Seleted Patents</p>
+						<p>Total Selected Patents</p>
 					</span>
 				</li>
 
@@ -340,8 +340,8 @@
 								{% if page > 1 %}
 									<a href="{{ url_for('search_patents', page=page-1, query=query) }}">Previous</a>
 								{% endif %}
-									<span>Page {{ page }} </span>
-								{% if more %}
+									<span>Page {{ page }} of {{ total_pages }}</span>
+								{% if page < total_pages %}
 									<a href="{{ url_for('search_patents', page=page+1, query=query) }}">Next</a>
 								{% endif %}
 							</nav>

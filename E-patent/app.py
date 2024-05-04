@@ -23,8 +23,10 @@ def fetch_patents():
         mongodb_documents.append(patent)
     return mongodb_documents
 
-def fetch_total_patents_count():
-    total_documents_count = patents_collection.count_documents({})
+def fetch_total_patents_count(keyword):
+    # total_documents_count = patents_collection.count_documents({})
+    query = {"title": {"$regex": keyword, "$options": "i"}}
+    total_documents_count = patents_collection.count_documents(query)
     return total_documents_count
 
 # todo
@@ -66,29 +68,17 @@ def search_patents():
     
     query = request.args.get('query', '')
     patent_items = search_title(query, offset, per_page)
-
-    # start = (page - 1) * per_page
-    # end = start + per_page
-    # total_pages = (len(search_results) + per_page - 1) // per_page
-    # patent_items = search_results[start:end]
-    # patents_params = {
-    #     'page_num': page,
-    #     'items': patent_items,
-    #     'total_pages': total_pages
-    # }
-
-    more = True
-    if len(patent_items) < per_page:
-    # if patent_items:
-        more = False
+    total_patents_count = fetch_total_patents_count(query)
+    total_pages = (total_patents_count + per_page - 1) // per_page
     
     patents = {
         'patent_items': patent_items,
         'selected_patents': selected_patents,
+        'total_patents_count': total_patents_count
     }
 
     return render_template('home.html', patents=patents, page=page,
-                            more=more, query=query)
+                            total_pages=total_pages, query=query)
 
 
 @app.route('/add_to_cart', methods=['POST'])

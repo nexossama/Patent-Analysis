@@ -407,15 +407,20 @@ body {
 .pagination {
     display: inline-block;
 	height: 56px;
-    background: var(--light);
+	width: 60%;
+    /* background: var(--light); */
     padding: 0 24px;
     display: flex;
+	flex-wrap: wrap;
     align-items: center;
-    /* grid-gap: 24px; */
     font-family: var(--lato);
     position: sticky;
     top: 0;
     left: 0;
+}
+
+.pagination li {
+	margin-bottom: 10px;
 }
 
 .pagination li a {

@@ -1,0 +1,2018 @@
+[
+    {
+        "title": "Depression recognition system",
+        "code": "CN117333804A",
+        "pub_date": "2024-01-02",
+        "application date": "2022-06-23",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN117333804A",
+        "applicants": [
+            "GUANGZHOU CVTE ELECTRONIC TECH",
+            "GUANGZHOU SHIYUAN ARTIFICIAL INTELLIGENCE INNOVATION RES INSTITUTE CO LTD"
+        ],
+        "inventor_name": [
+            "LI ANWEI",
+            "LIU HONGBO"
+        ],
+        "abstract_text": "The invention relates to the technical field of artificial intelligence, and provides a depression recognition system, which comprises a video acquisition device used for acquiring videos in a classroom; the processing device is used for carrying out face detection, face recognition and head region segmentation on dense crowds on the video image, and determining an identity corresponding to each head region image in the image; extracting an image feature corresponding to each head region image; wherein the image features comprise key feature information of facial expressions and head postures; fusing the image features of the same identity in a segment of video into a segment of emotion feature; fusing a plurality of section emotion features of the same identity in the first time period into a chapter emotion feature; fusing a plurality of chapter emotion features of the same identity in a second time period into a joint emotion feature; and determining a depression recognition result corresponding to each identity according to the demotional feature of each identity. According to the embodiment of the invention, depression recognition can be carried out on all students in a classroom, and the accuracy of depression recognition is improved.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Classroom light intelligent control system and method",
+        "code": "CN117295208A",
+        "pub_date": "2023-12-26",
+        "application date": "2023-09-26",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN117295208A",
+        "applicants": [
+            "HUICHANG DEXIN EDUCATION TECH CO LTD"
+        ],
+        "inventor_name": [
+            "LIU MEIDAN",
+            "GUO QINGHUA"
+        ],
+        "abstract_text": "The invention relates to the technical field of intelligent control, and particularly discloses a classroom light intelligent control system and method, which adopts an image processing technology based on deep learning, extracts personnel distribution information and illumination intensity information from classroom personnel monitoring images, and judges the number of an illuminating lamp to be turned on at the current time point based on the personnel distribution information and the illumination intensity information. And the corresponding lamp is controlled to be turned on. Thus, the on-off state of the lamp can be controlled according to requirements, electric power waste in a campus is reduced, and the energy utilization efficiency is improved.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Classroom cognitive input identification method and system based on multi-modal data",
+        "code": "CN117237766A",
+        "pub_date": "2023-12-15",
+        "application date": "2023-07-12",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN117237766A",
+        "applicants": [
+            "UNIV CENTRAL CHINA NORMAL"
+        ],
+        "inventor_name": [
+            "WEI YANTAO",
+            "XU QI",
+            "GAO JIE",
+            "LIU QINGTANG"
+        ],
+        "abstract_text": "The invention discloses a classroom cognitive input recognition method and system based on multi-modal data, and the method comprises the steps: firstly mining related visual clues of cognitive input from the multi-modal data, and constructing a classroom cognitive input multi-dimensional fine-grained representation model comprising cognitive behaviors, cognitive emotion and cognitive speech; secondly, the problem of automatic recognition of cognitive input of different modalities is solved through three types of deep learning models, and a Yolov8 model based on body postures and the like, an OfficientNet model based on facial expressions and the like, and a TextCNN model based on voice texts and the like are provided. Meanwhile, training support is provided for a machine learning method adopted by the method, and a multi-mode-based classroom cognition input perception database and a data annotation observation index system are constructed; and finally, according to a cognitive input survey feedback result of the learner, constructing a classroom cognitive input identification method fused with multi-vision clues, so that multi-granularity classroom cognitive input identification is realized, and multi-level and multi-stage classroom cognitive input perception requirements in practical application are met.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Intelligent cover campus electronic class board data identification management system",
+        "code": "CN117197869A",
+        "pub_date": "2023-12-08",
+        "application date": "2023-09-04",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN117197869A",
+        "applicants": [
+            "SHENZHEN JULONGJI TECH CO LTD"
+        ],
+        "inventor_name": [
+            "YUAN YOUQI"
+        ],
+        "abstract_text": "The invention discloses an intelligent campus electronic class card data identification management system, belongs to the technical field of intelligent electronic class cards, and aims to solve the problems that the number of people in a class is large, the time of card punching is long, and the phenomenon of missing card punching is likely to occur. According to the invention, a plurality of photos of students in a classroom are shot through a dome camera, the face of each person in the photos is perfected through a multi-face detection module, an image segmentation module, a first face feature extraction module and a face alignment and replacement module, and then matching calculation of all faces in the classroom is realized through a multi-face detection algorithm. Finally, the students not in the classroom are determined and transmitted to a management end through a data transmission unit, a class owner carries out correction through a manual participation calibration module, and finally face extraction and deep learning are carried out through a face data extraction and storage module, so that the next recognition speed is faster and more accurate; and compared with a mode of punching through an electronic class board, the method is simple and convenient to operate and high in efficiency.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "AI artificial intelligence enabling man-machine interaction intelligent classroom system",
+        "code": "CN220001177U",
+        "pub_date": "2023-11-14",
+        "application date": "2023-04-21",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN220001177U",
+        "applicants": [
+            "UNIV SHAOGUAN"
+        ],
+        "inventor_name": [
+            "HUANG HUIWEN",
+            "ZHANG ZONGSHU",
+            "CAI SIQI",
+            "LI YAN",
+            "ZHAN HONGWEI"
+        ],
+        "abstract_text": "The AI artificial intelligence enabling man-machine interaction intelligent classroom system comprises an intelligent classroom, a desk body and a first installation groove, a second installation groove is formed in the top end in the first installation groove, a second telescopic assembly is arranged at one end in the second installation groove, and a baffle is arranged at the output end of the second telescopic assembly. And a third telescopic assembly is arranged at the bottom end in the first mounting groove. The third telescopic assembly is arranged in the first mounting groove, the rotating frame is rotationally arranged at the top end of the third telescopic assembly, the mounting piece is mounted in the top end of the rotating frame through the mounting shaft, and the rotating frame is rotated to transversely rotate the multimedia computer to adjust the angle; the angle of the multimedia computer is adjusted by axially rotating the mounting piece along the mounting shaft, so that the multimedia computer can be adjusted according to the use requirements of students, the problem that the multimedia computer of the desk main body in the smart classroom is inconvenient to adjust is solved, and the desk main body is more convenient to use.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "AI interaction intelligent screen control system and method",
+        "code": "CN117037790A",
+        "pub_date": "2023-11-10",
+        "application date": "2023-10-10",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN117037790A",
+        "applicants": [
+            "LANGLANG EDUCATION TECH CO LTD"
+        ],
+        "inventor_name": [
+            "GENG JINKUO",
+            "GENG JINKUI"
+        ],
+        "abstract_text": "The invention discloses an AI interactive smart screen control system and method, and belongs to the technical field of screen control, and the method specifically comprises the steps: collecting voice command information of kindergarten teachers and children, carrying out the preprocessing of the collected voice command information of kindergarten teachers and children, including noise removal and tone quality enhancement, and carrying out the processing of the voice command information of kindergarten teachers and children; source identification, content identification and command classification are carried out on the preprocessed voice command information of the kindergarten teachers and children, and interaction control is carried out on the playing content of an intelligent screen according to the source, command content and classification of the voice command information of the kindergarten teachers and children in combination with intelligent screen control constraint conditions. Kindergarten teachers and students can perform interaction control with the smart screen, and the classroom efficiency and the user experience are greatly improved.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Real-time tracking method and system for target position in classroom scene",
+        "code": "CN116895035A",
+        "pub_date": "2023-10-17",
+        "application date": "2023-07-12",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN116895035A",
+        "applicants": [
+            "BEIJING POWERCREATOR INFORMATION TECH CO LTD"
+        ],
+        "inventor_name": [
+            "JU ANKANG"
+        ],
+        "abstract_text": "The invention provides a real-time tracking method and system for a target position in a classroom scene, and relates to the field of artificial intelligence. The method comprises the following steps: S1, acquiring sample data, and acquiring to-be-identified target data; s2, cutting the sample data into frame data, and sequentially sending the frame data into a detection module; s3, judging whether a traceable target exists or not, and if yes, entering step S4; otherwise, selecting the next frame of data, and repeating the step; s4, judging whether the trackable target is a to-be-recognized target or not, if yes, taking the trackable target as a tracking target, and entering the step S5; otherwise, selecting the next traceable target, and repeating the step; and S5, distributing the tracking target and searching the position of the tracking target in a subsequent video frame, when the tracking target is lost, re-positioning the tracking target and distributing the ID, otherwise, continuously tracking the target. According to the invention, a tracking target can be accurately matched, the sensitivity is relatively high, the system configuration is simple, and global tracking of teachers in a classroom scene can be realized.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Method and system for automatically evaluating online tutoring quality based on voice features",
+        "code": "CN116665706A",
+        "pub_date": "2023-08-29",
+        "application date": "2023-03-23",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN116665706A",
+        "applicants": [
+            "UNIV CENTRAL CHINA NORMAL"
+        ],
+        "inventor_name": [
+            "ZHANG LISHAN",
+            "DENG LINYU",
+            "ZHANG SIXU",
+            "SHU YAN",
+            "WANG HONGYE",
+            "WU HAN",
+            "DUAN TENGFEI"
+        ],
+        "abstract_text": "The invention provides a method and system for automatically evaluating online tutoring quality based on voice features, and the method comprises the steps: determining a trained tutoring quality evaluation model which comprises a first-layer prediction model and a second-layer prediction model; the tutoring quality evaluation model is used for evaluating the classroom tutoring quality based on the classroom tutoring audio, and is obtained by training audio information of speaking of teachers and/or students in the classroom tutoring process; the first-layer prediction model comprises a random forest sub-model, a long-short-term memory network sub-model and a feedforward neural network sub-model, and the second-layer prediction model is used for fitting output results of the three sub-models in a segmentation manner and learning high-order features of classroom tutoring audio. The output results of the three sub-models are fused to obtain a final classroom tutoring quality evaluation result; and inputting the classroom tutoring audio into the trained tutoring quality evaluation model, and evaluating the classroom tutoring quality on line. The classroom tutoring quality is automatically evaluated through machine learning, and time saving and high efficiency are achieved.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Intelligent AI classroom management method and system",
+        "code": "CN116416699A",
+        "pub_date": "2023-07-11",
+        "application date": "2023-01-29",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN116416699A",
+        "applicants": [
+            "ZHIYU ZHILIAN TECH CO LTD"
+        ],
+        "inventor_name": [
+            "ZENG GUANGFU",
+            "HUANG TANBO",
+            "PAN HONGZHENG"
+        ],
+        "abstract_text": "The invention discloses an intelligent AI classroom management method and system, and the method comprises the steps: obtaining a classroom image in real time through a camera device, obtaining a subimage of an area corresponding to the current seat information in the classroom image according to the seat information in the clock-in information after the clock-in information of a clock-in person is received, and carrying out the comparison of the subimage with the person information, according to the method and the device, when the sub-images are the same as the face images in the personnel information, the card punching is successful, and the card punching is realized by uploading the seat information to correspond to the areas in the classroom images, so that the card punching is realized without identifying and tracking each face in the classroom images through complex algorithms such as face tracking and the like; and only the sub-image of the corresponding area is compared with the personnel information, so that the algorithm difficulty of the camera is greatly reduced, and the implementation of an automatic roll call system is facilitated.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Sports examination process examination system based on artificial intelligence visual algorithm",
+        "code": "CN116308926A",
+        "pub_date": "2023-06-23",
+        "application date": "2023-03-23",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN116308926A",
+        "applicants": [
+            "JIUSHANG TECH CO LTD"
+        ],
+        "inventor_name": [
+            "SHEN TONG"
+        ],
+        "abstract_text": "The invention relates to the technical field of examinee distribution, in particular to a sports examination process assessment system based on an artificial intelligence visual algorithm, and the convenience is improved. The method comprises the following steps: step 1, related workers carry out related electronic consultation according to the number of examination classrooms and the number of classroom seats, preliminarily estimate the number of accommodated examinees, and print a classroom information table; 2, a related worker holds a classroom information table by hand to check the actual number of related classrooms and classroom seats, and the situation that tables and chairs are damaged and cannot be provided for an examination is prevented; 3, after checking, generating a classroom information table according to the number of classrooms and the number of classroom seats, and inputting the classroom information table into a central service unit; step 4, collecting personal electronic archives of related examinees by a worker; step 5, collecting fingerprint information of related examinees by a worker; and step 6, matching the personal electronic archives of the examinees in the step 4 with the fingerprint information to generate an examinee examination information checking table, and storing the examinee examination information checking table in a central service unit.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Intelligent classroom light control system based on artificial intelligence",
+        "code": "CN116321617A",
+        "pub_date": "2023-06-23",
+        "application date": "2023-03-29",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN116321617A",
+        "applicants": [
+            "UNIV HARBIN MEDICAL"
+        ],
+        "inventor_name": [
+            "ZHANG QILIANG",
+            "KANG LANLAN",
+            "PIAO JIE",
+            "HE YONGJUN"
+        ],
+        "abstract_text": "The invention discloses an intelligent classroom light control system based on artificial intelligence, and relates to the technical field of intelligent light control. The problems that an existing indoor intelligent lighting system is complex in wiring circuit and needs to be matched with a plurality of devices are solved. An illuminance sensor is used for collecting illuminance in a classroom and transmitting a collected illuminance signal to a server; the multiple sets of illuminating lamps are arranged at the top of a classroom, and the camera collects images in the classroom in real time and sends the collected images to the controller. The controller is used for receiving a control instruction of the server to perform on-off control on the illuminating lamps in the classroom; the controller is also used for sending an image acquired by the camera to the server; and the server is used for receiving the illuminance signal and the image in the classroom, identifying the number of people in the image in the classroom and the positions of the people in the classroom by adopting a target detection model, and obtaining an indoor illumination strategy according to the indoor illuminance, the number and the positions of the indoor people and the current time. The method is suitable for classroom light control.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Eye exercise quality evaluation method based on deep learning",
+        "code": "CN116189049A",
+        "pub_date": "2023-05-30",
+        "application date": "2023-01-12",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN116189049A",
+        "applicants": [
+            "UNIV CHONGQING POSTS & TELECOM"
+        ],
+        "inventor_name": [
+            "CHENG KEFEI",
+            "ZHENG CONG",
+            "CHEN JINGHAO",
+            "YANG FAN",
+            "LUO WEI"
+        ],
+        "abstract_text": "The invention belongs to the technical field of computers, and particularly relates to an eye exercise quality evaluation method based on deep learning. The method comprises the following steps: acquiring an image to be recognized in real time by using a network camera, inputting the image to a lightweight real-time human body posture estimation network, recognizing all human bodies in the image to be recognized, and outputting a key point coordinate corresponding to each human body; monitoring a video stream in a classroom, and extracting an image to be recognized from the classroom monitoring video stream by using an inter-frame difference method; smoothing the key point coordinates corresponding to each human body in the to-be-recognized image by using a smoothing filtering network to obtain smooth key point coordinates corresponding to each human body; carrying out vectorization modeling on limbs according to the smooth key point coordinates corresponding to each human body, and outputting a posture quality result of the eye exercises executed by each human body in combination with an eye exercise quality evaluation algorithm; according to the invention, the supervision efficiency of the school on the execution condition of the eye exercises in each classroom can be effectively improved.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Intelligent laboratory control system based on zigbee",
+        "code": "CN115903601A",
+        "pub_date": "2023-04-04",
+        "application date": "2022-11-26",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN115903601A",
+        "applicants": [
+            "WENHUA COLLEGE"
+        ],
+        "inventor_name": [
+            "WEI LEI",
+            "YU KAN",
+            "LIU YI",
+            "ZHONG BIAO",
+            "DU KANG",
+            "ZHANG CHAO",
+            "LI ZIDU",
+            "WU WENDI"
+        ],
+        "abstract_text": "The invention discloses an intelligent laboratory control system based on zigbee, and the system comprises an intelligent laboratory Internet of Things cloud platform, an intelligent mobile terminal, POE wireless WiFi, a zigbee intelligent gateway, a single-chip microcomputer containing a zigbee module, a sensor group, and an intelligent switch panel assembly in a laboratory, and the intelligent laboratory Internet of Things cloud platform carries out data transmission with the zigbee intelligent gateway through the POE wireless WiFi. The zigbee intelligent gateway carries out data transmission with the sensor assembly and the intelligent switch panel assembly through a single-chip microcomputer of the zigbee module, the sensor assembly is connected with the single-chip microcomputer of the zigbee module, and the intelligent mobile terminal is connected with the indoor Internet of Things cloud platform for data transmission. The intelligent laboratory control system is built through the Internet of Things technology, the intelligent control technology and the AI voice recognition technology, cloud platform control, mobile terminal control, intelligent switch panel control, AI voice control and sensor judgment control can be carried out on a laboratory, three classroom modes and an after-class leaving module are designed, and the intelligent control degree of the laboratory is improved.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Artificial intelligence experiment device for smart classroom",
+        "code": "CN218531001U",
+        "pub_date": "2023-02-28",
+        "application date": "2022-06-07",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN218531001U",
+        "applicants": [
+            "JINAN ZHONGWEISHUTONG INFORMATION TECH CO LTD"
+        ],
+        "inventor_name": [
+            "WEI YONG"
+        ],
+        "abstract_text": "The utility model relates to the technical field of experimental equipment, in particular to an artificial intelligence experimental device for a smart classroom, which comprises a device main body, an extension table is arranged above the device main body, a storage groove is formed in the surface of the extension table, a rotating shaft is mounted in the storage groove, and a cover plate is arranged on the surface of the rotating shaft. The experiment table overcomes the defects in the prior art, by arranging the containing groove, the rotating shaft, the torsional spring, the cover plate and the push-pull groove, the cover plate can be turned over through the push-pull groove in the experiment process, the cover plate rotates under the action of the rotating shaft and compresses the torsional spring, and then a worker can place waste or experiment tools in the containing groove; the waste can be stored in the storage groove, inconvenience caused by the fact that the waste is placed everywhere is avoided, experiment tools can be placed and prevented from being lost to affect the experiment process, then the cover plate can be loosened, the torsion spring recovers elasticity after being compressed, the cover plate is pushed to reset, and the storage groove is tightly covered and protected by the cover plate.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Intelligent classroom monitoring camera based on AI technology",
+        "code": "CN218416519U",
+        "pub_date": "2023-01-31",
+        "application date": "2022-07-27",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN218416519U",
+        "applicants": [
+            "HEFEI ZHISHENG XINCHUANG INFORMATION TECH CO LTD"
+        ],
+        "inventor_name": [
+            "WANG PEIXIN"
+        ],
+        "abstract_text": "The utility model discloses a smart classroom monitoring camera based on AI technology in the technical field of smart classroom monitoring equipment, which comprises a support rod with a base, the upper end face of the support rod is provided with a mounting hole, a connecting rod is inserted in an inner cavity of the mounting hole in a sliding manner, the support rod is screwed with a fixing bolt for fixing the connecting rod, and the fixing bolt is connected with a connecting rod. A mounting plate is mounted at the top end of the connecting rod, a camera body is mounted on the mounting plate, the camera body is mounted on a mounting frame formed by the base, the supporting rod, the connecting rod and the mounting plate, and the mounting frame is directly placed on the ground, so that camera equipment can be directly placed on the ground for use; and meanwhile, a fixing mode is not adopted, so that the camera equipment is convenient to adjust in the later period.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "ARTIFICIAL INTELLIGENCE SYSTEM FOR PREVENTION OF EPIDEMICS",
+        "code": "KR20220170452A",
+        "pub_date": "2022-12-30",
+        "application date": "2021-06-23",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DKR20220170452A",
+        "applicants": [
+            "UNIV INHA RES & BUSINESS FOUND [KR]"
+        ],
+        "inventor_name": [
+            "KIM HUN KEE [KR]",
+            "LEE SANG MOCK"
+        ],
+        "abstract_text": "The present invention relates to an artificial intelligence quarantine system installed in an indoor space used by a large number of people, such as an office or classroom, automatically recognizing a quarantine target, and handling quarantine, and more particularly, to an artificial intelligence quarantine system which comprises: a quarantine means disinfecting a quarantine object located in the indoor space to be disinfected; a movement guide means installed corresponding to a path along which the quarantine means moves; a sensing means photographing and sensing the inside of the indoor space; and a control unit determining the location of the quarantine object and the quarantine object through data obtained through the sensing means and transferring the quarantine means to the determined quarantine object to control disinfection. In addition, the artificial intelligence quarantine system can be set to treat quarantine at a regular period such that periodic quarantine treatment is possible.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Multi-mode smart classroom edge computing control system",
+        "code": "CN115480923A",
+        "pub_date": "2022-12-16",
+        "application date": "2022-10-10",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN115480923A",
+        "applicants": [
+            "UNIV BEIJING NORMAL"
+        ],
+        "inventor_name": [
+            "HUANG RONGHUAI"
+        ],
+        "abstract_text": "The invention discloses a multi-mode smart classroom edge calculation control system, which comprises an audio data acquisition unit, a panoramic image acquisition and AI calculation unit, a network connection unit and an equipment control unit, and is characterized in that the audio data acquisition unit comprises a microphone assembly and is used for acquiring target sound; the panoramic image acquisition and AI calculation unit comprises a panoramic camera and is used for acquiring panoramic image data in the smart classroom; the network connection unit comprises a WIFI (Wireless Fidelity) 6 wireless network unit, an optical fiber access unit and an RJ45 wired network unit, and is used for accessing common computing equipment, IoT (Internet of Things) equipment and other wireless equipment; and the equipment control unit is used for controlling the IoT equipment through the RS232 bus interface. According to the multi-modal smart classroom edge computing control system, by adding voice control, gesture control and multi-modal control methods, the devices are interconnected and intercommunicated, time is saved compared with independent use of manual buttons, and convenience is achieved.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "USING A MACHINE LEARNING MODEL TO OPTIMIZE GROUPINGS IN A BREAKOUT SESSION IN A VIRTUAL CLASSROOM",
+        "code": "US2022301087A1",
+        "pub_date": "2022-09-22",
+        "application date": "2021-03-22",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DUS2022301087A1",
+        "applicants": [
+            "IBM [US]"
+        ],
+        "inventor_name": [
+            "COVELL JACOB THOMAS [US]",
+            "CHUNDURI PRANAV [US]",
+            "HO CLARISSA [US]",
+            "DECROP CLEMENT [US]"
+        ],
+        "abstract_text": "A computer-implemented method and a computer program product for optimizing groupings in a breakout session in a virtual classroom. A computer retrieves profiles of students in the virtual classroom, where the profiles of the students include data of academic performances of the students. The computer retrieves a known correspondents archive which includes historic data of productivities correlated to interactions among the students. In response to initialization of the breakout session in the virtual classroom, the computer determines optimal groups that yield most productive results, based on the profiles of the students, the known correspondents archive, and requirements of group settings given by an instructor, using a machine learning model. The computer provides the instructor with the optimal groups. In another embodiment, the computer analyzes context of customized assignments for the breakout session and determines the optimal groups further based on the context to the customized assignments.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Artificial intelligence calligraphy and art scoring system",
+        "code": "CN114998910A",
+        "pub_date": "2022-09-02",
+        "application date": "2022-05-30",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN114998910A",
+        "applicants": [
+            "JIANGSU MEIYUZHIXING TECH CO LTD"
+        ],
+        "inventor_name": [
+            "LI LIZHI",
+            "ZHANG MINGLIANG",
+            "YUE ZHENGQUAN"
+        ],
+        "abstract_text": "The invention discloses an artificial intelligence calligraphy and art scoring system. The system comprises classroom terminal equipment and server room equipment; the classroom terminal equipment comprises a plurality of cameras, a processor and a network card; the camera collects a to-be-scored calligraphy and art work image and verifies the identity of an author corresponding to the to-be-scored calligraphy and art work image; the calligraphy and art work image to be scored is provided with a unique code corresponding to the author identity information; the network card uploads the calligraphy and art work image to be scored to server machine room equipment; the processor obtains author identity information according to the unique code, and binds the calligraphy and art work image to be scored with the author identity information; and the server machine room equipment intelligently scores the to-be-scored calligraphy and art work image. According to the system, the calligraphy and art works can be automatically scored, and the calligraphy and art works are bound with corresponding authors.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Virtual reality-based learning service method and system",
+        "code": "KR20220062849A",
+        "pub_date": "2022-05-17",
+        "application date": "2020-11-09",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DKR20220062849A",
+        "applicants": [
+            "UANGEL CORP [KR]"
+        ],
+        "inventor_name": [
+            "SEO SEOK EUN"
+        ],
+        "abstract_text": "The present invention relates to a virtual reality-based learning service method and a system thereof. According to one embodiment of the present invention, the virtual reality-based learning service system comprises: a first learning service unit providing a language learning service linked to video content provided on a video sharing site; a second learning service unit providing a situation learning service in accordance with a predetermined scenario in a virtual space using a three-dimensional object model; and a third learning service unit providing a virtual classroom learning service allowing a plurality of users to participate to learn in a virtual classroom space. According to the present invention, an efficient virtual reality-based learning service method and a system thereof can be provided by applying virtual reality technology, artificial intelligence voice recognition technology, 5G communication technology, etc. Specifically, a practical Korean learning platform for foreigners can be provided.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Machine-learning conversation listening, capturing, and analyzing system and process for determining classroom instructional effectiveness",
+        "code": "US11335349B1",
+        "pub_date": "2022-05-17",
+        "application date": "2020-03-19",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DUS11335349B1",
+        "applicants": [
+            "FARSAII SIAMAK [US]",
+            "VISIONARY TECH LLC [US]"
+        ],
+        "inventor_name": [
+            "FARSAII SIAMAK [US]"
+        ],
+        "abstract_text": "A machine-learning conversation listening, capturing, and analyzing system that determines instructional effectiveness is a classroom setting and a machine-learning conversation listening, capturing, and analyzing process for determining classroom instructional effectiveness are disclosed. The machine-learning conversation listening, capturing, and analyzing system and process for determining classroom instructional effectiveness relies on predetermined objective criteria and uses big data, deep learning, and redundancy to validate results.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Wireless microphone control method and device, equipment and storage medium",
+        "code": "CN114501208A",
+        "pub_date": "2022-05-13",
+        "application date": "2022-04-18",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN114501208A",
+        "applicants": [
+            "HANGZHOU AILAT DIGITAL SCIENCE AND TECH LIMITED COMPANY"
+        ],
+        "inventor_name": [
+            "REN JUNJUN",
+            "CHEN FEIXIA",
+            "YU JIAN",
+            "LUO HAO",
+            "SUN YUNYUN"
+        ],
+        "abstract_text": "The invention provides a wireless microphone control method and device, equipment and a storage medium, and relates to the technical field of artificial intelligence, and the specific scheme is as follows: obtaining basic state parameters of a target wireless microphone; respectively determining an electric quantity label and a position label corresponding to the electric quantity value and the position parameter; determining a target electric quantity control strategy of the target wireless microphone based on a preset mapping relation between the electric quantity label and the electric quantity control strategy; comparing the current position label corresponding to the target wireless microphone with a preset classroom position label corresponding to the target wireless microphone to determine a comparison result; and according to the comparison result, the time parameter and the target electric quantity control strategy, determining a current comprehensive control strategy of the wireless microphone and executing the comprehensive control strategy. Therefore, according to the state information corresponding to the wireless microphone, the current electric quantity and the position of the wireless microphone can be determined in real time, the current position of the wireless microphone can be verified, accuracy and reliability are achieved, the real-time performance is good, and the abnormal state of the wireless microphone can be found in time.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Classroom front-row seating rate automatic detection method and system based on image segmentation, and storage medium",
+        "code": "CN114445742A",
+        "pub_date": "2022-05-06",
+        "application date": "2022-01-18",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN114445742A",
+        "applicants": [
+            "DALIAN DONGXIANG EDUCATION SCIENCE AND TECH GROUP LIMITED COMPANY"
+        ],
+        "inventor_name": [
+            "WANG YANQIU",
+            "YU DAN",
+            "XIAO PENG",
+            "PENG SUTING",
+            "ZHANG TONG"
+        ],
+        "abstract_text": "The invention provides an image segmentation-based classroom front-row seating rate automatic detection method and system, and a storage medium. The method comprises the following steps: receiving a video picture image monitored by a classroom; processing the video picture image, and segmenting out an image of an area where the classroom desks and chairs are located; extracting position images of front-row desks and chairs in the area images of the classroom desks and chairs; processing the video picture image, and detecting and outputting the position coordinates of the heads in the classroom and the total number information in the video picture image; and calculating and outputting the front-row seating rate according to the position images of the front-row desks and chairs, the position coordinates of the heads in the classroom and the total number information. According to the method, classroom desk and chair areas are detected based on a deep learning segmentation network, the effective sitting range of students in a classroom can be directly determined, the positions of the classroom desks and chairs do not need to be manually calibrated or additionally input, data enhancement is performed by using methods such as elastic deformation based on perspective transformation in the training process, and a training set is expanded and enriched; and the robustness and generalization of the model are enhanced.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Classroom front-row seating rate automatic detection method and system and storage medium",
+        "code": "CN114445743A",
+        "pub_date": "2022-05-06",
+        "application date": "2022-01-20",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN114445743A",
+        "applicants": [
+            "DALIAN DONGXIANG EDUCATION SCIENCE AND TECH GROUP LIMITED COMPANY"
+        ],
+        "inventor_name": [
+            "XIAO PENG",
+            "YU DAN",
+            "WANG YANQIU",
+            "PENG SUTING",
+            "ZHANG TONG"
+        ],
+        "abstract_text": "The invention provides a classroom front-row seating rate automatic detection method and system and a storage medium, and the method comprises the steps: receiving a video picture image monitored by a classroom, and splitting the video picture image into an image sequence; using the trained U-Net deep learning segmentation network to predict the split image sequence, and obtaining a seat area and a seat area corner position; post-processing the prediction result of the U-Net deep learning segmentation network, checking whether the prediction result is credible, and if the detection result is credible, correcting the quadrilateral perspective transformation of the seat area determined by the angular point coordinates into a regular quadrilateral area; if the detection result is not credible, abandoning; after the regular quadrilateral region is obtained, determining a front-row region according to a selected position threshold value; and after the front-row area is determined, counting the total number T of students in the class and the number t of students detected in the front-row area by adopting a head detection algorithm, and calculating the front-row sitting rate, namely t/T. The problem of automatic calculation of the front-row seating rate is solved.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Automatic examination invigilation method based on deep learning",
+        "code": "CN114429572A",
+        "pub_date": "2022-05-03",
+        "application date": "2021-12-29",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN114429572A",
+        "applicants": [
+            "SUZHOU JINRUYANG INFORMATION TECH LIMITED RESPONSIBILITY COMPANY"
+        ],
+        "inventor_name": [
+            "WANG CHENYANG",
+            "ZHOU GUANLONG",
+            "ZHANG SUHANG",
+            "DING HUI",
+            "QI XIAOQIANG",
+            "FANG LIANGMIN",
+            "ZHANG RUI",
+            "ZHAO ZHIWEI",
+            "LIU SHUN",
+            "GUO YANWEN"
+        ],
+        "abstract_text": "The invention discloses an automatic examination invigilation method based on deep learning. The method comprises the following steps: step 1, training a deep learning target detection model for detecting examinees; step 2-4, respectively training a deep learning image face lifting classification model, a side face classification model and a return classification model; 5, detecting examinees in the image by using the target detection model, and cutting off a bounding box image corresponding to the examinees; step 6, classifying the examinee bounding box images by using a face lifting classification model, and filtering the examinees with head lowering answer sheets; 7-8, classifying the remaining face-lifting examinees by using a side face classification model and a turn-back classification model to obtain examinees with side face and turn-back behaviors; and 9, recording time, classroom numbers and suspicious images of the side face examinees and the back examinees, and performing final auditing and corresponding processing by workers. According to the invention, automatic and intelligent invigilation to a certain degree is realized, and the algorithm speed is high.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Artificial intelligence cloud invigilation classroom based on big data",
+        "code": "CN216046319U",
+        "pub_date": "2022-03-15",
+        "application date": "2021-08-16",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN216046319U",
+        "applicants": [
+            "SICHUAN OCCUPATIONAL TECH COLLEGE"
+        ],
+        "inventor_name": [
+            "DENG FEI",
+            "XIONG HUI",
+            "GAO JIAQIONG"
+        ],
+        "abstract_text": "The utility model discloses an artificial intelligence cloud invigilation classroom based on big data, and relates to the technical field of artificial intelligence. A sliding rail is arranged in an invigilation room, an invigilation device arranged in the sliding rail comprises a base, the base and the base are in sliding connection, a supporting rod fixedly connected with a box fixedly connected with the base and fixed by a first motor is rotationally connected with the box, the supporting rod is fixedly connected with a rack, a limiting block is fixed to the supporting rod, and a shell arranged on the supporting rod in a sleeving mode is in sliding connection with the supporting rod. A gear meshed with the rack is rotationally connected with the shell, a worm meshed with the gear is rotationally connected with the shell, a second motor fixed to the worm is fixedly connected with the shell, a first monitor hinged to a supporting frame fixedly connected with the shell is hinged to a U-shaped frame, and a first air cylinder is fixed to the U-shaped frame and fixedly connected with the supporting frame. According to the utility model, by arranging the invigilation device, the invigilation device can replace the inspection tour of an invigilation teacher, the monitoring range is expanded, and cheating behaviors are reduced, so that the fairness and justice of examination results of students are ensured.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Classroom broadcasting device based on artificial intelligence",
+        "code": "CN114173230A",
+        "pub_date": "2022-03-11",
+        "application date": "2021-11-22",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN114173230A",
+        "applicants": [
+            "UNIV HUNAN AGRICULTURAL"
+        ],
+        "inventor_name": [
+            "WU JIAO"
+        ],
+        "abstract_text": "The classroom broadcasting device based on artificial intelligence comprises a sound box shell, a separation net is arranged at an opening in the left side of the sound box shell, the upper side and the lower side of a trigger mechanism are movably connected with amplification mechanisms, and the left sides of the amplification mechanisms are movably connected with cleaning mechanisms. When the sound equipment works, a paper bowl continuously vibrates, continuously touches an arc-shaped convex part, drives an abutting plate to move left and right, cooperates with the meshing effect of a rack plate connected to the right side of the abutting plate and a gear, and coaxially and fixedly connects the gear with a larger diameter and a turntable with a smaller diameter, so that the force applied to the gear by the rack plate is amplified; it is guaranteed that a piston rod connected with the connecting rod has large force to push and pull a piston plate to move along the inner wall of a piston pipe, positive pressure and negative pressure are continuously generated in the piston pipe, air is pumped and blown into a vertical hole, and dust in the vertical hole and dust in a horizontal hole are discharged through flowing of airflow; therefore, the purpose of automatically cleaning the separation net is achieved.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Virtual classroom fire evacuation drilling method based on Unity 3D",
+        "code": "CN114047754A",
+        "pub_date": "2022-02-15",
+        "application date": "2021-11-03",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN114047754A",
+        "applicants": [
+            "UNIV ANHUI TECHNOLOGY"
+        ],
+        "inventor_name": [
+            "ZHANG XUEFENG",
+            "ZENG PENG"
+        ],
+        "abstract_text": "The invention discloses a Unity3D-based virtual classroom fire evacuation drilling method, and belongs to the technical field of virtual reality and artificial intelligence. The method comprises the steps of building a basic model of a fire scene and a character role through 3ds Max software, adding various basic actions to the character role, importing the basic actions into Unity3D simulation software, simulating real scenes during fire catching and water fire extinguishing by means of a particle system of Unity3D, and enabling all escape members to fully experience the real experience of fire evacuation. In order to meet safe escape of all teachers and students to the greatest extent, an A * algorithm is adopted to plan the shortest escape path, smoothing processing is carried out on the corresponding escape path, improvement is carried out by adding a corresponding weight proportion according to an A * algorithm formula, a life value function of a character role is set, whether safe escape is achieved or not is judged by observing the remaining life value index of escape from a round of fire.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Target detection model training method, classroom behavior detection method and related equipment",
+        "code": "CN114005013A",
+        "pub_date": "2022-02-01",
+        "application date": "2021-11-10",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN114005013A",
+        "applicants": [
+            "CHINA TELECOM CO LTD"
+        ],
+        "inventor_name": [
+            "ZHUANG LI",
+            "WU JING",
+            "ZHAO YINLING",
+            "DONG JIAYI",
+            "JIANG FEI",
+            "SI JIAXIN",
+            "LI JIAN",
+            "JIN TANG"
+        ],
+        "abstract_text": "The invention relates to the technical field of artificial intelligence, and provides a training method of a target detection model, a classroom behavior detection method and related equipment. The training method of the target detection model comprises the following steps: constructing an initial network model based on a central network Center Net; processing a sample image through the initial network model to obtain the category and the center point position of each target object in the sample image, and performing single-dimensional regression according to the center point position to obtain detection frame information of each target object; controlling the training of the initial network model by taking a multi-task loss function including classification loss, detection frame offset loss and center point offset loss as a constraint condition according to a sample image set including a plurality of sample images, and obtaining a target detection model. Based on the Center Net, by improving the regression process and the loss function, the training efficiency of the target detection model can be effectively improved, and the target detection precision is improved.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Method for extracting educational training data information",
+        "code": "CN113987316A",
+        "pub_date": "2022-01-28",
+        "application date": "2021-10-27",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN113987316A",
+        "applicants": [
+            "ADVANCED TRAINING CENTER OF STATE GRID POWER GRID COMPANY"
+        ],
+        "inventor_name": [
+            "NI JIXIANG",
+            "GE XUBO",
+            "ZHANG BO",
+            "JIANG KUNYUN",
+            "LIU BAICHUAN",
+            "LYU JUAN",
+            "YAN XINYUE",
+            "MAO DAWEI",
+            "WANG WEILIN"
+        ],
+        "abstract_text": "The invention discloses a method for extracting the educational training data information, and the method comprises the following steps of automatically acquiring the updating of data on the premise of legality and compliance through a crawler algorithm and a subscription method, and structuring and storing the acquired data at the same time; carrying out mechanical technical research on heterogeneous files, automatically analyzing the effective information in different file formats, structuring and storing the analyzed file information, and keeping a necessary file source; carrying out abstract extraction algorithm research based on an artificial intelligence technology as the basis of subsequent artificial intelligence processing; implementing a subject keyword extraction algorithm based on the artificial intelligence technology; deeply researching the data acquisition, the analysis technologies, the abstract extraction and the subject keyword extraction algorithm to form a demonstration prototype demo, combining a cloud classroom for practical verification, assisting in the training scheme design and course development, and taking the method as a daily tool, so that the working efficiency is improved, and the artificial intelligence and internet technology enabling is realized.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Intelligent classroom AI voice assistant device",
+        "code": "CN215265139U",
+        "pub_date": "2021-12-21",
+        "application date": "2021-06-18",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN215265139U",
+        "applicants": [
+            "QINGDAO DAJIA INFORMATION TECH CO LTD"
+        ],
+        "inventor_name": [
+            "PANG ANPENG",
+            "ZHANG YUDONG",
+            "QU HAIYAN"
+        ],
+        "abstract_text": "The utility model discloses intelligent classroom AI voice assistant equipment, which comprises a sound equipment main body and a rotating device arranged at the bottom of the sound equipment main body, the rotating device comprises a bearing fixed to the outer wall of the bottom end of the sound equipment body, a rotating rod rotating in the bearing, and a bottom plate fixed to the end, away from the sound equipment body, of the rotating rod and used for supporting the sound equipment body. The sound equipment further comprises a driving assembly used for driving the sound equipment body to rotate, the driving assembly comprises a fixing plate, a driving motor, a rotating column, a rotating gear and a rotating rack, and the fixing plate is fixed to the outer wall of the top end of the bottom plate. According to the intelligent classroom AI voice assistant equipment, a driving motor is started to drive a rotating column and a rotating gear to rotate, and then a rotating rack and a sound box are driven to rotate, so that sound emitted by the sound box can comprehensively realize a surrounding effect, and students in a classroom can comprehensively hear the sound emitted by the sound box; the sound receiving effect is facilitated, and the use efficiency of the equipment is improved.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Mobile phone storage device based on artificial intelligence monitoring",
+        "code": "CN214931617U",
+        "pub_date": "2021-11-30",
+        "application date": "2021-01-29",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN214931617U",
+        "applicants": [
+            "YANG NAN"
+        ],
+        "inventor_name": [
+            "YANG NAN",
+            "MAO JINGYUAN",
+            "SHI LI",
+            "WANG SHIXUN",
+            "HU CHUNLI"
+        ],
+        "abstract_text": "The utility model belongs to the technical field of mobile phone storage, and particularly relates to a mobile phone storage device based on artificial intelligence monitoring, which comprises a plurality of storage assemblies, each storage assembly comprises a storage frame, a fingerprint device, a lock cylinder and an inclined glass door, the inner side of each storage frame is provided with an actuating mechanism corresponding to the fingerprint device and the lock cylinder, and the outer side of each storage frame is provided with an inclined glass door. The inclined glass door is rotationally connected with the storage frame, the fingerprint device and the lock cylinder are fixed to the top of the storage frame, and a control module is arranged on the inner side of the storage frame; the storage assembly comprises the storage frame, the fingerprint device, the lock cylinder and the inclined glass door, mobile phones can be stored in the storage frame when needing to be paid in a classroom or a conference, the fingerprint device can start the executing mechanism to open the inclined glass door and take out the mobile phones through fingerprints of an owner, and when fingerprint recognition cannot be conducted, the lock cylinder can be locked by the lock cylinder when the fingerprint recognition cannot be conducted. The inclined glass door can be opened by a key through the lock cylinder, the purpose that the fingerprint lock and a common lock form double insurance is achieved, and the safety coefficient is high.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Intelligent classroom interaction system based on artificial intelligence",
+        "code": "CN113888918A",
+        "pub_date": "2022-01-04",
+        "application date": "2021-11-02",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN113888918A",
+        "applicants": [
+            "ANHUI OKOLO TECH DEVELOPMENT CO LTD"
+        ],
+        "inventor_name": [
+            "WU YUERAN"
+        ],
+        "abstract_text": "The invention discloses an intelligent classroom interaction system based on artificial intelligence. The intelligent classroom interaction system comprises a central control box body, a central control circuit board used for controlling a scanning head and an electric lock is arranged in the central control box body, a bottom plate and a cover plate are arranged on the two sides of an opening of the central control box body respectively, and the top end of the central control box body is fixedly connected with the scanning head through a supporting arm; and the front side of the central control box body is integrally connected with a protective shell, the electric lock is arranged in the protective shell, the front side and the rear side of the central control box body are integrally connected with hollow groove plates, left clamping heads and right clamping heads are clamped in the hollow groove plates, the left clamping heads are integrally connected with the two sides of a cover plate, and the right clamping heads are integrally connected with the two sides of the bottom plate. Through a combined assembly mode, the purpose of conveniently and sequentially disassembling the central control box body is achieved, then the central control circuit board is conveniently disassembled, assembled and overhauled, the cover plate and the central control box body are conveniently disassembled and assembled, and operating is easy.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Method for intelligently generating splendid moment video of children in juvenile garden based on artificial intelligence",
+        "code": "CN113792694A",
+        "pub_date": "2021-12-14",
+        "application date": "2021-09-23",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN113792694A",
+        "applicants": [
+            "CHANGSHA PENGYANG INFORMATION TECH CO LTD"
+        ],
+        "inventor_name": [
+            "ZHU WEI",
+            "XU XINWEN",
+            "TU DAN",
+            "WANG YANMING",
+            "CAO ZHENGWU",
+            "XIE ZHIHENG",
+            "XU DONG",
+            "HU QINGXIA",
+            "WANG TAO",
+            "ZHENG BING"
+        ],
+        "abstract_text": "The invention discloses a method for intelligently generating a splendid moment video of children in a juvenile garden based on artificial intelligence, and the method comprises the steps: installing cameras in a classroom, a rest room, an activity room, a playground and the like of the juvenile garden, and transmitting the video data shot by a plurality of cameras to a processing computer; identity information of children appearing in a video is identified by adopting a computer vision method, automatically capturing a wonderful moment video clip of each child by utilizing artificial intelligence algorithms such as computer vision and machine learning, automatically generating a short video of wonderful moments of the children in one day, and automatically transmitting the short video to mobile phones of parents through background configured information. The method supports the generation of wonderful moment videos of a group or class, helps parents to better understand the performance of children in group activities, and also helps larva gardens and teachers to well supervise and review activities in one day. The method can save a large amount of manpower and time, meets the demands of parents, teachers, larva gardens and the like, and has important practical application significance.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Full-automatic operation method and system for artificial intelligence classroom",
+        "code": "CN113778092A",
+        "pub_date": "2021-12-10",
+        "application date": "2021-09-14",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN113778092A",
+        "applicants": [
+            "PINGDU FENGTAI MIDDLE SCHOOL"
+        ],
+        "inventor_name": [
+            "ZHU CHUANHONG",
+            "XU PENG"
+        ],
+        "abstract_text": "The invention discloses a full-automatic operation method and system for an artificial intelligence classroom, and relates to the technical field of intelligent classrooms. The method comprises equipment access, equipment control and automatic guide; through adding a control module with multiple communication modes and offline voice recognition, the system can be compatible with multiple equipment, the number of controllable equipment is increased, the artificial intelligence classroom has the effects that the classroom does not need to be connected with the Internet and is high in compatibility, meanwhile, a robot is arranged in the classroom, the robot plays broadcast manuscripts and videos corresponding to the guide points at all the guide points according to the planned paths, meanwhile, corresponding limb actions are made to explain visitors, When the equipment in the classroom needs to be controlled, the robot broadcasts the voice instruction, and the control module identifies the sent voice instruction and then controls the equipment in the classroom to display the content to visitors according to the identification result, so that the artificial intelligence classroom has the effects that a specially-assigned person is not needed for explanation, manpower is saved, and the explanation mode is more intuitive.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Classroom air quality prediction method based on BO-EMD-LSTM deep learning algorithm",
+        "code": "CN113762642A",
+        "pub_date": "2021-12-07",
+        "application date": "2021-09-23",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN113762642A",
+        "applicants": [
+            "DUT ARTIFICIAL INTELLIGENCE INST DALIAN",
+            "DALIAN LINGKONG DATA TECH CO LTD"
+        ],
+        "inventor_name": [
+            "YANG GUANGFEI",
+            "YUAN ERBIAO"
+        ],
+        "abstract_text": "The invention provides a classroom air quality prediction method based on a BO-EMD-LSTM deep learning algorithm. The method specifically comprises the following steps: carrying out the distance correlation analysis of environment variables in a classroom, and screening variables which are highly related to prediction variables; based on an empirical mode decomposition algorithm, decomposing the pollutant data sequence into a plurality of low-frequency time sequence data, namely pollutant concentration subsequences; and based on an LSTM deep learning model, modeling and predicting each pollutant concentration sub-sequence, combining prediction results of the sub-sequences to obtain a final prediction result, and obtaining the classroom air quality according to the final prediction result. The invention provides a new thought for solving the problem of indoor pollutant concentration prediction, the thought of division and treatment is introduced, the empirical mode decomposition algorithm and the deep learning algorithm in the field of signal decomposition are ingeniously combined, and the precision of long-time problem prediction is improved.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Artificial intelligence exhaust and ventilation device for classroom",
+        "code": "CN214664971U",
+        "pub_date": "2021-11-09",
+        "application date": "2021-04-26",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN214664971U",
+        "applicants": [
+            "XIAN LIXIAN"
+        ],
+        "inventor_name": [
+            "XIAN LIXIAN"
+        ],
+        "abstract_text": "The utility model belongs to the technical field of artificial intelligence exhaust and ventilation, and discloses an artificial intelligence exhaust and ventilation device for a classroom, which comprises an L-shaped ventilation box and a house wall body, and the L-shaped ventilation box is arranged on a window of the house wall body. According to the scheme, the device is simple in structure and small in size, the L-shaped ventilation box can be installed on the window through the installation blocks and the installation bolts, normal lighting of a classroom is not affected, the installation difficulty and the installation requirement are reduced, and the installation efficiency is improved. After installation, the carbon dioxide concentration monitor and the temperature sensor are used for monitoring the carbon dioxide concentration of air in a classroom and the temperature in the classroom respectively, signals are transmitted to the controller, the controller controls the two turbofans with the opposite wind directions to operate, indoor air is pumped out of the classroom, outdoor air is blown into the classroom, and the indoor environment is protected. The automatic exhaust and ventilation functions are achieved, dust and other impurities in outdoor air can be filtered through the filtering assembly, and it is guaranteed that fresh air entering a room is clean.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Adjustable display screen for artificial intelligence classroom",
+        "code": "CN214197810U",
+        "pub_date": "2021-09-14",
+        "application date": "2020-10-22",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN214197810U",
+        "applicants": [
+            "SHAANXI RUIFENG INFORMATION TECH CO LTD"
+        ],
+        "inventor_name": [
+            "LUO XIUCHENG",
+            "ZHANG LING",
+            "LUO XIUFENG"
+        ],
+        "abstract_text": "The adjustable display screen for the artificial intelligence classroom comprises a fixing base, a rotating mechanism is arranged on the surface of the fixing base, a telescopic mechanism is arranged at the upper end of the rotating mechanism, the rotating mechanism comprises a rotating groove, the rotating groove is vertically formed in the surface of the fixing base, and a rotating shaft is fixedly connected to the inner wall of the lower end of the rotating groove; the fixing device has the advantages that the fixing rod drives the inserting rod to move out of the inserting groove by pulling the fixing rod, after the fixing rod moves to a proper height, the threaded ring is conveniently rotated through the protruding block, then the thread on the inner wall of the threaded ring extrudes the thread on the surface of the bolt, the threaded ring is made to rotate and move, and therefore the bolt can be fixed. The rotating plate rotates around the bolt, the display screen is driven to rotate to a proper position, then the threaded ring is reversely rotated, the threaded ring and the bolt extrude the fixing rod and the rotating plate, and the direction of the rotating plate is fixed; and the display screen can be adjusted to proper height and angle.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Classroom broadcasting system based on artificial intelligence",
+        "code": "CN214101674U",
+        "pub_date": "2021-08-31",
+        "application date": "2021-02-01",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN214101674U",
+        "applicants": [
+            "GUANGDONG SOUTHERN PLANNING & DESIGNING INST OF TELECOM CONSULTATION CO LTD"
+        ],
+        "inventor_name": [
+            "ZHOU FANGMEI",
+            "MAI XIAOBIN",
+            "LIU HUANHUAN",
+            "ZHANG XUE",
+            "JIANG QIAOJIE",
+            "YUE SHENG"
+        ],
+        "abstract_text": "The embodiment of the utility model relates to the field of artificial intelligence, and particularly discloses a classroom broadcasting system based on artificial intelligence, which comprises a bearing top plate, and supporting columns are fixedly arranged on the lower surface of the bearing top plate and located at the edge position of the rear side. Mounting plates are fixedly mounted on the two sides, close to the bottom, of the supporting column and the positions, close to the two sides, of the upper surface of the bearing top plate, a rotating motor is fixedly mounted in the position, close to the middle of the rear side, of the upper surface of the bearing top plate, a threaded shaft is mounted at the output end of the rotating motor, and a connecting bottom plate is mounted on the lower side of the supporting column; a bearing pipe is fixedly installed at the position, close to the middle, of the upper surface of the connecting bottom plate, a lifting block is arranged in the supporting column, and a threaded hole is formed in the upper surface of the lifting block in a penetrating mode. According to the utility model, the broadcast loudspeaker has the functions of convenient installation and disassembly, is convenient for workers to overhaul, reduces the working difficulty, plays a good dustproof role, and prolongs the service life of the broadcast loudspeaker.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Behavior analysis system for smart classroom",
+        "code": "CN113158919A",
+        "pub_date": "2021-07-23",
+        "application date": "2021-04-26",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN113158919A",
+        "applicants": [
+            "GUANGDONG MOXIANG CULTURE TECH CO LTD"
+        ],
+        "inventor_name": [
+            "XIE XIANG"
+        ],
+        "abstract_text": "The invention discloses a behavior analysis system for a smart classroom, and belongs to the field of classroom analysis systems. The system comprises a classroom data acquisition module, a classroom data storage unit, a classroom data arrangement module, a simulation test score recording module, a data mining analysis module, an analysis report generation module and a data receiving terminal, wherein the data acquisition module comprises a behavior identification unit and a behavior occurrence frequency recording unit, the behavior identification unit is specifically an AI motion capture camera and is arranged right above a classroom blackboard, and the behavior occurrence frequency recording unit is electrically connected with the behavior identification unit. According to the invention, correlation calculation is carried out on the concentration rate and the stage simulation test score in one week by using a Pearson's correlation coefficient algorithm, so that the relationship between the enthusiasm and comprehension of students in class can be found; therefore, targeted personalized guidance and long-term dynamic learning overall planning can be carried out by class advisers and teachers.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Monitoring equipment for artificial intelligence classroom",
+        "code": "CN213656135U",
+        "pub_date": "2021-07-09",
+        "application date": "2020-10-22",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN213656135U",
+        "applicants": [
+            "SHAANXI RUIFENG INFORMATION TECH CO LTD"
+        ],
+        "inventor_name": [
+            "LUO XIUCHENG",
+            "ZHANG LING",
+            "LUO XIUFENG"
+        ],
+        "abstract_text": "The utility model discloses monitoring equipment for an artificial intelligence classroom, which comprises a supporting mechanism, one side of the supporting mechanism is connected with a lifting mechanism in a sliding manner, and the inner side of the lifting mechanism is fixedly connected with a fixing mechanism. When installation is needed, the clamping blocks are placed into the fixing grooves, the clamping blocks are clamped by the clamping plates through the counter-acting force of springs and telescopic rods, then a handle is rotated, the clamping blocks are clamped by the clamping plates, the clamping blocks are clamped by the clamping plates, the clamping blocks are clamped by the clamping plates through the counter-acting force of the springs and the telescopic rods, and the clamping blocks are clamped by the clamping plates through the clamping plates, so that the camera is maintained. According to the monitoring equipment for the artificial intelligence classroom, the first rotating wheel is rotated, the steel rope is wound to drive the camera to ascend, it is effectively achieved that existing monitoring equipment for the artificial intelligence classroom is convenient to install and maintain, installation and maintenance are more convenient, meanwhile, the camera can be detached, and maintenance and installation do not consume too much time and physical strength.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Ventilation device for artificial intelligence classroom",
+        "code": "CN213657016U",
+        "pub_date": "2021-07-09",
+        "application date": "2020-10-22",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN213657016U",
+        "applicants": [
+            "SHAANXI RUIFENG INFORMATION TECH CO LTD"
+        ],
+        "inventor_name": [
+            "LUO XIUCHENG",
+            "ZHANG LING",
+            "LUO XIUFENG"
+        ],
+        "abstract_text": "The utility model discloses a ventilation device for an artificial intelligence classroom, which comprises a wall body, a ventilation fan fixedly connected in the wall body, a fixed frame fixedly connected at the front part of the lower end of the ventilation fan, a gear frame fixedly connected at the front part of the fixed frame through a bearing, a gear engaged with one side of the gear frame, and a gear fixedly connected with the wall body through a bearing. The filter screen frame has the beneficial effects that the filter screen frame can be conveniently mounted and dismounted through the structures such as the sliding grooves, the clamping grooves, the L-shaped plates, the inclined plates, the clamping blocks and the special-shaped blocks, so that the used filter screen frame can be conveniently cleaned; and by arranging the fixing frame, the gear frame, the first baffle, the second baffle and other structures, when the ventilation fan is not used, the ventilation fan can be protected, and the service life of the ventilation fan is prolonged.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Method of classroom head raising rate detection system based on deep learning",
+        "code": "CN113033365A",
+        "pub_date": "2021-06-25",
+        "application date": "2021-03-17",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN113033365A",
+        "applicants": [
+            "UNIV SW SCI & TECH SWUST"
+        ],
+        "inventor_name": [
+            "SHAO YANHUA",
+            "PENG RUI",
+            "ZHANG YU",
+            "XU LIBING",
+            "TANG MIN"
+        ],
+        "abstract_text": "The invention relates to a method of a classroom head raising rate detection system based on deep learning. The method comprises the steps of multi-person face detection in the dense scene, person detection and statistics in the dense scene and multi-person head posture estimation in the dense scene. The method comprises the steps of: firstly, collecting video information through cameras installed in all classrooms, and obtaining pictures to make a head-up recognition data set; carrying out algorithm analysis on the video information, completing head raising behavior recognition and total number statistics of people by using a face detection algorithm, and obtaining head raising rate data; and finally, digitally displaying the acquired data through the Web server.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Objective question marking method and device based on answer sheet, equipment and storage medium",
+        "code": "CN113033480A",
+        "pub_date": "2021-06-25",
+        "application date": "2021-04-20",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN113033480A",
+        "applicants": [
+            "SHENZHEN GEESUNN TECH CO LTD"
+        ],
+        "inventor_name": [
+            "CHANG ZHIGUO"
+        ],
+        "abstract_text": "The invention relates to the field of data processing, and provides an objective question marking method and device based on an answer sheet, equipment and a storage medium. The method comprises the following steps: shooting an answer sheet after answering to obtain a digital image of the answer sheet; collecting a discrete curve corresponding to a horizontal line segment and a discrete curve corresponding to a vertical line segment based on the digital image; positioning grid units from the digital image according to the horizontal discrete curve and the vertical discrete curve; obtaining the handwritten answer content of each question from each positioned grid unit; recognizing the handwritten answer content to obtain an recognition result of each question; and comparing the recognition result of each question with a preset standard answer one by one to obtain a reviewing result of each question. According to the method, grid cell positioning is carried out through discrete curves, when the answer sheet is warped and other deformations, the method is more accurate compared with a traditional straight line detection algorithm, and compared with an algorithm based on deep learning, the calculation power demand is smaller, and the method is more suitable for real-time application scenarios based on edge calculation, such as real-time classroom test and the like.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Intelligent classroom capable of performing face recognition",
+        "code": "CN213458219U",
+        "pub_date": "2021-06-15",
+        "application date": "2020-12-04",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN213458219U",
+        "applicants": [
+            "LIANG HUANYUAN"
+        ],
+        "inventor_name": [
+            "LIANG HUANYUAN"
+        ],
+        "abstract_text": "The utility model relates to the technical field of intelligent classrooms, and discloses an intelligent classroom capable of performing face recognition, which comprises a classroom body, a blackboard is fixedly connected to the rear surface of the interior of the classroom body, a display screen is slidably connected to the front of the blackboard, and a classroom door is rotatably connected to the left side of the classroom body through a hinge. A steering engine is arranged above the classroom door, the steering engine is fixed to the rear surface of the interior of the classroom body, the steering engine is rotationally connected with the classroom door, and a first shell is fixedly connected to the position, close to the front portion of the classroom door, of the left side of the classroom body; when the A button I on the shell I is pressed down, the voice module prompts that'hello, please aim at the camera and check the mask ', face and mask recognition can be started for people entering the classroom through the AI image recognition module in the shell I, and when the face recognition and the mask recognition are both met, the LED display screen displays a symbol'V' and broadcasts'welcome to the XXXX class, number of people in the room * people 'in a voice mode.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "AI-based two-dimensional art image dynamic display method and device",
+        "code": "CN112699263A",
+        "pub_date": "2021-04-23",
+        "application date": "2021-01-08",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN112699263A",
+        "applicants": [
+            "ZHENGZHOU UNIV SCIENCE & TECHNOLOGY"
+        ],
+        "inventor_name": [
+            "LIU JINYANG"
+        ],
+        "abstract_text": "The embodiment of the invention discloses an AI-based two-dimensional art image dynamic display method and device, equipment and a storage medium, and belongs to the technical field of art display. The method comprises the steps of constructing an art picture set; identifying and classifying the art pictures based on a preset unit training set; obtaining motion features based on a preset supervised learning model, and carrying out distinguishing numbering; carrying out motion tendency estimation based on a preset direction prediction model, and carrying out distinguishing numbering; carrying out image extraction based on a preset picture image extraction model, obtaining an object image, and carrying out distinguishing numbering; and on the basis of a preset animation generation model and a distinguishing number, performing video synthesis on the motion features and the motion tendency estimation results and the object images in one-to-one correspondence with the motion features and the motion tendency estimation results to complete dynamic display of elements in the art picture set.According to the invention, the art picture is processed through the AI technology, and then video synthesis is carried out, so that dynamic display of the art picture is completed; and a better classroom effect is provided for students.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Facial expression recognition method based on deep learning",
+        "code": "CN112668369A",
+        "pub_date": "2021-04-16",
+        "application date": "2019-10-16",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN112668369A",
+        "applicants": [
+            "CHINA CHANGFENG SCIENCE TECHNOLOGY IND GROUP CORP"
+        ],
+        "inventor_name": [
+            "PEI YIYAO"
+        ],
+        "abstract_text": "A face expression recognition method based on deep learning comprises the steps that firstly, a user-defined face expression classification data set is made and used for training a face expression recognition model in an intelligent classroom scene, then two migration training methods are applied, migration training is conducted on two different pre-training models respectively, training is carried out on the custom data set, training and testing results are compared and analyzed, a model with the highest accuracy and a training method are obtained, and then the model is applied to a facial expression recognition system. The invention can be applied to the situation of the intelligent classroom, and the interactivity between teachers and students in the intelligent classroom is enhanced by using videos and images of the students in the lecture attending process.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Department-based shift AI intelligent management system",
+        "code": "CN112596451A",
+        "pub_date": "2021-04-02",
+        "application date": "2021-01-15",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN112596451A",
+        "applicants": [
+            "WANG XUDONG"
+        ],
+        "inventor_name": [
+            "WANG XUDONG"
+        ],
+        "abstract_text": "The invention provides a department-based shift AI intelligent management system which comprises a visual sensor used for distinguishing identities, counting and judging whether students enter and exit classes, are late, leave early and absenteeism classes; a non-contact temperature sensor used for measuring the body temperature; an ultrasonic sensor used for measuring body temperature; a sound sensor used for judging whether a noisy condition exists during self-study in a classroom or not; a voice module used for carrying out voice prompt; the system has the advantages that a control edition2.0 is used as a main control chip, is connected with a Tinywebdb micro-database through WIFI, and performs related data acquisition, processing, storage and query with an on-duty 4G mobile phone, sothat the problems of shift management such as late arrival, early leaving, absenteeism, abnormal body temperature, noisy self-study, non-on-time lamp turning off and the like of students in shift areaccurately judged.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Convenient-to-adjust mobile AI projector for smart classroom",
+        "code": "CN112576877A",
+        "pub_date": "2021-03-30",
+        "application date": "2020-12-04",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN112576877A",
+        "applicants": [
+            "SHANGHAI SHENSHU ART TECH CO LTD"
+        ],
+        "inventor_name": [
+            "YUAN DING",
+            "WANG MOHAN",
+            "YE JUN"
+        ],
+        "abstract_text": "The invention discloses a convenient-to-adjust mobile AI projector for a smart classroom. The convenient-to-adjust mobile AI projector comprises a base, a lens shell and a projection lens, a rotatingstructure is arranged in the base, an adjusting structure is arranged at the top end of the rotating structure, a mounting structure is arranged at the top end of the adjusting structure, the lens shell is arranged at the top end of the mounting structure, and the projection lens is arranged on one side of the lens shell. When a user needs to adjust the angle of the lens shell, a fixing rod is manually rotated to enable a fixing head of the fixing rod to leave the surface of an adjusting core, at the moment, the user can manually move the projection lens to adjust the projection angle of the lens shell, and after the projection angle is adjusted to a proper angle, the fixing rod is reversely screwed, and the adjusting core in an adjusting seat is fixed, so that the projection angle of theconvenient-to-adjust mobile AI projector for the smart classroom can be adjusted.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "METHOD AND APPARATUS FOR ESTIMATING EMOTIONAL QUALITY USING MACHINE LEARNING",
+        "code": "US2021056676A1",
+        "pub_date": "2021-02-25",
+        "application date": "2020-08-21",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DUS2021056676A1",
+        "applicants": [
+            "WORCESTER POLYTECH INST [US]",
+            "UNIV VIRGINIA PATENT FOUNDATION [US]"
+        ],
+        "inventor_name": [
+            "WHITEHILL JACOB [US]",
+            "RAMAKRISHNAN ANAND [US]",
+            "OTTMAR ERIN [US]",
+            "LOCASALE-CROUCH JENNIFER [US]"
+        ],
+        "abstract_text": "Embodiments of the innovation relate to an emotional quality estimation device comprising a controller having a memory and a processor, the controller configured to execute a training engine with labelled training data to train a neural network and generate a classroom analysis machine, the labelled training data including historical video data and an associated classroom quality score table; receive a classroom observation video from a classroom environment; execute the classroom analysis machine relative to the classroom observation video from the classroom environment to generate an emotional quality score relating to the emotional quality of the classroom environment; and output the emotional quality score for the classroom environment.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Artificial intelligence exhaust ventilation device for classroom",
+        "code": "CN212538157U",
+        "pub_date": "2021-02-12",
+        "application date": "2020-06-28",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN212538157U",
+        "applicants": [
+            "ANHUI TECHNICAL COLLEGE OF IND AND ECONOMY"
+        ],
+        "inventor_name": [
+            "DING JUN",
+            "SUN RONGHUI"
+        ],
+        "abstract_text": "The utility model relates to an artificial intelligence exhaust ventilation device for a classroom. The artificial intelligence exhaust ventilation device for the classroom comprises a ventilation shell, the ventilation shell comprises an air inlet and an air outlet, a fan is fixedly connected to the interior of the ventilation shell, a fixing frame is fixedly connected to the position, close to the air inlet, of the interior of the ventilation shell, and a filtering frame is detachably connected to the fixing frame; an inner sliding groove is formed in the outer surface of the filtering frame, a sliding rail is fixedly connected to the outer surface of the filtering frame, a limiting plate is further connected to the outer surface of the filtering frame, a spring piece is fixedly connected to the outer surface of one end of the inner sliding groove, a moving block is fixedly connected to the other end of the spring piece, and the moving block is connected with the sliding rail. The moving block slides along the sliding rail; the artificial intelligence exhaust and air exchange device for the classroom is simple in structure, convenient to operate and flexible to use, the filter frame can be disassembled and assembled very conveniently, and the exhaust and air exchange device is convenient to clean and use.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Myopia development intelligent early warning system based on teenager eye micro-expression changes and intervention method thereof",
+        "code": "CN112232308A",
+        "pub_date": "2021-01-15",
+        "application date": "2020-11-23",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN112232308A",
+        "applicants": [
+            "XIE WENLEI"
+        ],
+        "inventor_name": [
+            "XIE WENLEI"
+        ],
+        "abstract_text": "The invention discloses a myopia development intelligent early warning system based on teenager eye micro-expression changes and an intervention method thereof, and belongs to the technical field of myopia early warning, and the myopia development intelligent early warning system based on teenager eye micro-expression changes comprises a classroom high-definition monitoring system, a video recognition and distribution system, a myopia development early warning AI algorithm platform, a database system, a myopia early warning system and a myopia warning information pushing system. According to the myopia development intelligent early warning system and method based on teenager eye micro-expression changes, an AI algorithm is adopted to detect and process data, the recognition speed is high,the recognition accuracy is high, a corresponding relation table in a database is rich, and data matching is accurate.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Novel disassembly and assembly table for machine learning",
+        "code": "CN211787844U",
+        "pub_date": "2020-10-27",
+        "application date": "2019-10-18",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN211787844U",
+        "applicants": [
+            "YANG ZHENG"
+        ],
+        "inventor_name": [
+            "YANG ZHENG"
+        ],
+        "abstract_text": "The utility model discloses a novel disassembly and assembly table for machine learning. Workbench, a first protective shell is arranged on the upper surface of the workbench. A gear is arranged in the protective shell; a motor is mounted on the upper surface of the protective shell; the motor drives the gear to rotate; a slide way is mounted on the inner surface of the protective shell; a rack isconnected to the slide way in a sliding manner; the rack is meshed with the gear; a second protective shell is integrally formed at one end of the first protective shell; the motor is controlled by ateacher through the remote control controller; some experimental apparatuses in machine learning are relatively precise and expensive; and in the learning process, the controller can uniformly control taking-out of the equipment, classroom management is facilitated, students are helped to adjust the height of the disassembly and assembly table through the electric telescopic rods, the disassemblyand assembly table is convenient for the students to use, the equipment can be temporarily clamped through the clamping grooves, and the students can learn more conveniently.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Multi-dimensional analysis method, device and equipment based on classroom voice, and storage medium",
+        "code": "CN111681143A",
+        "pub_date": "2020-09-18",
+        "application date": "2020-04-27",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN111681143A",
+        "applicants": [
+            "PING AN INT SMART CITY TECH CO LTD"
+        ],
+        "inventor_name": [
+            "WU YOU",
+            "YU NING",
+            "FENG JINGLING"
+        ],
+        "abstract_text": "The invention relates to the field of artificial intelligence, and discloses a multi-dimensional analysis method, device and equipment based on classroom voice, and a storage medium, and the method comprises the steps: obtaining the initial classroom audio of a target teacher; preprocessing the initial classroom audio to generate a class volume and a tone evaluation value of the target teacher; calling an automatic speech recognition ASR algorithm to recognize the initial classroom audio, and generating a target classroom text of the target teacher; performing data analysis on the target classroom text based on a plurality of preset dimensions to obtain an analysis result of each preset dimension, the plurality of preset dimensions including a speech speed, a meditation, a questioning frequency, a questioning type, an average answering waiting time length and a knowledge point number; and scoring the initial classroom text based on the analysis result of each preset dimension, the class volume, the intonation evaluation value and the corresponding standard reference value to obtain a total score of the target teacher. In addition, the invention also relates to a blockchain technology, and the initial classroom audio can be stored in the blockchain.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Teenager eyesight protection system based on video deep learning",
+        "code": "CN211293955U",
+        "pub_date": "2020-08-18",
+        "application date": "2019-09-23",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN211293955U",
+        "applicants": [
+            "XU YUNZHE"
+        ],
+        "inventor_name": [
+            "XU YUNZHE"
+        ],
+        "abstract_text": "The utility model relates to a teenager eyesight protection system based on video deep learning. The teenager eyesight protection system comprises a video monitoring module, a database module and a front-end display module. The video monitoring module comprises a camera and a data processing module; the camera is installed in a classroom and used for shooting and obtaining video data of sitting postures of students. The data processing module is in communication connection with the camera and is used for processing video data shot by the camera; the database module is in communication connection with the video monitoring module and is used for storing processing result data of the data processing module and formed short videos; and the front-end display module is in communication connection with the database module and is used for a user to log in and check real-time monitoring and data analysis results. The system not only can monitor in real time, but also can store videos and photosof monitored poor sitting postures, and can count the time and frequency of the poor sitting postures according to hours, days and months, so that the sitting postures of students are improved, and the effect of preventing myopia is achieved.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Artificial intelligence smart classroom",
+        "code": "CN210924226U",
+        "pub_date": "2020-07-03",
+        "application date": "2019-10-10",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN210924226U",
+        "applicants": [
+            "CHONGQING YOTOO TECH CO LTD"
+        ],
+        "inventor_name": [
+            "WANG ZHE",
+            "LYU HONGBIN"
+        ],
+        "abstract_text": "The utility model requests to protect an artificial intelligence smart classroom. The artificial intelligence smart classroom comprises an Internet of Things sensing unit, an Internet of Things sensing monitoring unit and a monitoring unit. Wherein the Internet of Things sensing unit comprises a motor, a camera, an illuminating lamp, an infrared detector, a sensor group and an intelligent controlmodule, the Internet of Things sensing monitoring unit is used for monitoring by adopting an intelligent instrument, and the monitoring unit comprises a server and a display. According to the utilitymodel, the intelligent demand of the intelligent classroom can be effectively supported, and the classroom AI application cost is reduced.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Classroom informatization evaluation and management system and method based on deep learning",
+        "code": "CN111275345A",
+        "pub_date": "2020-06-12",
+        "application date": "2020-01-22",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN111275345A",
+        "applicants": [
+            "UNIV CHONGQING"
+        ],
+        "inventor_name": [
+            "HE WEI",
+            "JIN XIAOSONG",
+            "LIN YINGCHENG",
+            "LIU PINGJING",
+            "LIANG SONGHONG",
+            "WU MINGMEI",
+            "LIU YONGBING"
+        ],
+        "abstract_text": "The invention discloses a classroom informatization evaluation and management system and method based on deep learning. The system comprises an edge calculation module, a server and a client, the edgecalculation module comprises a camera and a development board; the camera collects and transmits coordinate data of different areas of a classroom and static images and real-time images of students in the classroom. The development board analyzes the received data to obtain a face image and recognition results and recognition time of different actions; the information is transmitted to a server in a document form; the server analyzes and counts the received face image, the recognition result and the recognition time document to obtain an attendance result, a classroom link richness index anda classroom atmosphere index; according to the classroom informatization evaluation method and system, classroom informatization evaluation and management are automatically carried out, and the evaluation result is objective and efficient.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Fault repair system and method for live broadcast",
+        "code": "CN111274107A",
+        "pub_date": "2020-06-12",
+        "application date": "2020-01-15",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN111274107A",
+        "applicants": [
+            "KUDE YOUNGSTER TIANJIN CULTURE COMMUNICATION CO LTD"
+        ],
+        "inventor_name": [
+            "ZU GUANQUN",
+            "WANG ZHENGUO",
+            "BAI LU",
+            "LIU WANZHONG",
+            "LIU XIAOLIANG",
+            "LIANG XIAOPING"
+        ],
+        "abstract_text": "The embodiment of the invention provides a fault repairing system and method for live broadcast. The system comprises an obtaining module used for obtaining buried point logs sent by one or more userterminals and decomposing the buried point logs to obtain data related to an operation event; the alarm module used for giving an alarm according to the data and a preset alarm rule to obtain an alarmresult; the processing module used for executing analysis operation on the data and the alarm result according to a preset machine learning model to obtain a fault category corresponding to the alarmresult, and determining a repair instruction according to the fault category; and the repair module used for sending the repair instruction to the corresponding user terminal, so that the user terminal can repair the fault according to the repair instruction. Based on the scheme of the invention, the fault can be quickly positioned and repaired, and the classroom experience of students is improved.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Attendance checking and learning condition analysis method, system, equipment and readable storage medium",
+        "code": "CN111241926A",
+        "pub_date": "2020-06-05",
+        "application date": "2019-12-30",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN111241926A",
+        "applicants": [
+            "NEWLAND DIGITAL TECH CO LTD"
+        ],
+        "inventor_name": [
+            "HE XUEZHI",
+            "LIN LIN",
+            "YU ZEFAN",
+            "LIU XIAOYANG",
+            "HUANG ZILI"
+        ],
+        "abstract_text": "The invention discloses an attendance checking and learning condition analysis method, which comprises the following steps of: acquiring a video image, and performing hardware decoding on the video image; performing face feature value extraction on the video image at an edge end, and uploading a face feature value to a server for attendance checking; performing human body posture estimation on a human body in the video image at the edge end, and performing learning behavior analysis; matching the face feature value with the learning condition behavior analysis result through using a timestampand a position; and uploading the learning condition behavior analysis result matched with the face feature value to the server. According to the attendance checking and learning condition analysis method, automatic attendance checking of students and automatic analysis of learning conditions of the students are realized, cameras originally erected in a classroom can be used, and the deployment overhead is reduced. In addition, since edge calculation is adopted to replace a traditional server scheme to give calculation to the front end to obtain a calculation result, only an AI calculation result is transmitted on network data transmission instead of video data, a large amount of bandwidth can be reduced, and the speed can be increased.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "METHOD AND APPARATUS FOR ANALYSING DEEP LEARNING (DNN) BASED CLASSROOM LEARNING BEHAVIOUR",
+        "code": "WO2020063436A1",
+        "pub_date": "2020-04-02",
+        "application date": "2019-09-19",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DWO2020063436A1",
+        "applicants": [
+            "UNIV HUIZHOU [CN]"
+        ],
+        "inventor_name": [
+            "CAI ZHAOQUAN [CN]",
+            "CAI YINGXUE [CN]",
+            "CHEN JIA [CN]",
+            "HU SONG [CN]",
+            "HUANG SIBO [CN]",
+            "LI HUI [CN]",
+            "HU HUI [CN]",
+            "CHEN MINGYANG [CN]"
+        ],
+        "abstract_text": "A method and apparatus for analysing a deep learning (DNN) based classroom learning behaviour. The method comprises: first, recalculating a transparency estimation value by measuring the credibility of a foreground and background pixel pair so as to obtain a first transparency mask of a first image; then, generating a new picture by superposing greyscale information, obtaining a second transparency mask of the first image, and further modifying the first transparency mask of the first image; and finally, using the modified first transparency mask to extract a foreground target of a certain frame of image in a video, and further extracting a background target in the first image, and performing facial expression analysis on the extracted foreground target and background target by means of a deep neural network. By means of the method, a new classroom behaviour analysis solution can be provided by comprehensively utilising the credibility and greyscale information of a foreground and background pixel pair in a certain frame of image in a video.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "- Smart Realtime Lecture Lecture Capture and Tele-Presentation-Webinar VR Class room VR Conference method using Virtual/Augmented Reality Class Room and Artificial Intelligent Virtual Camera Switching technologies",
+        "code": "KR20200024441A",
+        "pub_date": "2020-03-09",
+        "application date": "2018-08-28",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DKR20200024441A",
+        "applicants": [
+            "KIM YOUNG DAE [KR]"
+        ],
+        "inventor_name": [
+            "KIM YOUNG DAE [KR]"
+        ],
+        "abstract_text": "The present invention relates to a smart-remote lecture method using an automatic scene switching technology having an artificial intelligence function in a virtual and augmented reality lecture room comprising: (a) a step of manufacturing and selecting a virtual classroom; (b) a step of providing an arrangement function of a plurality of virtual cameras; (c) a step of causing an output screen to be displayed at a needed location; (d) a step of providing a function of freely arranging a virtual electronic blackboard; (e) a step of providing an automatic or manual track generation function; (f) a step of arranging intuitive scenes to be switched with only a mouse or pointer button; (g) a step of setting a switching GUI button; and (h) a step of providing a function of outputting a lecture scene in real time. According to the present invention, it is possible to provide a more excellent environment for listening to a remote video lecture as compared to listening to a lecturer\u2032s lecture in a classroom.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "METHOD FOR SMART-REMOTE LECTURING USING AUTOMATIC SCENE-TRANSITION TECHNOLOGY HAVING ARTIFICIAL INTELLIGENCE FUNCTION IN VIRTUAL AND AUGMENTED REALITY LECTURE ROOM",
+        "code": "WO2020045837A1",
+        "pub_date": "2020-03-05",
+        "application date": "2019-07-29",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DWO2020045837A1",
+        "applicants": [
+            "KIM YOUNG DAE [KR]"
+        ],
+        "inventor_name": [
+            "KIM YOUNG DAE [KR]"
+        ],
+        "abstract_text": "Compared to a lecture apparatus according to the prior art, the present invention provides a feature, wherein an operation of an apparatus, that is, scene transition, is automatic and based on an artificial intelligence (AI) function so as to allow a lecturer to focus on a lecture, and a feature of an edge processing scheme based on AR composition without performing chroma keying in a studio environment confined to performing a chroma-keying technique, thereby providing a lecture apparatus based on an AR lecture room method. Accordingly, a scene for delivering a more immersive lecture compared to the existing lecture method may be created in any classroom or lecture location such that a technique may be provided of perfectly implementing a real-time lecture apparatus, a real-time lecture recording apparatus, a real-time remote lecture, and a lecture presentation conference apparatus, which allow a lecture to be delivered in a lecture location, based on the method of the present invention.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Same frequency interaction classroom control device",
+        "code": "CN110853436A",
+        "pub_date": "2020-02-28",
+        "application date": "2019-12-11",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN110853436A",
+        "applicants": [
+            "BEIJING ZONEKEY MODERN TECH CO LTD"
+        ],
+        "inventor_name": [
+            "BIAN QI",
+            "LI GANG",
+            "CHEN YUE",
+            "CAO ZHIYUE",
+            "WANG GANG",
+            "LI SHENGHUAI"
+        ],
+        "abstract_text": "The invention discloses a same frequency interaction classroom control device. The device comprises a recording control module, an AI control module, a video switching control module and a sound control module integrally designed on a same control panel, wherein the recording control module is used for controlling start and pause of a recorder-player; the AI control module is used for controllingstart and pause of AI intelligent analysis; the video switching control module is used for controlling switching of video sources; the sound control module is used for controlling volumes of a local machine and a remote terminal; and above-mentioned keys and indicator lights are designed to be of a cortege matrix keyboard structure. By using the device, a teacher can conveniently control various systems in the classroom; and the device is relatively high in usability, prominent in stability and strong in expansibility.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Deep learning classroom analysis system and method based on container technology",
+        "code": "CN110780987A",
+        "pub_date": "2020-02-11",
+        "application date": "2019-10-30",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN110780987A",
+        "applicants": [
+            "UNIV SHANGHAI JIAOTONG"
+        ],
+        "inventor_name": [
+            "LIU TAO",
+            "JIANG FEI",
+            "SHEN RUIMIN"
+        ],
+        "abstract_text": "The invention relates to a deep learning classroom analysis system based on a container technology. The system is connected with a camera for acquiring video data and detecting different classroom actions and/or sounds; according to the system, basic container mirror images of different environments are constructed for different deep learning algorithms, thereby forming different detecting containers for detecting different classroom actions and sound; the system comprises a logic control layer which comprises a front-end display module used for front-end interaction, a logic control module used for obtaining video data, and a communication interface layer module used for transmitting information; a container layer which is used for managing and scheduling various detection containers; anda hardware layer which is used for providing hardware resources required by the system, and compared with the prior art, the container technology used by the invention solves the problem of consistency of a development environment and a deployment environment, and can greatly improve the development efficiency of a deep learning developer.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Classroom learning behavior analysis method and device for deep learning (DNN)",
+        "code": "CN110659562A",
+        "pub_date": "2020-01-07",
+        "application date": "2019-08-09",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN110659562A",
+        "applicants": [
+            "UNIV HUIZHOU"
+        ],
+        "inventor_name": [
+            "CAI ZHAOQUAN",
+            "CAI YINGXUE",
+            "CHEN JIA",
+            "HU SONG",
+            "HUANG SIBO",
+            "LI HUI",
+            "HU HUI",
+            "CHEN MINGYANG"
+        ],
+        "abstract_text": "The invention discloses a classroom learning behavior analysis method and device for deep learning (DNN). Firstly, a transparency estimation value is recalculated by measuring the credibility of foreground and background pixel pairs to obtain a first transparency mask of a first image; a new picture is generated by superposing gray information, and a second transparency mask of the first image isobtained; a first transparency mask of the first image is further corrected; and finally, a foreground target of a certain frame of image in the video is extracted by using the corrected first transparency mask, a background target in the first image is further extracted, and the facial expression analysis is performed on the extracted foreground target and background target through a deep neuralnetwork. According to the invention, the credibility and gray information of the foreground and background pixel pairs in a certain frame of image in the video can be comprehensively utilized, and a new classroom behavior analysis scheme is provided.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Short video clipping method for air classroom",
+        "code": "CN110569393A",
+        "pub_date": "2019-12-13",
+        "application date": "2019-09-05",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN110569393A",
+        "applicants": [
+            "HANGZHOU MELOT TECH GROUP CO LTD"
+        ],
+        "inventor_name": [
+            "LOU YULIANG",
+            "TANG YUWU"
+        ],
+        "abstract_text": "The invention discloses a short video clipping method for an air classroom. The method specifically comprises the following steps: obtaining a basic data label according to a complete video of an airclassroom, obtaining a question bank label according to a question bank corresponding to the basic data label, marking a question by the question bank by taking a knowledge point as a main line to obtain a knowledge point label, and integrating the basic data label, the question bank label and the knowledge point label to form an automatic label bank; acquiring keywords through voice recognition or video recognition, associating the keywords with a question bank, associating video contents with the question bank by utilizing a deep learning technology after association comparison fails, finally automatically segmenting short videos, and generating corresponding classroom notes; and confirming the content of the short video manually, and correcting the model established through the deep learning technology. The beneficial effects of the invention are that the learning efficiency of students is greatly improved; and the manual segmentation cost is reduced, the manual labeling strength isreduced, and the manual labeling precision is improved.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Cloud home-school system based on Internet of Things",
+        "code": "CN110097485A",
+        "pub_date": "2019-08-06",
+        "application date": "2019-05-13",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN110097485A",
+        "applicants": [
+            "GUANGDONG ZHIXIN INFORMATION TECH CO LTD"
+        ],
+        "inventor_name": [
+            "LIAO XIAOPENG",
+            "CAI LIQUN",
+            "LIN XIAODONG",
+            "YANG SU"
+        ],
+        "abstract_text": "The invention discloses a cloud home-school system based on the Internet of Things. The system comprises a processor, a message pushing module, a psychological health perception module, an activity track perception module, a classroom performance perception module, a physical exercise perception module, an academic quality perception module, a physical health perception module, a disease prevention perception module and a school attendance perception module. An internet of things technology is introduced to improve the data quality of home-school communication and the user experience; based onthe Internet of Things equipment, the performance data of the students in school are automatically generated, filtered, analyzed and summarized through the sub-modules from multiple aspects; feedbackand communication are carried out through the Internet, the teacher workload is reduced, the data accuracy is high, the school informatization degree is improved through the Internet of Things, an intelligent cloud home-school system is constructed, a big data basis is laid for construction of an artificial intelligence campus, and learning and growth of students are facilitated.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Intelligent recognition method for unoccupied seats of classrooms",
+        "code": "CN110059611A",
+        "pub_date": "2019-07-26",
+        "application date": "2019-04-12",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN110059611A",
+        "applicants": [
+            "UNIV CHINA PETROLEUM EAST CHINA"
+        ],
+        "inventor_name": [
+            "SONG HUAJUN",
+            "WANG RUI",
+            "WU YANQI",
+            "BAI XIAOFENG",
+            "REN PENG",
+            "CHEN KE"
+        ],
+        "abstract_text": "The invention discloses an intelligent recognition method for unoccupied seats of classrooms. The method comprises the steps that a camera shoots a classroom seat image; a calculation server performsimage calibration on the shot seat image, coordinates of a left lower corner point, a right lower corner point, a left upper corner point and a right upper corner point of a seat image area are calculated, and coordinates of the four corner points form a main view area; the computing server performs trapezoidal correction on the main view area, and stretches the main view area into a rectangle byusing perspective transformation to obtain a corrected image; and the computing server detects the positions of the persons in the corrected image by using a deep learning model to obtain the coordinates of the central point of each person in the corrected image, and if the coordinates are located in the seat area, the seat is taken, otherwise, not taken. The method has the characteristics of simple structure, accurate identification, high adaptability and the like, and can be widely applied to a integrated management system for university classrooms.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "A artificial intelligence breather that exhausts for classroom",
+        "code": "CN208635280U",
+        "pub_date": "2019-03-22",
+        "application date": "2018-06-07",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN208635280U",
+        "applicants": [
+            "ZHENGZHOU QIONGPEI ELECTRONIC TECH CO LTD"
+        ],
+        "inventor_name": [
+            "TIAN GUOXUE"
+        ],
+        "abstract_text": "The utility model discloses an artificial intelligence breather that exhausts for classroom, including fan, controller and carbon dioxide concentration monitor, the fan has the branch pipe through female union coupling, the lateral duct is crossed the electrical control valve and is connected with for the tuber pipe, one side of giving the tuber pipe is provided with the blast pipe, the distolateral joint of giving the tuber pipe has the filter screen, one side of filter screen is provided with the active carbon filter layer, the muffler has been cup jointed in the outside of active carbon filter layer, fan electric connection has the controller, the controller links to each other with carbon dioxide concentration monitor and temperature sensor electrical property respectively. The utilitymodel discloses a carbon dioxide concentration monitor and temperature sensor monitor the carbon dioxide concentration of religion room air and the temperature in the classroom respectively to give the controller with the signal transmission, the aperture of operation of controller control fan and electrical control valve, it is indoor to profess proper amount air drum, and the air through filterscreen and active carbon filter layer tabla income filters.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Classroom listener head-up rate detection method based on a deep learning network",
+        "code": "CN109492594A",
+        "pub_date": "2019-03-19",
+        "application date": "2018-11-16",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN109492594A",
+        "applicants": [
+            "UNIV XIDIAN"
+        ],
+        "inventor_name": [
+            "SHI GUANGMING",
+            "JIN KAI",
+            "GAO XU",
+            "WANG FANGYU",
+            "XIE XUEMEI"
+        ],
+        "abstract_text": "The invention discloses a classroom listener head-up rate detection method based on a deep learning network. The method comprises the following steps: 1, generating a training set, a verification setand a test set; 2, constructing a deep learning network; 3, training a deep learning network; 4, detecting a score value and position information of the human face; 5, setting a detection state; and 6, obtaining the classroom head-up rate. According to the invention, a deep learning network of two branches is established; the multi-scale face detection by the deep learning network is ensured; training the deep learning network on a big data set by utilizing a random gradient descent method; the method has the advantages that the robustness of the deep learning network to face detection is guaranteed, training can be completed in a short time, the head-up state and the head-down state are effectively distinguished by the aid of the method for setting the detection state, and meanwhile, themethod has good real-time performance for detecting the head-up rate of a classroom listener and can detect real-time video streams.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Smart toy for kittens to catch fish",
+        "code": "CN109011634A",
+        "pub_date": "2018-12-18",
+        "application date": "2018-07-19",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN109011634A",
+        "applicants": [
+            "FOSHAN CITY SANSHUI DISTRICT XIWANG TORCH EDUCATION SCIENCE & TECH CO LTD"
+        ],
+        "inventor_name": [
+            "\u4e0d\u516c\u544a\u53d1\u660e\u4eba"
+        ],
+        "abstract_text": "The invention relates to a smart toy for kittens to catch fish. The smart toy for kittens to catch fish includes an arena, a No.2 robot kitty, a No.1 fish, a No.2 fish, a No.3 fish, a No.4 fish, a No.1 robot kitty remote controller, a No.2 robot kitty remote controller, a No.1 fish basket, a No.2 fish basket, a No.1 robot kitty, and a river boundary. The smart toy for kittens to catch fish has theadvantages that combined with a story of Kitty Goes Fishing in a Chinese primary school textbook, a smart toy is developed; the smart toy is integrated with fun, story and interaction, and enables the idea that working is most glorious\" expressed in the knowledge of the textbook of Kitty Goes Fishing to rise the height of era for China creation, intellectual creation and innovation; children canlearn and understand artificial intelligence knowledge and skills by participating in the fish catching game and entertainment, thus integrating the classroom knowledge with the development of scienceand technology preferably; and the smart toy for kittens to catch fish is a smart new toy which promotes the development of Chinese smart toys in combination with animation and artificial intelligence.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Classroom rapid roll-call and sign-in method adopting face recognition technology based on deep learning",
+        "code": "CN108921038A",
+        "pub_date": "2018-11-30",
+        "application date": "2018-06-07",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN108921038A",
+        "applicants": [
+            "UNIV HOHAI"
+        ],
+        "inventor_name": [
+            "WANG RUIXIN",
+            "LIU DETAN",
+            "WU QIONG",
+            "SHEN ZHENZHONG",
+            "XU LIQUN",
+            "TAO YUNCHENG",
+            "ZHANG HONGWEI",
+            "QIU LITING",
+            "HUO CHENWEI",
+            "LIU CHONG"
+        ],
+        "abstract_text": "The invention discloses a classroom rapid roll-call and sign-in method adopting a face recognition technology based on deep learning, and relates to the technical field of computer vision, in particular to the face recognition technology. The classroom rapid roll-call and sign-in method comprises the steps that a camera at a mobile terminal quickly collects target face videos and generates an IP address; a server is connected with the IP address provided by the mobile terminal under an ubuntu system and generates pictures frame by frame; key points of the face pictures are detected according to an MTCNN algorithm, and a Procrustes analysis method is selected to conduct face aligning; according to the aligned face pictures, a FaceNet algorithm is selected to conduct face vector characterization; and collected face vectors are compared with characteristic vectors of the face pictures in a database, the face picture most similar to a target face picture is found out according to a certainthreshold, and a text file is generated. According to the classroom rapid roll-call and sign-in method, face images are quickly scanned based on a deep learning method, and the face pictures affectedby the factors such as makeup, light and the identification background can be recognized quickly and accurately through the mobile terminal.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Stand detection method based on deep learning",
+        "code": "CN108229352A",
+        "pub_date": "2018-06-29",
+        "application date": "2017-12-21",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN108229352A",
+        "applicants": [
+            "UNIV SHANGHAI JIAOTONG"
+        ],
+        "inventor_name": [
+            "SHAO BENCHI",
+            "JIANG FEI",
+            "SHEN RUIMIN"
+        ],
+        "abstract_text": "The invention relates to a stand detection method based on deep learning. The method comprises the steps that (1) samples are collected, wherein each sample comprises a sample picture and a corresponding annotation file; (2) a stand detection model is established, and the stand detection model is trained based on a convolutional neural network structure and the samples through an R-FCN target detection algorithm, wherein the stand detection model comprises a senior-grade stand detection model and a junior-grade stand detection model; and (3) the trained stand detection model is utilized to perform stand detection on a to-be-detected video. Compared with the prior art, the method has the advantages of being high in full-checking rate and accuracy, suitable for a complicated classroom environment and the like.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Classroom attendance statistics system based on monitoring camera",
+        "code": "CN108109220A",
+        "pub_date": "2018-06-01",
+        "application date": "2017-12-29",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN108109220A",
+        "applicants": [
+            "GUIZHOU INST TECH"
+        ],
+        "inventor_name": [
+            "ZENG CHENGBIN"
+        ],
+        "abstract_text": "The invention discloses a classroom attendance statistics system based on a monitoring camera, and relates to the technical field of attendance statistics systems. The attendance statistics system comprises the following process of S101, firstly, using a machine learning method to learn a human upper body model; S102, using the human upper body model in S101 to identify images in classroom monitoring videos, so as to count the number of students in a classroom; S103, comparing with the supposed number of students in each classroom in a school educational administration system, so as to count the number of latecomers, number of absent students, and attendance rate. The attendance statistics system has the advantages that the system can be applied to all classroom environments by using justone pre-learned human upper body model, so that the difficulty in implementing of the system is greatly decreased; the adaptive capacity is better; the number of latecomers, number of absent students,and attendance rate can be counted.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "Detection method and system for number of people in classroom based on machine vision and binocular collaborative technology",
+        "code": "CN106897698A",
+        "pub_date": "2017-06-27",
+        "application date": "2017-02-24",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DCN106897698A",
+        "applicants": [
+            "CHANGZHOU CHANGGONG ELECTRONIC TECH CO LTD",
+            "UNIV HOHAI CHANGZHOU"
+        ],
+        "inventor_name": [
+            "LI XINHONG",
+            "LI QINGWU",
+            "JI MEIPING",
+            "SHEN MEIYUN",
+            "XING JUN",
+            "ZHOU LIANGJI"
+        ],
+        "abstract_text": "The invention discloses a detection method and system for the number of people in a classroom based on machine vision and a binocular collaborative technology and belongs to the field of image processing technology. According to the method, first, a multi-feature fusion improvement machine learning model for colors, morphology, outlines, etc. is utilized to detect and judge human heads, and then a dead angle area in the classroom is eliminated and avoided in combination with binocular collaborative work. The method is high in detection accuracy, good in universality and high in real-time performance. Through the detection method and system, the number of people in the classroom can be effectively monitored, crowd location, people density and other information are reflected according to a machine learning result, and an important means and method is provided for detection of the number of people in the classroom.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    },
+    {
+        "title": "METHOD AND SYSTEM OF GENERATING RELEVANT MARKETING OPPORTUNITIES BY FACILITATING THE COMMUNICATION OF FEEDBACK IN SMALL AND LARGE GROUP SETTINGS",
+        "code": "US2015193792A1",
+        "pub_date": "2015-07-09",
+        "application date": "2014-01-07",
+        "link": "https://worldwide.espacenet.com/patent/search?q=pn%3DUS2015193792A1",
+        "applicants": [
+            "MAGDON-ISMAIL MALIK [US]",
+            "PATEL PARAG [US]",
+            "WARRIER SURESH [US]"
+        ],
+        "inventor_name": [
+            "PATEL PARAG [US]",
+            "WARRIER SURESH [US]",
+            "MAGDON-ISMAIL MALIK [US]"
+        ],
+        "abstract_text": "A Method And System Of Generating Relevant Marketing Opportunities By Facilitating The Communication Of Feedback In Small And Large Group Settings is provided. With mobile and social networking technologies evolving and the growing need to receive virtually instant feedback from one's social and networking colleagues, the invention provides the ability for a user to send a photograph, video, event information or other form of group message to one or more pre-selected groups, each consisting of two or more members. These groups may be large (e.g. a stadium filled with people) or small (a small classroom). Each member may receive the message through almost instant communications technology and provide a response, which one or more members of the one or more pre-selected groups may view in an engaging results format and continue a group discussion, if desired. In addition, members are presented with native advertisements as part of the user experience and may engage the services of virtual artificial intelligence members in ways beneficial to the group interactions.",
+        "source": "OPS",
+        "assignee_name_orig": [],
+        "assignee_name_current": [],
+        "priority_date": "2020-06-09",
+        "grant_date": "",
+        "filing_date": "",
+        "forward_cite_no_family": [],
+        "forward_cite_yes_family": [],
+        "backward_cite_no_family": [],
+        "backward_cite_yes_family": []
+    }
+]

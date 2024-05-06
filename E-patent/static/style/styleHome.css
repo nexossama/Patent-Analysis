@@ -419,7 +419,7 @@ body {
 }
 
 .pagination li a {
-    color: black;
+    color: #007bff;
     float: left;
     padding: 8px 16px;
     text-decoration: none;
@@ -428,7 +428,7 @@ body {
 }
 
 .pagination li a.active {
-	background-color: #4CAF50;
+	background-color: #007bff;
 	color: white;
 }
 

@@ -348,17 +348,18 @@
 								{% endif %}
 								
 								{% for page_num in range(1, total_pages+1) %}
-								<li>
-									<a href="{{ url_for('search_patents', page=page_num, query=query) }}">
-										{{ page_num }}
-									</a>
-								</li>
+									<li>
+										{% if page == page_num%}
+											<a href="{{ url_for('search_patents', page=page_num, query=query) }}" class="active">{{ page_num }}</a>
+										{% else %}
+											<a href="{{ url_for('search_patents', page=page_num, query=query) }}">{{ page_num }}</a>
+										{% endif %}
+									</li>
 								{% endfor %}
 								
 								{% if page < total_pages %}
 									<li>
-										<a href="{{ url_for('search_patents', page=page+1, query=query) }}" class="far-right-item">
-											&raquo;</a>
+										<a href="{{ url_for('search_patents', page=page+1, query=query) }}" class="far-right-item">&raquo;</a>
 									</li>
 								{% else %}
 									<li>

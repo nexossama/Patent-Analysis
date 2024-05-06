@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- My CSS -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='style/styleHome.css') }}">
+	<!-- Additional styles -->
+	<style>
+		.add-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        font-size: 20px;
+        color: green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .add-btn:hover {
+        background-color: lightgreen;
+    }
+
+    .add-btn:hover i {
+        color: white;
+    }
+	    .delete-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        font-size: 20px;
+        color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px; /* Adjust width as needed */
+        height: 30px; /* Adjust height as needed */
+    }
+
+    .delete-btn:hover {
+        background-color: lightcoral; /* Change background color on hover */
+    }
+
+    .delete-btn:hover i {
+        color: white; /* Change icon color on hover */
+    }
+
+
+		.btn {
+			border: none;
+			color: white;
+			padding: 5px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			border-radius: 5px;
+		}
+
+		.accBtn {
+			background-color: #008CBA;
+		}
+
+		.rejBtn {
+			background-color: #f44336;
+		}
+
+		.encBtn {
+			background-color: grey;
+		}
+
+		.filterOkBtn {
+			background-color: #0080FF;
+		}
+
+		.filterAnnBtn {
+			background-color: grey;
+		}
+
+		#limiteTable {
+			border-collapse: collapse;
+		}
+	</style>
+	<style>
+		.tooltip {
+		position: relative;
+		display: inline-block;
+		}
+
+		.tooltip .tooltiptext {
+		visibility: hidden;
+		width: 190px;
+		background-color: black;
+		color: #fff;
+		text-align: center;
+		border-radius: 6px;
+		padding: 5px 0;
+		
+		/* Position the tooltip */
+		position: absolute;
+		z-index: 1;
+		top: -5px;
+  		right: 105%;
+		}
+
+		.tooltip:hover .tooltiptext {
+		visibility: visible;
+		}
+	</style>
+	<style>
+		/* The Modal (background) */
+		.modal {
+		display: none; /* Hidden by default */
+		position: fixed; /* Stay in place */
+		z-index: 1; /* Sit on top */
+		padding-top: 100px; /* Location of the box */
+		left: 0;
+		top: 0;
+		width: 100%; /* Full width */
+		height: 100%; /* Full height */
+		overflow: auto; /* Enable scroll if needed */
+		background-color: rgb(0,0,0); /* Fallback color */
+		background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+		}
+
+		/* Modal Content */
+		.modal-content {
+		background-color: #fefefe;
+		margin: auto;
+		padding: 20px;
+		border: 1px solid #888;
+		width: 50%;
+		}
+
+		/* The Close Button */
+		.close {
+		color: #aaaaaa;
+		float: right;
+		font-size: 28px;
+		font-weight: bold;
+		}
+
+		.close:hover,
+		.close:focus {
+		color: #000;
+		text-decoration: none;
+		cursor: pointer;
+		}
+		#filterBtn {
+			border-radius: 50px;
+			border-width : 0px;
+		}
+
+		.hidden {
+            display: none;
+        }
+	</style>
+	<style>
+		ol,
+		ul {
+		  padding-left: 0rem !important;
+		}
+	  
+		a {
+		  text-decoration: none !important;
+		}
+	  </style>
+	<link rel="icon" href="{{ url_for('static', filename='media/fichier.png') }}" type="image/x-icon">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+	<title>E-Patente</title>
+</head>
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<i class='bx bxs-file'></i>
+			<span class="text">E-Patente</span>
+		</a>
+		<ul class="side-menu top">
+			<li class="active">
+				<a href="#">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Home</span>
+				</a>
+			</li>
+			<li>
+				<a href="/insight">
+					<i class='bx bxs-shopping-bag-alt' ></i>
+					<span class="text">Insights</span>
+				</a>
+			</li>
+
+		</ul>
+		<ul class="side-menu">
+
+			<li>
+				<a href="/logout" class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+
+            <form action=""></form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+
+			<a href="#" class="profile">
+				<img src="{{ url_for('static', filename='media/user.png') }}">
+			</a>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+
+
+			<div class="head-title">
+				<div class="left">
+					<h1>Hello {{ session['username'] }}</h1>
+				</div>
+				
+			</div>
+
+			<ul class="box-info">
+				<li>
+					<i class='bx bxs-calendar-check' ></i>
+					<span class="text">
+						<h3>{{ all_patents|length }}</h3>
+						<p>Total Patents</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-group' ></i>
+					<span class="text">
+						<h3>{{ selected_patents|length }}</h3>
+						<p>Total Seleted Patents</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-group' ></i>
+					<span class="text">
+						<h3>{{ selected_patents|length }}</h3>
+						<p>Total Seleted Patents</p>
+					</span>
+				</li>
+			</ul>
+
+			<ul class="box-info">
+				<li>
+					<i class='bx bxs-calendar-check' ></i>
+					<span class="text">
+						<h3>{{ all_patents|length }}</h3>
+						<p>Total Patents</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-group' ></i>
+					<span class="text">
+						<h3>{{ selected_patents|length }}</h3>
+						<p>Total Seleted Patents</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-group' ></i>
+					<span class="text">
+						<h3>{{ selected_patents|length }}</h3>
+						<p>Total Seleted Patents</p>
+					</span>
+				</li>
+			</ul>
+
+
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT -->
+
+	<!-- SCRIPT -->
+
+
+
+
+
+
+	<script src="{{ url_for('static', filename='js/scriptHome.js') }}"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+	$(document).ready(function() {
+		$('.add-btn').click(function() {
+			var recordId = $(this).data('record-id');
+			$.ajax({
+				type: "POST",
+				url: "/add_to_cart",
+				data: JSON.stringify({ record_id: recordId }),
+				contentType: "application/json; charset=utf-8",
+				dataType: "json",
+				success: function(response) {
+					alert(response.message);
+					location.reload();
+
+				},
+				error: function(xhr, status, error) {
+					console.error(xhr.responseText);
+				}
+			});
+		});
+	});
+	</script>
+
+
+
+
+	<script>
+		$(document).ready(function() {
+		$('.delete-btn').click(function() {
+			var recordId = $(this).data('record-id');
+			$.ajax({
+				type: "POST",
+				url: "/delete_patent",
+				data: JSON.stringify({ record_id: recordId }),
+				contentType: "application/json; charset=utf-8",
+				dataType: "json",
+				success: function(response) {
+					alert(response.message);
+					location.reload();
+
+				},
+				error: function(xhr, status, error) {
+					console.error(xhr.responseText);
+				}
+			});
+		});
+	});
+</script>
+
+
+
+
+
+
+	<script>
+		// Get the modal
+		var modal = document.getElementById("myModal");
+
+		// Get the button that opens the modal
+		var btn = document.getElementById("filterModalBtn");
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks the button, open the modal 
+		if (btn){
+			btn.onclick = function() {
+				modal.style.display = "block";
+			}
+			
+		}
+		if(span){
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() {
+			modal.style.display = "none";
+		}
+		}
+
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
+		}
+	</script>
+
+		<script>
+        var selectYear = document.getElementById("year");
+        var currentYear = new Date().getFullYear();
+
+        for (var i = currentYear; i >= currentYear - 20; i--) {
+            var option = document.createElement("option");
+            option.text = i;
+            option.value = i;
+            selectYear.add(option);
+        }
+
+
+        var patentOffices = [
+            "WO", "US", "EP", "JP", "KR", "CN", "AE", "AG", "AL", "AM", "AO", "AP", "AR", "AT", "AU", "AW", "AZ", "BA", "BB",
+            "BD", "BE", "BF", "BG", "BH", "BJ", "BN", "BO", "BR", "BW", "BX", "BY", "BZ", "CA", "CF", "CG", "CH", "CI", "CL",
+            "CM", "CO", "CR", "CS", "CU", "CY", "CZ", "DD", "DE", "DJ", "DK", "DM", "DO", "DZ", "EA", "EC", "EE", "EG", "EM",
+            "ES", "FI", "FR", "GA", "GB", "GC", "GD", "GE", "GH", "GM", "GN", "GQ", "GR", "GT", "GW", "HK", "HN", "HR", "HU",
+            "IB", "ID", "IE", "IL", "IN", "IR", "IS", "IT", "JO", "KE", "KG", "KH", "KM", "KN", "KP", "KW", "KZ", "LA", "LC",
+            "LI", "LK", "LR", "LS", "LT", "LU", "LV", "LY", "MA", "MC", "MD", "ME", "MG", "MK", "ML", "MN", "MO", "MR", "MT",
+            "MW", "MX", "MY", "MZ", "NA", "NE", "NG", "NI", "NL", "NO", "NZ", "OA", "OM", "PA", "PE", "PG", "PH", "PL", "PT",
+            "PY", "QA", "RO", "RS", "RU", "RW", "SA", "SC", "SD", "SE", "SG", "SI", "SK", "SL", "SM", "SN", "ST", "SU", "SV",
+            "SY", "SZ", "TD", "TG", "TH", "TJ", "TM", "TN", "TR", "TT", "TW", "TZ", "UA", "UG", "UY", "UZ", "VC", "VE", "VN",
+            "YU", "ZA", "ZM", "ZW"
+        ];
+
+        // Function to populate the select element
+        function populatePatentOffices() {
+            var selectElement = document.getElementById("patent_office");
+
+            // Loop through the patent offices array and create an option for each
+            for (var i = 0; i < patentOffices.length; i++) {
+                var option = document.createElement("option");
+                option.text = patentOffices[i];
+                option.value = patentOffices[i];
+                selectElement.appendChild(option);
+            }
+        }
+
+        populatePatentOffices();
+
+
+    </script>
+
+
+
+</body>
+</html>

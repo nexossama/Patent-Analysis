@@ -336,15 +336,45 @@
 							<div class="keyword">
 								<span>{{ query }}</span>
 							</div>
-							<nav class='pagination'>	
+							<div class='pagination'>
 								{% if page > 1 %}
+									<li>
+										<a href="{{ url_for('search_patents', page=page-1, query=query) }}" class="far-left-item">&laquo;</a>
+									</li>
+								{% else %}
+									<li>
+										<a href="{{ url_for('search_patents', page=page, query=query) }}" class="far-left-item">&laquo;</a>
+									</li>
+								{% endif %}
+								
+								{% for page_num in range(1, total_pages+1) %}
+								<li>
+									<a href="{{ url_for('search_patents', page=page_num, query=query) }}">
+										{{ page_num }}
+									</a>
+								</li>
+								{% endfor %}
+								
+								{% if page < total_pages %}
+									<li>
+										<a href="{{ url_for('search_patents', page=page+1, query=query) }}" class="far-right-item">
+											&raquo;</a>
+									</li>
+								{% else %}
+									<li>
+										<a href="{{ url_for('search_patents', page=page, query=query) }}" class="far-right-item">&raquo;</a>
+									</li>
+								{% endif %}
+
+								<!-- old pagination -->
+								<!-- {% if page > 1 %}
 									<a href="{{ url_for('search_patents', page=page-1, query=query) }}">Previous</a>
 								{% endif %}
 									<span>Page {{ page }} of {{ total_pages }}</span>
 								{% if page < total_pages %}
 									<a href="{{ url_for('search_patents', page=page+1, query=query) }}">Next</a>
-								{% endif %}
-							</nav>
+								{% endif %} -->
+								</div>
 						</div>
 					{% endif %}
 				</div>
@@ -361,11 +391,10 @@
 							</tr>
 						</thead>
 						<tbody>
-							{% for patent in selected_patents %}
+							{% for patent in patents.selected_patents %}
 							<tr>
 								<td>{{ patent.code }}</td>
 								<td><button class="delete-btn" data-record-id="{{ patent._id }}"><i class='bx bx-trash'></i></button></td>
-
 							</tr>
 							{% endfor %}
 						</tbody>

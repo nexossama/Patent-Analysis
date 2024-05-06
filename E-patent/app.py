@@ -53,7 +53,7 @@ def home():
 
         return render_template('home.html', patents=[], selected_patents=selected_patents)
     else:
-            return render_template('login.html')
+        return render_template('login.html')
 
 
 @app.route('/search_patents')
@@ -116,8 +116,6 @@ def delete_patent():
             return jsonify({'error': 'User not found'}), 404
     else:
         return jsonify({'error': 'User not logged in'}), 401
-
-
 
 
 @app.route('/patent/<patent_id>')

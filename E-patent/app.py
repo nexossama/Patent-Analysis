@@ -57,7 +57,8 @@ def home():
         user_email = session['email']
         user = users_collection.find_one({'email': user_email})
 
-        selected_patents = fetch_panier(user)
+        # selected_patents = fetch_panier(user)
+        selected_patents = []
 
         return render_template('home.html', patents=[], selected_patents=selected_patents)
     else:

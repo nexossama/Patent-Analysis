@@ -175,6 +175,7 @@
 	  </style>
 	<link rel="icon" href="{{ url_for('static', filename='media/fichier.png') }}" type="image/x-icon">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	<title>E-Patente</title>
 </head>
 <body>
@@ -268,24 +269,49 @@
 
 			<ul class="box-info">
 				<li>
-					<i class='bx bxs-calendar-check' ></i>
-					<span class="text">
-						<h3>{{ all_patents|length }}</h3>
-						<p>Total Patents</p>
+					<i class='bx bxs-chart bx-tada-hover'></i>
+					<span class='text'>
+						<h3>Statistiques</h3>
+						<canvas id='mychart'></canvas>
 					</span>
 				</li>
 				<li>
-					<i class='bx bxs-group' ></i>
-					<span class="text">
-						<h3>{{ selected_patents|length }}</h3>
-						<p>Total Seleted Patents</p>
+					<i class='bx bxs-chart bx-tada-hover'></i>
+					<span class='text'>
+						<h3>Statistiques</h3>
+						<canvas id='mychart2'></canvas>
+					</span>
+				</li>
+			</ul>
+			<ul class="box-info">
+				<li>
+					<i class='bx bxs-chart bx-tada-hover'></i>
+					<span class='text'>
+						<h3>Statistiques</h3>
+						<canvas id='mychart3'></canvas>
 					</span>
 				</li>
 				<li>
-					<i class='bx bxs-group' ></i>
-					<span class="text">
-						<h3>{{ selected_patents|length }}</h3>
-						<p>Total Seleted Patents</p>
+					<i class='bx bxs-chart bx-tada-hover'></i>
+					<span class='text'>
+						<h3>Statistiques</h3>
+						<canvas id='mychart4'></canvas>
+					</span>
+				</li>
+			</ul>
+			<ul class="box-info">
+				<li>
+					<i class='bx bxs-chart bx-tada-hover'></i>
+					<span class='text'>
+						<h3>Statistiques</h3>
+						<canvas id='mychart5'></canvas>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-chart bx-tada-hover'></i>
+					<span class='text'>
+						<h3>Statistiques</h3>
+						<canvas id='mychart6'></canvas>
 					</span>
 				</li>
 			</ul>
@@ -304,23 +330,6 @@
 
 
 	<script src="{{ url_for('static', filename='js/scriptHome.js') }}"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -348,9 +357,6 @@
 	});
 	</script>
 
-
-
-
 	<script>
 		$(document).ready(function() {
 		$('.delete-btn').click(function() {
@@ -373,9 +379,6 @@
 		});
 	});
 </script>
-
-
-
 
 
 
@@ -412,7 +415,7 @@
 		}
 	</script>
 
-		<script>
+	<script>
         var selectYear = document.getElementById("year");
         var currentYear = new Date().getFullYear();
 
@@ -454,6 +457,200 @@
 
 
     </script>
+
+	<!-- Chart.js -->
+	<script>
+	document.addEventListener("DOMContentLoaded", function() {
+  // Sample data
+  var xValues = [1, 2, 3, 4, 5];
+  var yValues = [10, 20, 15, 25, 30];
+
+  // Prepare data for Chart.js
+  var chartData = {
+    labels: xValues,
+    datasets: [{
+      label: 'Sample Data',
+      data: yValues,
+      backgroundColor: 'rgba(255, 99, 132, 0.2)',
+      borderColor: 'rgba(255, 99, 132, 1)',
+      borderWidth: 1
+    }]
+  };
+
+  // Set options for the chart
+  var options = {
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true
+        }
+      }]
+    }
+  };
+
+  // Create the chart
+  var ctx = document.getElementById('mychart').getContext('2d');
+  var myChart = new Chart(ctx, {
+    type: 'line',
+    data: chartData,
+    options: options
+  });
+});
+
+	</script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+		  // Sample data (replace with your categorical data and their counts)
+		  var labels = ['Category 1', 'Category 2', 'Category 3'];
+		  var data = [30, 50, 20];
+		
+		  // Prepare data for Chart.js
+		  var chartData = {
+			labels: labels,
+			datasets: [{
+			  data: data,
+			  backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+			  hoverBackgroundColor: ['#FF477E', '#2C97F0', '#FFD32E']
+			}]
+		  };
+		
+		  // Create the chart
+		  var ctx = document.getElementById('mychart2').getContext('2d');
+		  var myChart = new Chart(ctx, {
+			type: 'pie',
+			data: chartData
+		  });
+		});
+	</script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+		  // Sample data (replace with your data for each category)
+		  var labels = ['Category 1', 'Category 2', 'Category 3'];
+		  var data1 = [15, 28, 12];
+		  var data2 = [20, 15, 30];
+		
+		  // Prepare data for Chart.js
+		  var chartData = {
+			labels: labels,
+			datasets: [{
+			  label: 'Dataset 1',
+			  data: data1,
+			  backgroundColor: '#FF6384',
+			  borderColor: '#FF6384',
+			  borderWidth: 1
+			}, {
+			  label: 'Dataset 2',
+			  data: data2,
+			  backgroundColor: '#36A2EB',
+			  borderColor: '#36A2EB',
+			  borderWidth: 1
+			}]
+		  };
+		
+		  // Create the chart
+		  var ctx = document.getElementById('mychart3').getContext('2d');
+		  var myChart = new Chart(ctx, {
+			type: 'bar',
+			data: chartData,
+			options: {
+			  scales: {
+				yAxes: [{
+				  ticks: {
+					beginAtZero: true
+				  }
+				}]
+			  }
+			}
+		  });
+		});
+	</script>
+	<script>
+	document.addEventListener("DOMContentLoaded", function() {
+	  // Sample data (replace with your data for each category and its value)
+	  var labels = ['Category 1', 'Category 2', 'Category 3', 'Category 4'];
+	  var data = [50, 30, 70, 20];
+	
+	  // Prepare data for Chart.js
+	  var chartData = {
+		labels: labels,
+		datasets: [{
+		  label: 'Data',
+		  data: data,
+		  backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#FFEA5A']
+		}]
+	  };
+	
+	  // Create the chart
+	  var ctx = document.getElementById('mychart4').getContext('2d');
+	  var myChart = new Chart(ctx, {
+		type: 'polarArea',
+		data: chartData
+	  });
+	});
+	</script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+		  // Sample data (replace with your data for each category and its value)
+		  var labels = ['Category 1', 'Category 2', 'Category 3'];
+		  var data = [30, 50, 20];
+		
+		  // Prepare data for Chart.js
+		  var chartData = {
+			labels: labels,
+			datasets: [{
+			  data: data,
+			  backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+			  hoverBackgroundColor: ['#FF477E', '#2C97F0', '#FFD32E']
+			}]
+		  };
+		
+		  // Create the chart
+		  var ctx = document.getElementById('mychart5').getContext('2d');
+		  var myChart = new Chart(ctx, {
+			type: 'doughnut',
+			data: chartData
+		  });
+		});
+	</script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+		  // Sample data (replace with your data for x, y, and radius)
+		  var data = [{
+			x: 2,
+			y: 7,
+			r: 10
+		  }, {
+			x: 5,
+			y: 4,
+			r: 15
+		  }, {
+			x: 8,
+			y: 2,
+			r: 8
+		  }];
+		
+		  // Prepare data for Chart.js
+		  var chartData = {
+			datasets: [{
+			  label: 'Data Points',
+			  data: data,
+			  backgroundColor: 'rgba(255, 99, 132, 0.2)',
+			  borderColor: 'rgba(255, 99, 132, 1)',
+			  pointBorderColor: '#36A2EB',
+			  pointBackgroundColor: '#36A2EB',
+			  pointBorderWidth: 1
+			}]
+		  };
+		
+		  // Create the chart
+		  var ctx = document.getElementById('mychart6').getContext('2d');
+		  var myChart = new Chart(ctx, {
+			type: 'bubble',
+			data: chartData
+		  });
+		});
+	</script>
+	<!-- ChartJs -->
 
 
 

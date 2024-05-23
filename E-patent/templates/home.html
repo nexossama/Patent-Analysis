@@ -246,45 +246,39 @@
 			
 			<!-- The Modal -->
 			<div id="myModal" class="modal">
-				<div class="modal-content">
+				<form method="POST" action="/filter" class="modal-content">
 				<span class="close">&times;</span>
 				<p>Choose your filter: </p> <br>
-				<h3>SEARCH TERMS :</h3>
+				<h3 style="color: #0080FF;">SEARCH TERMS :</h3>
 				<h4>
-				<input value="Title" class="filtre status" type="checkbox"> Title
-				<input value="Abstract" class="filtre status" type="checkbox"> Abstract
-				<input value="Both" class="filtre status" type="checkbox"> Both
+				<input name="search_terms" value="Title" class="filtre status" type="checkbox"> Title
+				<input name="search_terms" value="Abstract" class="filtre status" type="checkbox"> Abstract
 				</h4>
-				<h4><label for="year">SELECT A YEAR :</label> </h4>
+				<h3 style="color: #0080FF;"><label for="year">START YEAR :</label> </h3>
 
-					<select id="year">
-					</select>
+				<select name="start_year" id="syear">
+				</select>
+				<h3 style="color: #0080FF;"><label for="year">END YEAR :</label> </h3>
 
-				<h3>SEARCH TERMS :</h3>
+				<select name="end_year" id="eyear">
+				</select>
+
+				<h3 style="color: #0080FF;">Source :</h3>
 				<h4>
-				<input value="Inventor" class="filtre status" type="checkbox"> Inventor
-				<input value="Assignee" class="filtre status" type="checkbox"> Assignee
-				<input value="Both" class="filtre status" type="checkbox"> Both
-				</h4>
-
-				<h3>Source :</h3>
-				<h4>
-				<input value="google_patent" class="filtre status" type="checkbox"> Google Patent
-				<input value="epo" class="filtre status" type="checkbox"> EPO
-				<input value="uspto" class="filtre status" type="checkbox"> USPTO
-				<input value="all" class="filtre status" type="checkbox"> All
-
+				<input name="source" value="google_patent" class="filtre status" type="checkbox"> Google Patent
+				<input name="source" value="epo" class="filtre status" type="checkbox"> EPO
+				<input name="source" value="uspto" class="filtre status" type="checkbox"> USPTO
 				</h4>
 
 
-				<h4><label for="year">Patent Office :</label> </h4>
-				<select id="patent_office">
+				<h3 style="color: #0080FF;"><label for="year">Patent Office :</label> </h3>
+				<select name="patent_office" id="patent_office">
 				</select>
 
 				<br>
 
 				<button id="filterOkBtn" class="btn filterOkBtn">Filter</button>
-				</div>
+			</form>
 			</div>
 
 			<div class="head-title">
@@ -534,7 +528,17 @@
 	</script>
 
 		<script>
-        var selectYear = document.getElementById("year");
+        var selectYear = document.getElementById("syear");
+        var currentYear = new Date().getFullYear();
+
+        for (var i = currentYear; i >= currentYear - 20; i--) {
+            var option = document.createElement("option");
+            option.text = i;
+            option.value = i;
+            selectYear.add(option);
+        }
+
+		var selectYear = document.getElementById("eyear");
         var currentYear = new Date().getFullYear();
 
         for (var i = currentYear; i >= currentYear - 20; i--) {

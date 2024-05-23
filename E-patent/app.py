@@ -189,6 +189,48 @@ def logout():
 def about():
     return render_template('about.html')
 
+@app.route('/filter', methods=['GET', 'POST'])
+def filter():
+    if request.method == 'POST':
+        # Extracting selected filters
+        search_terms = request.form.getlist('search_terms')
+        start_year = request.form.get('start_year')
+        end_year = request.form.get('end_year')
+        source = request.form.getlist('source')
+        patent_office = request.form.get('patent_office')
+
+        print(search_terms)
+        print(source)
+        
+        # Building the SQL query
+        query = "SELECT * FROM patents WHERE 1=1"
+
+        # Adding serach_terms filter
+        if search_terms:
+            search_terms = "','".join(search_terms)
+            query += f" AND source IN ('{search_terms}')"
+        
+        # Adding year range filter
+        if start_year:
+            query += f" AND year >= {start_year}"
+        if end_year:
+            query += f" AND year <= {end_year}"
+        
+        # Adding source filter
+        if source:
+            sources = "','".join(source)
+            query += f" AND source IN ('{sources}')"
+        
+        # Adding patent office filter
+        if patent_office:
+            query += f" AND patent_office = '{patent_office}'"
+        
+        # Execute the query (this part is a placeholder, adjust based on your database setup)
+        # results = execute_query(query)
+        
+        # Return the query for demonstration purposes
+        return query
+
 
 if __name__ == '__main__':
     app.run(debug=True)

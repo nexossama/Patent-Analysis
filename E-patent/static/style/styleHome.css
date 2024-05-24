@@ -474,6 +474,7 @@ body {
 	justify-content: space-between;
 }
 /* End Table Footer Styling */
+
 #content main .table-data {
 	display: flex;
 	flex-wrap: wrap;

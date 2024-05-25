@@ -35,15 +35,31 @@ JOIN "DimPatent" as dp ON dp.id_title=dt.id_title
 GROUP BY code_patent, id_inventor, id_assignee);
 ```
 
-## 2D Analysis
+##### Top 5 Keywords of Selected Patents
 
 ```sql
--- Retrieve employees with high salaries
-SELECT * FROM employees
-WHERE salary > 50000;
+-- Retrieve top 5 keywords of the selected patents
+SELECT DISTINCT keyword, Count(*) FROM "DimKeyword" as dk
+JOIN "FactKeyword" as fk ON fk.id_keyword=dk.id_keyword
+JOIN "DimTitle" as dt ON dt.id_title=fk.id_title
+JOIN "DimPatent" as dp ON dp.id_title=dt.id_title
+-- WHERE code_patent IN ('', '', '')
+GROUP BY keyword, id_inventor, id_assignee
+ORDER BY count DESC LIMIT 5;
 ```
 
-## 3D Analysis
+##### Countries Frequency Of The Selected Patents
+
+```sql
+-- Retrieve Countries Frequency Of The Selected Patents
+SELECT country_name, Count(*) total FROM "DimCountry" as dc
+JOIN "DimPatent" as dp ON dp.id_country=dc.id_country
+-- WHERE code_patent IN ('', '', '')
+GROUP BY country_name;
+```
+
+
+## 2D Analysis
 
 ```sql
 -- Retrieve employees with high salaries

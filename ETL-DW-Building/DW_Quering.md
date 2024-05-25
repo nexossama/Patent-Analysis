@@ -6,9 +6,9 @@
 -- Retrieve count of (seleceted) patents inventors
 SELECT SUM(count)
 FROM
-(SELECT DISTINCT code_patent, Count(*) FROM "FactGrant"
+(SELECT DISTINCT code_patent, Count(*) FROM "FactPublication"
 -- WHERE code_patent IN ('', '', '')
-GROUP BY code_patent, id_time, id_assignee
+GROUP BY code_patent, id_time 
 ORDER BY count DESC)
 ```
 

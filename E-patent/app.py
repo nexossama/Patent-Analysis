@@ -46,12 +46,6 @@ def fetch_panier(user):
     return user.get('patents', [])
 
 
-previous = 1
-page = 2
-nbrPages = 5
-next = 3
-rowNbr = 10
-
 @app.route('/')
 def home():
     if 'email' in session:
@@ -77,18 +71,29 @@ def insight():
         return render_template('login.html')    
 
 
-
-
 @app.route('/search_patents')
 def search_patents():
     user_email = session['email']
     user = users_collection.find_one({'email': user_email})
-    query = request.args.get('query', '')
-    search_results = search_title(query)
     selected_patents = fetch_panier(user)
-    return render_template('home.html', all_patents=search_results,selected_patents=selected_patents)
+    
+    per_page = 5
+    page = request.args.get('page', 1, type=int)
+    offset = (page - 1) * per_page
+    
+    query = request.args.get('query', '')
+    patent_items = search_title(query, offset, per_page)
+    total_patents_count = fetch_total_patents_count(query)
+    total_pages = (total_patents_count + per_page - 1) // per_page
+    
+    patents = {
+        'patent_items': patent_items,
+        'selected_patents': selected_patents,
+        'total_patents_count': total_patents_count
+    }
 
-
+    return render_template('home.html', patents=patents, page=page,
+                            total_pages=total_pages, query=query)
 
 
 @app.route('/add_to_cart', methods=['POST'])

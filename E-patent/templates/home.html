@@ -378,16 +378,7 @@
 										<a href="{{ url_for('search_patents', page=page, query=query) }}" class="far-right-item">&raquo;</a>
 									</li>
 								{% endif %}
-
-								<!-- old pagination -->
-								<!-- {% if page > 1 %}
-									<a href="{{ url_for('search_patents', page=page-1, query=query) }}">Previous</a>
-								{% endif %}
-									<span>Page {{ page }} of {{ total_pages }}</span>
-								{% if page < total_pages %}
-									<a href="{{ url_for('search_patents', page=page+1, query=query) }}">Next</a>
-								{% endif %} -->
-								</div>
+							</div>
 						</div>
 					{% endif %}
 				</div>

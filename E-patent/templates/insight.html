@@ -188,13 +188,13 @@
 			<span class="text">E-Patente</span>
 		</a>
 		<ul class="side-menu top">
-			<li class="active">
+			<li>
 				<a href="/">
 					<i class='bx bxs-dashboard' ></i>
 					<span class="text">Home</span>
 				</a>
 			</li>
-			<li>
+			<li class="active">
 				<a href="/insight">
 					<i class='bx bxs-shopping-bag-alt' ></i>
 					<span class="text">Insights</span>
@@ -413,13 +413,15 @@
 	<script>
         var selectYear = document.getElementById("year");
         var currentYear = new Date().getFullYear();
-
+		
+		if (selectYear) {
         for (var i = currentYear; i >= currentYear - 20; i--) {
             var option = document.createElement("option");
             option.text = i;
             option.value = i;
             selectYear.add(option);
         }
+		}
 
 
         var patentOffices = [
@@ -435,10 +437,9 @@
             "YU", "ZA", "ZM", "ZW"
         ];
 
+		var selectElement = document.getElementById("patent_office");
         // Function to populate the select element
         function populatePatentOffices() {
-            var selectElement = document.getElementById("patent_office");
-
             // Loop through the patent offices array and create an option for each
             for (var i = 0; i < patentOffices.length; i++) {
                 var option = document.createElement("option");
@@ -447,8 +448,7 @@
                 selectElement.appendChild(option);
             }
         }
-
-        populatePatentOffices();
+		if (selectElement){populatePatentOffices();}
 
 
     </script>

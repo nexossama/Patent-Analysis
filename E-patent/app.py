@@ -35,14 +35,15 @@ def fetch_total_patents_count(keyword):
 
 # todo
 def fetch_panier(user):
-    all_patents = fetch_patents()
+    # all_patents = fetch_patents()
 
-    selected_patents = []
-    for patent in all_patents:
-        for patent_id in user.get('patents', []):
-            if str(patent['_id']) == str(patent_id):
-                selected_patents.append(patent)
-    return selected_patents
+    # selected_patents = []
+    # for patent in all_patents:
+    #     for patent_id in user.get('patents', []):
+    #         if str(patent['_id']) == str(patent_id):
+    #             selected_patents.append(patent)
+    # return selected_patents
+    return user.get('patents', [])
 
 
 previous = 1
@@ -161,7 +162,7 @@ def register():
             return 'That email already exists!'
 
         hash_pass = generate_password_hash(password)
-        users_collection.insert_one({'username':username ,'email': email, 'password': hash_pass})
+        users_collection.insert_one({'username':username ,'email': email, 'password': hash_pass, "patents": []})
         session['email'] = email
         session['username']=username
         return redirect('/')
@@ -188,7 +189,6 @@ def logout():
 @app.route('/about')
 def about():
     return render_template('about.html')
-
 @app.route('/filter', methods=['GET', 'POST'])
 def filter():
     if request.method == 'POST':
@@ -199,38 +199,32 @@ def filter():
         source = request.form.getlist('source')
         patent_office = request.form.get('patent_office')
 
-        print(search_terms)
-        print(source)
-        
-        # Building the SQL query
-        query = "SELECT * FROM patents WHERE 1=1"
+        # Building the MongoDB query
+        query = {}
 
-        # Adding serach_terms filter
+        # Adding search_terms filter
         if search_terms:
-            search_terms = "','".join(search_terms)
-            query += f" AND source IN ('{search_terms}')"
+            query['source'] = {'$in': search_terms}
         
         # Adding year range filter
         if start_year:
-            query += f" AND year >= {start_year}"
+            query['year'] = {'$gte': int(start_year)}
         if end_year:
-            query += f" AND year <= {end_year}"
+            query['year'] = {'$lte': int(end_year)}
         
         # Adding source filter
         if source:
-            sources = "','".join(source)
-            query += f" AND source IN ('{sources}')"
+            query['source'] = {'$in': source}
         
         # Adding patent office filter
         if patent_office:
-            query += f" AND patent_office = '{patent_office}'"
+            query['patent_office'] = patent_office
         
-        # Execute the query (this part is a placeholder, adjust based on your database setup)
-        # results = execute_query(query)
+        # # Execute the query
+        # results = list(db.find(query))
         
-        # Return the query for demonstration purposes
+        # # Return the results
+        # return jsonify(results)
         return query
-
-
 if __name__ == '__main__':
     app.run(debug=True)

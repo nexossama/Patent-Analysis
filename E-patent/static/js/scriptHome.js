@@ -32,6 +32,7 @@ const searchButton = document.querySelector('#content .table-data form .form-inp
 const searchButtonIcon = document.querySelector('#content .table-data form .form-input button .bx');
 const searchForm = document.querySelector('#content nav form');
 
+if (searchButton && searchButtonIcon && searchForm) {
 searchButton.addEventListener('click', function (e) {
 	if(window.innerWidth < 576) {
 		e.preventDefault();
@@ -43,6 +44,7 @@ searchButton.addEventListener('click', function (e) {
 		}
 	}
 })
+}
 
 
 
@@ -55,13 +57,14 @@ if(window.innerWidth < 768) {
 	searchForm.classList.remove('show');
 }
 
-
+if (searchForm){
 window.addEventListener('resize', function () {
 	if(this.innerWidth > 576) {
 		searchButtonIcon.classList.replace('bx-x', 'bx-search');
 		searchForm.classList.remove('show');
 	}
 })
+}
 
 
 

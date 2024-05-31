@@ -332,7 +332,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							{% for patent in patents.patent_items %}
+							{% for patent in patents %}
 							<tr>
 								<td>{{ patent.code }}</td>
 								<td><a href="/patent/{{ patent._id }}" target="_blank">{{ patent.title }}</a></td>
@@ -395,7 +395,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							{% for patent in patents.selected_patents %}
+							{% for patent in selected_patents %}
 							<tr>
 								<td>{{ patent.code }}</td>
 								<td><button class="delete-btn" data-record-id="{{ patent._id }}"><i class='bx bx-trash'></i></button></td>

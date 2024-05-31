@@ -59,17 +59,17 @@ client = MongoClient("mongodb+srv://aymanemaghouti:FwbFRrymX6wjJPxG@patents.js05
 db = client.get_database("patent_db")
 
 
-# Access the google_patents collection
-patents_collection = db.google_patents
+# Access patents collection
+patents_collection = db.patents
 
 users_collection = db.users
-user_records = db.user_records
+user_records = db.user_records # ???
 
-def fetch_patents():
-    mongodb_documents = []
-    for patent in patents_collection.find({}):
-        mongodb_documents.append(patent)
-    return mongodb_documents
+# def fetch_patents():
+#     mongodb_documents = []
+#     for patent in patents_collection.find({}):
+#         mongodb_documents.append(patent)
+#     return mongodb_documents
 
 def fetch_total_patents_count(keyword):
     # total_documents_count = patents_collection.count_documents({})
@@ -77,17 +77,6 @@ def fetch_total_patents_count(keyword):
     total_documents_count = patents_collection.count_documents(query)
     return total_documents_count
 
-# todo
-def fetch_panier(user):
-    # all_patents = fetch_patents()
-
-    # selected_patents = []
-    # for patent in all_patents:
-    #     for patent_id in user.get('patents', []):
-    #         if str(patent['_id']) == str(patent_id):
-    #             selected_patents.append(patent)
-    # return selected_patents
-    return user.get('patents', [])
 
 
 @app.route('/')
@@ -97,9 +86,10 @@ def home():
         user = users_collection.find_one({'email': user_email})
 
         # selected_patents = fetch_panier(user)
-        selected_patents = []
+        selected_patentss = list(patents_collection.find({"code": {"$in": user.get('patents', [])}}))
+        patents = list(patents_collection.find({}).limit(100))
 
-        return render_template('home.html', patents=[], selected_patents=selected_patents)
+        return render_template('home.html', patents=patents, selected_patents=selected_patentss)
     else:
         return render_template('login.html')
 

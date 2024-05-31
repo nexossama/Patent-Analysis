@@ -86,10 +86,10 @@ def home():
         user = users_collection.find_one({'email': user_email})
 
         # selected_patents = fetch_panier(user)
-        selected_patentss = list(patents_collection.find({"code": {"$in": user.get('patents', [])}}))
+        selected_patents = list(patents_collection.find({"code": {"$in": user.get('patents', [])}}))
         patents = list(patents_collection.find({}).limit(100))
 
-        return render_template('home.html', patents=patents, selected_patents=selected_patentss)
+        return render_template('home.html', patents=patents, selected_patents=selected_patents)
     else:
         return render_template('login.html')
 
@@ -160,7 +160,8 @@ def insight():
 def search_patents():
     user_email = session['email']
     user = users_collection.find_one({'email': user_email})
-    selected_patents = fetch_panier(user)
+    # selected_patents = fetch_panier(user)
+    selected_patents = list(patents_collection.find({"code": {"$in": user.get('patents', [])}}))
     
     per_page = 5
     page = request.args.get('page', 1, type=int)
@@ -177,8 +178,8 @@ def search_patents():
         'total_patents_count': total_patents_count
     }
 
-    return render_template('home.html', patents=patents, page=page,
-                            total_pages=total_pages, query=query)
+    return render_template('home.html', patents=patent_items, selected_patents=selected_patents, total_patents_count=total_patents_count,
+                           page=page, total_pages=total_pages, query=query)
 
 
 @app.route('/add_to_cart', methods=['POST'])

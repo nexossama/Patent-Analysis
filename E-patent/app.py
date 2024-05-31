@@ -1,7 +1,9 @@
 import json
 from bson import ObjectId
+from configparser import ConfigParser
 from flask import Flask, render_template, request, redirect, session, url_for, jsonify
 from pymongo import MongoClient
+import psycopg2
 from werkzeug.security import generate_password_hash, check_password_hash
 from search import search_title
 import psycopg2
@@ -50,8 +52,6 @@ def get2d(query):
     conn.close()
    
     return two_d_results
-
-
 
 app.secret_key = "secret_key"  
 

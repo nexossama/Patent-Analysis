@@ -35,7 +35,7 @@ JOIN "DimPatent" as dp ON dp.id_title=dt.id_title
 GROUP BY code_patent, id_inventor, id_assignee);
 ```
 
-##### Top 5 Keywords of Selected Patents
+##### TOP 5 Keywords of Selected Patents
 
 ```sql
 -- Retrieve top 5 keywords of the selected patents
@@ -61,8 +61,44 @@ GROUP BY country_name;
 
 ## 2D Analysis
 
+
+##### TOP 3 Keywords Of The Selected Patents For Each Country
+
 ```sql
--- Retrieve employees with high salaries
-SELECT * FROM employees
-WHERE salary > 50000;
+-- Retrieve top 5 keywords of selected patents for each country
+SELECT DISTINCT country_name, keyword, Count(*) key_occurrence FROM "DimKeyword" as dk
+JOIN "FactKeyword" as fk ON fk.id_keyword=dk.id_keyword
+JOIN "DimCountry" as dc ON dc.id_country=fk.id_country
+JOIN "DimPatent" as dp ON dp.id_title = fk.id_title
+-- WHERE code_patent IN ('', '', '')
+GROUP BY country_name, keyword, id_assignee, id_inventor, fk.id_title, id_time
+ORDER BY key_occurrence DESC LIMIT 5;
+```
+
+##### TOP 3 Keywords Of The Selected Patents For Each Country
+
+```sql
+-- Retrieve top 5 keywords of selected patents for each country
+SELECT DISTINCT country_name, keyword, Count(*) key_occurrence FROM "DimKeyword" as dk
+JOIN "FactKeyword" as fk ON fk.id_keyword=dk.id_keyword
+JOIN "DimCountry" as dc ON dc.id_country=fk.id_country
+JOIN "DimPatent" as dp ON dp.id_title = fk.id_title
+-- WHERE code_patent IN ('', '', '')
+GROUP BY country_name, keyword, id_assignee, id_inventor, fk.id_title, id_time
+ORDER BY key_occurrence DESC LIMIT 5;
+```
+
+##### Number Of Patent Publications By Year
+
+```sql
+-- Retrieve number of patents by year
+SELECT year, Count(*) as total_patents
+FROM
+(SELECT "year" FROM "FactPublication" as fp
+JOIN "DimPatent" as dp ON dp.code_patent=fp.code_patent
+JOIN "DimTime" as dt ON dt.id_time=fp.id_time
+-- WHERE code_patent IN ('', '', '')
+GROUP BY "year", id_inventor)
+GROUP BY year
+ORDER BY total_patents DESC;
 ```

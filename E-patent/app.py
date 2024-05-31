@@ -4,8 +4,52 @@ from flask import Flask, render_template, request, redirect, session, url_for, j
 from pymongo import MongoClient
 from werkzeug.security import generate_password_hash, check_password_hash
 from search import search_title
+import psycopg2
 app = Flask(__name__)
 
+# Database connection PostgreSQL
+def get_db_connection():
+    conn = psycopg2.connect(
+        host="localhost",
+        database="Patent",
+        user="postgres",
+        password="password"
+    )
+    return conn
+
+def get1d(query, lc):
+    conn = get_db_connection()
+    cursor = conn.cursor()
+
+    if lc:
+        placeholders = ', '.join(['%s'] * len(lc))
+        where_clause = f"WHERE code_patent IN ({placeholders})"
+    else:
+        where_clause = ""
+
+    query0 = query.format(where_clause=where_clause)
+
+    # 1D Query Example
+    cursor.execute(query0, lc)
+    one_d_results = cursor.fetchall() 
+
+    cursor.close()
+    conn.close()
+
+    return one_d_results
+
+def get2d(query):
+    conn = get_db_connection()
+    cursor = conn.cursor()
+
+    # 2D Query Example
+    cursor.execute(query)
+    two_d_results = cursor.fetchall() 
+   
+    cursor.close()
+    conn.close()
+   
+    return two_d_results
 
 
 
@@ -66,7 +110,58 @@ def insight():
         user_email = session['email']
         user = users_collection.find_one({'email': user_email})
 
-        return render_template('insight.html', username=session['email'])
+        patent_code_list = ["AU2017374457A1", "CN105069481B", "AU2020103341A4"]
+
+        q0="""
+        -- Retrieve count of (seleceted) patents inventors
+            SELECT SUM(count)
+            FROM
+            (SELECT DISTINCT code_patent, Count(*) FROM "FactPublication"
+            {where_clause}
+            GROUP BY code_patent, id_time 
+            ORDER BY count DESC)
+        """
+        q1="""
+        -- Retrieve count of (seleceted) patents countries
+            SELECT COUNT(DISTINCT country_name)
+            FROM "DimCountry" as dc
+            JOIN "DimPatent" as dp ON dp.id_country=dc.id_country
+            {where_clause}
+        """
+        q2="""
+        -- Retrieve count of (seleceted) patents title keywords
+            SELECT SUM(count)
+            FROM
+            (SELECT DISTINCT code_patent, COUNT(id_keyword) FROM "FactKeyword" as fk
+            JOIN "DimTitle" as dt ON dt.id_title=fk.id_title
+            JOIN "DimPatent" as dp ON dp.id_title=dt.id_title
+            {where_clause}
+            GROUP BY code_patent, id_inventor, id_assignee);
+        """
+        q3="""
+        -- Retrieve top 5 keywords of the selected patents
+            SELECT DISTINCT keyword, Count(*) FROM "DimKeyword" as dk
+            JOIN "FactKeyword" as fk ON fk.id_keyword=dk.id_keyword
+            JOIN "DimTitle" as dt ON dt.id_title=fk.id_title
+            JOIN "DimPatent" as dp ON dp.id_title=dt.id_title
+            {where_clause}
+            GROUP BY keyword, id_inventor, id_assignee
+            ORDER BY count DESC LIMIT 5;        
+        """
+
+        # 1D Query
+        r0 = get1d(q0, patent_code_list)
+        r1 = get1d(q1, patent_code_list)
+        r2 = get1d(q2, patent_code_list)
+        # 2D Query 
+        r3 = get1d(q3, patent_code_list)
+
+        r = [r0[0][0], r1[0][0], r2[0][0], r3]
+
+
+
+
+        return render_template('insight.html', username=session['email'], r=r)
     else:
         return render_template('login.html')    
 
@@ -195,6 +290,7 @@ def logout():
 def about():
     return render_template('about.html')
 @app.route('/filter', methods=['GET', 'POST'])
+
 def filter():
     if request.method == 'POST':
         # Extracting selected filters
@@ -231,5 +327,6 @@ def filter():
         # # Return the results
         # return jsonify(results)
         return query
+
 if __name__ == '__main__':
     app.run(debug=True)

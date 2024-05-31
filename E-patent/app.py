@@ -1,12 +1,12 @@
 import json
 from bson import ObjectId
+from configparser import ConfigParser
 from flask import Flask, render_template, request, redirect, session, url_for, jsonify
 from pymongo import MongoClient
+import psycopg2
 from werkzeug.security import generate_password_hash, check_password_hash
 from search import search_title
 app = Flask(__name__)
-
-
 
 
 app.secret_key = "secret_key"  

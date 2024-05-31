@@ -291,14 +291,14 @@
 				<li>
 					<i class='bx bxs-calendar-check' ></i>
 					<span class="text">
-						<h3>{{ patents.total_patents_count }}</h3>
+						<h3>{{ patents|length }}</h3>
 						<p>Total Patents</p>
 					</span>
 				</li>
 				<li>
 					<i class='bx bxs-group' ></i>
 					<span class="text">
-						<h3>{{ patents.selected_patents|length }}</h3>
+						<h3>{{ selected_patents|length }}</h3>
 						<p>Total Selected Patents</p>
 					</span>
 				</li>

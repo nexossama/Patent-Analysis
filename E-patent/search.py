@@ -1,5 +1,4 @@
 from pymongo import MongoClient
-from fuzzywuzzy import fuzz
 
 uri = "mongodb+srv://aymanemaghouti:FwbFRrymX6wjJPxG@patents.js05fnq.mongodb.net/?retryWrites=true&w=majority"
 client = MongoClient(uri)

@@ -13,7 +13,7 @@ def get_db_connection():
         host="localhost",
         database="Patent",
         user="postgres",
-        password="password"
+        password="aymane2002"
     )
     return conn
 
@@ -68,7 +68,7 @@ db = client.get_database("patent_db")
 
 
 # Access the google_patents collection
-patents_collection = db.google_patents
+patents_collection = db.patents
 
 users_collection = db.users
 user_records = db.user_records
@@ -102,6 +102,8 @@ def fetch_panier(user):
 def home():
     if 'email' in session:
         user_email = session['email']
+
+
         user = users_collection.find_one({'email': user_email})
 
         selected_patents = fetch_panier(user)
@@ -127,7 +129,7 @@ def insight():
             (SELECT DISTINCT code_patent, Count(*) FROM "FactPublication"
             {where_clause}
             GROUP BY code_patent, id_time 
-            ORDER BY count DESC)
+            ORDER BY count DESC)  AS subquery
         """
         q1="""
         -- Retrieve count of (seleceted) patents countries
@@ -144,7 +146,7 @@ def insight():
             JOIN "DimTitle" as dt ON dt.id_title=fk.id_title
             JOIN "DimPatent" as dp ON dp.id_title=dt.id_title
             {where_clause}
-            GROUP BY code_patent, id_inventor, id_assignee);
+            GROUP BY code_patent, id_inventor, id_assignee)  AS subquery;
         """
         q3="""
         -- Retrieve top 5 keywords of the selected patents
@@ -171,7 +173,7 @@ def insight():
             JOIN "DimPatent" as dp ON dp.code_patent=fp.code_patent
             JOIN "DimTime" as dt ON dt.id_time=fp.id_time
             {where_clause}
-            GROUP BY "year", id_inventor)
+            GROUP BY "year", id_inventor)  AS subquery
             GROUP BY year
             ORDER BY total_patents DESC;
         """
@@ -257,7 +259,7 @@ def delete_patent():
         user = users_collection.find_one({'email': user_email})
         if user:
             record_id = request.json['record_id']
-            print(ObjectId(record_id))
+            # print(ObjectId(record_id))
             users_collection.update_one(
                 {'email': user_email},
                 {'$pull': {'patents': str(record_id)}}
@@ -271,8 +273,9 @@ def delete_patent():
 
 @app.route('/patent/<patent_id>')
 def patent_details(patent_id):
-    print(patent_id)
-    patent = patents_collection.find_one({'_id': ObjectId(patent_id)})
+    object_id = ObjectId(patent_id)
+    print(object_id)
+    patent = patents_collection.find_one({'_id': ObjectId(object_id)})
     print(patent)
 
     if patent:
@@ -286,7 +289,7 @@ def patent_details(patent_id):
         return render_template('patent_details.html', patent=patent)
     else:
         # If patent is not found, render an error page or redirect to another route
-        return render_template('patent_details.html', message='Patent not found')
+        return render_template('patent_details.html', message='Patent not found',patent=patent)
 
 
 

@@ -343,7 +343,7 @@ body {
 	color: var(--blue);
 	pointer-events: unset;
 }
-#content main .table-data .btn-download {
+#btn-download {
 	height: 36px;
 	padding: 0 16px;
 	border-radius: 36px;

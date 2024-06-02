@@ -282,7 +282,7 @@
 
 			<div class="head-title">
 				<div class="left">
-					<h1>Hello {{ session['username'] }}</h1>
+					<h1>Hello {{ username }}</h1>
 				</div>
 				
 			</div>
@@ -360,14 +360,18 @@
 								{% endif %}
 								
 								{% for page_num in range(1, total_pages+1) %}
+								{% if page_num == page or page_num <= 3 or page_num > total_pages - 3 or (page_num >= page - 1 and page_num <= page + 1) %}
 									<li>
-										{% if page == page_num%}
+										{% if page == page_num %}
 											<a href="{{ url_for('search_patents', page=page_num, query=query) }}" class="active">{{ page_num }}</a>
 										{% else %}
 											<a href="{{ url_for('search_patents', page=page_num, query=query) }}">{{ page_num }}</a>
 										{% endif %}
 									</li>
-								{% endfor %}
+								{% elif (page_num == 4 and page > 5) or (page_num == total_pages - 3 and page < total_pages - 4) %}
+									<li>...</li>
+								{% endif %}
+							{% endfor %}
 								
 								{% if page < total_pages %}
 									<li>

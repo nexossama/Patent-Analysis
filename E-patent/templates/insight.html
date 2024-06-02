@@ -286,35 +286,35 @@
 				<li>
 					<i class='bx bxs-chart bx-tada-hover'></i>
 					<span class='text'>
-						<h3>Statistiques</h3>
+						<h3>Top 5 keywords</h3>
 						<canvas id='mychart'></canvas>
 					</span>
 				</li>
 				<li>
 					<i class='bx bxs-chart bx-tada-hover'></i>
 					<span class='text'>
-						<h3>Statistiques</h3>
+						<h3>Countries Frequency</h3>
 						<canvas id='mychart2'></canvas>
 					</span>
 				</li>
 			</ul>
 			<ul class="box-info">
-				<li>
+				<!-- <li>
 					<i class='bx bxs-chart bx-tada-hover'></i>
 					<span class='text'>
 						<h3>Statistiques</h3>
 						<canvas id='mychart3'></canvas>
 					</span>
-				</li>
+				</li> -->
 				<li>
 					<i class='bx bxs-chart bx-tada-hover'></i>
 					<span class='text'>
-						<h3>Statistiques</h3>
+						<h3>Number of patents by year</h3>
 						<canvas id='mychart4'></canvas>
 					</span>
 				</li>
 			</ul>
-			<ul class="box-info">
+			<!-- <ul class="box-info">
 				<li>
 					<i class='bx bxs-chart bx-tada-hover'></i>
 					<span class='text'>
@@ -329,7 +329,7 @@
 						<canvas id='mychart6'></canvas>
 					</span>
 				</li>
-			</ul>
+			</ul> -->
 		</main>
 		<!-- MAIN -->
 	</section>
@@ -473,68 +473,74 @@
 
 	<!-- Chart.js -->
 	<script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Get data from Flask
-            var data = {{ r[3]|tojson }};
-
-            // Prepare data for Chart.js
-            var labels = data.map(function(item) { return item[0]; });
-            var values = data.map(function(item) { return item[1]; });
-
-            var chartData = {
-                labels: labels,
-                datasets: [{
-                    label: 'Frequency',
-                    data: values,
-                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                    borderColor: 'rgba(75, 192, 192, 1)',
-                    borderWidth: 1
-                }]
-            };
-
-            // Set options for the chart
-            var options = {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            };
-
-            // Create the chart
-            var ctx = document.getElementById('mychart').getContext('2d');
-            var myChart = new Chart(ctx, {
-                type: 'bar',  // Changed to 'bar' for better visualization in this case
-                data: chartData,
-                options: options
-            });
-        });
-    </script>
-	<script>
 		document.addEventListener("DOMContentLoaded", function () {
-			// Sample data (replace with your categorical data and their counts)
-			var labels = ['Category 1', 'Category 2', 'Category 3'];
-			var data = [30, 50, 20];
+			// Get data from Flask
+			var data = {{ r[3]| tojson
+		}};
 
-			// Prepare data for Chart.js
-			var chartData = {
-				labels: labels,
-				datasets: [{
-					data: data,
-					backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
-					hoverBackgroundColor: ['#FF477E', '#2C97F0', '#FFD32E']
-				}]
-			};
+		// Prepare data for Chart.js
+		var labels = data.map(function (item) { return item[0]; });
+		var values = data.map(function (item) { return item[1]; });
 
-			// Create the chart
-			var ctx = document.getElementById('mychart2').getContext('2d');
-			var myChart = new Chart(ctx, {
-				type: 'pie',
-				data: chartData
-			});
+		var chartData = {
+			labels: labels,
+			datasets: [{
+				label: 'Frequency',
+				data: values,
+				backgroundColor: 'rgba(75, 192, 192, 0.2)',
+				borderColor: 'rgba(75, 192, 192, 1)',
+				borderWidth: 1
+			}]
+		};
+
+		// Set options for the chart
+		var options = {
+			scales: {
+				y: {
+					beginAtZero: true
+				}
+			}
+		};
+
+		// Create the chart
+		var ctx = document.getElementById('mychart').getContext('2d');
+		var myChart = new Chart(ctx, {
+			type: 'bar',  // Changed to 'bar' for better visualization in this case
+			data: chartData,
+			options: options
 		});
+        });
 	</script>
 	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			// Get data from Flask
+			var data = {{ r[4]| tojson
+		}};
+
+		// Prepare data for Chart.js
+		var labels = data.map(function (item) { return item[0]; });
+		var data = data.map(function (item) { return item[1]; });
+
+
+		// Prepare data for Chart.js
+		var chartData = {
+			labels: labels,
+			datasets: [{
+				data: data,
+				backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+				hoverBackgroundColor: ['#FF477E', '#2C97F0', '#FFD32E']
+			}]
+		};
+
+		// Create the chart
+		var ctx = document.getElementById('mychart2').getContext('2d');
+		var myChart = new Chart(ctx, {
+			type: 'pie',
+			data: chartData
+		});
+		});
+	</script>
+	<!-- <script>
 		document.addEventListener("DOMContentLoaded", function () {
 			// Sample data (replace with your data for each category)
 			var labels = ['Category 1', 'Category 2', 'Category 3'];
@@ -575,8 +581,47 @@
 				}
 			});
 		});
-	</script>
+	</script> -->
 	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			// Get data from Flask
+			var data = {{ r[5]| tojson
+		}};
+
+		// Prepare data for Chart.js
+		var labels = data.map(function (item) { return item[0]; });
+		var values = data.map(function (item) { return item[1]; });
+
+		var chartData = {
+			labels: labels,
+			datasets: [{
+				label: 'Frequency',
+				data: values,
+				backgroundColor: 'rgba(75, 192, 192, 0.2)',
+				borderColor: 'rgba(75, 192, 192, 1)',
+				borderWidth: 1
+			}]
+		};
+
+		// Set options for the chart
+		var options = {
+			scales: {
+				y: {
+					beginAtZero: true
+				}
+			}
+		};
+
+		// Create the chart
+		var ctx = document.getElementById('mychart4').getContext('2d');
+		var myChart = new Chart(ctx, {
+			type: 'line',  
+			data: chartData,
+			options: options
+		});
+		});
+	</script>
+	<!-- <script>
 		document.addEventListener("DOMContentLoaded", function () {
 			// Sample data (replace with your data for each category and its value)
 			var labels = ['Category 1', 'Category 2', 'Category 3', 'Category 4'];
@@ -599,8 +644,8 @@
 				data: chartData
 			});
 		});
-	</script>
-	<script>
+	</script> -->
+	<!-- <script>
 		document.addEventListener("DOMContentLoaded", function () {
 			// Sample data (replace with your data for each category and its value)
 			var labels = ['Category 1', 'Category 2', 'Category 3'];
@@ -661,7 +706,7 @@
 				data: chartData
 			});
 		});
-	</script>
+	</script> -->
 	<!-- ChartJs -->
 
 

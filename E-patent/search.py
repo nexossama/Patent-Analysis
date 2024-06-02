@@ -5,11 +5,12 @@ uri = "mongodb+srv://aymanemaghouti:FwbFRrymX6wjJPxG@patents.js05fnq.mongodb.net
 client = MongoClient(uri)
 
 db = client["patent_db"]
-collection = db["google_patents"]
+collection = db["patents"]
 
 
 def search_title(keyword, offset, limit):
-
+    if keyword == "":
+        return list(collection.find({}).skip(offset).limit(limit))
     query = {"title": {"$regex": keyword, "$options": "i"}}
     result = collection.find(query).skip(offset).limit(limit)
 

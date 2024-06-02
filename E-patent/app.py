@@ -1,9 +1,7 @@
 import json
 from bson import ObjectId
-from configparser import ConfigParser
 from flask import Flask, render_template, request, redirect, session, url_for, jsonify
 from pymongo import MongoClient
-import psycopg2
 from werkzeug.security import generate_password_hash, check_password_hash
 from search import search_title
 import psycopg2
@@ -40,18 +38,28 @@ def get1d(query, lc):
 
     return one_d_results
 
-def get2d(query):
+def get2d(query, lc):
     conn = get_db_connection()
     cursor = conn.cursor()
 
+    if lc:
+        placeholders = ', '.join(['%s'] * len(lc))
+        where_clause = f"WHERE dp.code_patent IN ({placeholders})"
+    else:
+        where_clause = ""
+
+    query0 = query.format(where_clause=where_clause)
+
     # 2D Query Example
-    cursor.execute(query)
-    two_d_results = cursor.fetchall() 
-   
+    cursor.execute(query0, lc)
+    one_d_results = cursor.fetchall() 
+
     cursor.close()
     conn.close()
-   
-    return two_d_results
+
+    return one_d_results
+
+
 
 app.secret_key = "secret_key"  
 
@@ -59,17 +67,17 @@ client = MongoClient("mongodb+srv://aymanemaghouti:FwbFRrymX6wjJPxG@patents.js05
 db = client.get_database("patent_db")
 
 
-# Access patents collection
-patents_collection = db.patents
+# Access the google_patents collection
+patents_collection = db.google_patents
 
 users_collection = db.users
-user_records = db.user_records # ???
+user_records = db.user_records
 
-# def fetch_patents():
-#     mongodb_documents = []
-#     for patent in patents_collection.find({}):
-#         mongodb_documents.append(patent)
-#     return mongodb_documents
+def fetch_patents():
+    mongodb_documents = []
+    for patent in patents_collection.find({}):
+        mongodb_documents.append(patent)
+    return mongodb_documents
 
 def fetch_total_patents_count(keyword):
     # total_documents_count = patents_collection.count_documents({})
@@ -77,6 +85,17 @@ def fetch_total_patents_count(keyword):
     total_documents_count = patents_collection.count_documents(query)
     return total_documents_count
 
+# todo
+def fetch_panier(user):
+    # all_patents = fetch_patents()
+
+    # selected_patents = []
+    # for patent in all_patents:
+    #     for patent_id in user.get('patents', []):
+    #         if str(patent['_id']) == str(patent_id):
+    #             selected_patents.append(patent)
+    # return selected_patents
+    return user.get('patents', [])
 
 
 @app.route('/')
@@ -85,11 +104,9 @@ def home():
         user_email = session['email']
         user = users_collection.find_one({'email': user_email})
 
-        # selected_patents = fetch_panier(user)
-        selected_patents = list(patents_collection.find({"code": {"$in": user.get('patents', [])}}))
-        patents = list(patents_collection.find({}).limit(100))
+        selected_patents = fetch_panier(user)
 
-        return render_template('home.html', patents=patents, selected_patents=selected_patents)
+        return render_template('home.html', patents={"selected_patents":selected_patents})
     else:
         return render_template('login.html')
 
@@ -100,7 +117,8 @@ def insight():
         user_email = session['email']
         user = users_collection.find_one({'email': user_email})
 
-        patent_code_list = ["AU2017374457A1", "CN105069481B", "AU2020103341A4"]
+        # patent_code_list = ["AU2017374457A1", "CN105069481B", "AU2020103341A4"]
+        patent_code_list = fetch_panier(user)
 
         q0="""
         -- Retrieve count of (seleceted) patents inventors
@@ -138,6 +156,36 @@ def insight():
             GROUP BY keyword, id_inventor, id_assignee
             ORDER BY count DESC LIMIT 5;        
         """
+        q4="""
+        -- Retrieve Countries Frequency Of The Selected Patents
+            SELECT country_name, Count(*) total FROM "DimCountry" as dc
+            JOIN "DimPatent" as dp ON dp.id_country=dc.id_country
+            {where_clause}
+            GROUP BY country_name;
+        """
+        q5="""
+        -- Retrieve number of patents by year
+            SELECT year, Count(*) as total_patents
+            FROM
+            (SELECT "year" FROM "FactPublication" as fp
+            JOIN "DimPatent" as dp ON dp.code_patent=fp.code_patent
+            JOIN "DimTime" as dt ON dt.id_time=fp.id_time
+            {where_clause}
+            GROUP BY "year", id_inventor)
+            GROUP BY year
+            ORDER BY total_patents DESC;
+        """
+        q6="""
+        -- Retrieve top 5 keywords of selected patents for each country
+            SELECT DISTINCT country_name, keyword, Count(*) key_occurrence FROM "DimKeyword" as dk
+            JOIN "FactKeyword" as fk ON fk.id_keyword=dk.id_keyword
+            JOIN "DimCountry" as dc ON dc.id_country=fk.id_country
+            JOIN "DimPatent" as dp ON dp.id_title = fk.id_title
+            {where_clause}
+            GROUP BY country_name, keyword, id_assignee, id_inventor, fk.id_title, id_time
+            ORDER BY key_occurrence DESC LIMIT 5;
+        """
+
 
         # 1D Query
         r0 = get1d(q0, patent_code_list)
@@ -145,8 +193,11 @@ def insight():
         r2 = get1d(q2, patent_code_list)
         # 2D Query 
         r3 = get1d(q3, patent_code_list)
+        r4 = get1d(q4, patent_code_list)
+        r5 = get2d(q5, patent_code_list)
+        # r6 = get1d(q6, patent_code_list)
 
-        r = [r0[0][0], r1[0][0], r2[0][0], r3]
+        r = [r0[0][0], r1[0][0], r2[0][0], r3, r4, r5]
 
 
 
@@ -160,8 +211,7 @@ def insight():
 def search_patents():
     user_email = session['email']
     user = users_collection.find_one({'email': user_email})
-    # selected_patents = fetch_panier(user)
-    selected_patents = list(patents_collection.find({"code": {"$in": user.get('patents', [])}}))
+    selected_patents = fetch_panier(user)
     
     per_page = 5
     page = request.args.get('page', 1, type=int)
@@ -178,8 +228,8 @@ def search_patents():
         'total_patents_count': total_patents_count
     }
 
-    return render_template('home.html', patents=patent_items, selected_patents=selected_patents, total_patents_count=total_patents_count,
-                           page=page, total_pages=total_pages, query=query)
+    return render_template('home.html', patents=patents, page=page,
+                            total_pages=total_pages, query=query)
 
 
 @app.route('/add_to_cart', methods=['POST'])

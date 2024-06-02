@@ -52,21 +52,22 @@
         color: white; /* Change icon color on hover */
     }
 
-	.btn {
-		border: none;
-		color: white;
-		padding: 5px;
-		text-align: center;
-		text-decoration: none;
-		display: inline-block;
-		font-size: 16px;
-		margin: 4px 2px;
-		border-radius: 5px;
-	}
 
-	.accBtn {
-		background-color: #008CBA;
-	}
+		.btn {
+			border: none;
+			color: white;
+			padding: 5px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			border-radius: 5px;
+		}
+
+		.accBtn {
+			background-color: #008CBA;
+		}
 
 		.rejBtn {
 			background-color: #f44336;
@@ -290,14 +291,14 @@
 				<li>
 					<i class='bx bxs-calendar-check' ></i>
 					<span class="text">
-						<h3>{{ patents|length }}</h3>
+						<h3>{{ patents.total_patents_count }}</h3>
 						<p>Total Patents</p>
 					</span>
 				</li>
 				<li>
 					<i class='bx bxs-group' ></i>
 					<span class="text">
-						<h3>{{ selected_patents|length }}</h3>
+						<h3>{{ patents.selected_patents|length }}</h3>
 						<p>Total Selected Patents</p>
 					</span>
 				</li>
@@ -331,12 +332,12 @@
 							</tr>
 						</thead>
 						<tbody>
-							{% for patent in patents %}
+							{% for patent in patents.patent_items %}
 							<tr>
 								<td>{{ patent.code }}</td>
 								<td><a href="/patent/{{ patent._id }}" target="_blank">{{ patent.title }}</a></td>
 								<td>{{ patent.source }}</td>
-								<td><button class="add-btn" data-record-id="{{ patent._id }}"><i class='bx bx-plus'></i></button></td>
+								<td><button class="add-btn" data-record-id="{{ patent.code }}"><i class='bx bx-plus'></i></button></td>
 							</tr>
 							{% endfor %}		
 						</tbody>
@@ -394,10 +395,10 @@
 							</tr>
 						</thead>
 						<tbody>
-							{% for patent in selected_patents %}
+							{% for patent in patents.selected_patents %}
 							<tr>
-								<td>{{ patent.code }}</td>
-								<td><button class="delete-btn" data-record-id="{{ patent._id }}"><i class='bx bx-trash'></i></button></td>
+								<td>{{ patent }}</td>
+								<td><button class="delete-btn" data-record-id="{{ patent }}"><i class='bx bx-trash'></i></button></td>
 							</tr>
 							{% endfor %}
 						</tbody>

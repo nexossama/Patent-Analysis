@@ -106,7 +106,7 @@ def home():
 
         selected_patents = fetch_panier(user)
 
-        return render_template('home.html', patents={"selected_patents":selected_patents})
+        return render_template('home.html', patents={"selected_patents":selected_patents}, username=user['username'])   
     else:
         return render_template('login.html')
 
@@ -202,7 +202,7 @@ def insight():
 
 
 
-        return render_template('insight.html', username=session['email'], r=r)
+        return render_template('insight.html', username=user['username'], r=r)
     else:
         return render_template('login.html')    
 

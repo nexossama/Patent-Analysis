@@ -118,6 +118,8 @@ Watch our demo video to see the E-Patent application in action:
 https://github.com/nexossama/Patent-Analysis/assets/112390782/817115ee-27e3-49f2-999d-ca2e183ab4cb
 
 
+- For better quality: [Demo](https://youtu.be/leHGDz7AAik?si=qmpUXwlMb9L9KnAw)
+
 ## Conclusion
 
 The E-Patent project demonstrates the potential of big data technologies in analyzing and visualizing patents related to AI in education. By leveraging a combination of data collection, transformation, storage, and visualization tools, we have created a comprehensive platform for patent analysis.

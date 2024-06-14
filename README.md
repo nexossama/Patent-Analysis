@@ -126,4 +126,4 @@ For any inquiries or feedback, please contact:
 - <a href="https://www.linkedin.com/in/aymane-maghouti/" target="_blank">Aymane Maghouti</a><br>
 - <a href="https://www.linkedin.com/in/ossama-outmani/" target="_blank">Ossama Outmani</a><br>
 - <a href="https://www.linkedin.com/in/hamza-motassim-a56801219/" target="_blank">Hamza MOTASSIM</a><br>
-- <a href="https://www.linkedin.com/in/abdelghafor-elgharbaoui-16a276202/" target="_blank">Aymane Maghouti</a><br>
+- <a href="https://www.linkedin.com/in/abdelghafor-elgharbaoui-16a276202/" target="_blank">Abdelghafor Elgharbaoui</a><br>

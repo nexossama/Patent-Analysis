@@ -83,7 +83,7 @@ The data sourcing and transformation architecture follows a structured approach 
 1. **Data Sourcing:** APIs and web scraping to gather raw data.
 2. **Data Storage:** Using MongoDB Atlas for cloud storage and HDFS for on-premise storage.
 
-![architecture](images/sourcing and storage.png)
+![architecture](images/sourcing_and_storage.png)
 
 
 3. **Data Transformation:** Utilizing Apache Spark in a Medallion architecture:

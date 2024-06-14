@@ -114,7 +114,9 @@ The **E-Patent** web application features an intuitive user interface developed 
 ## Demo Video
 
 Watch our demo video to see the E-Patent application in action:
-[Demo Video Link](https://youtu.be/leHGDz7AAik?si=qmpUXwlMb9L9KnAw)
+
+https://github.com/nexossama/Patent-Analysis/assets/112390782/817115ee-27e3-49f2-999d-ca2e183ab4cb
+
 
 ## Conclusion
 

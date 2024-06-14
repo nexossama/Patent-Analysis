@@ -5,63 +5,109 @@
     <title>About E-patent</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f8f8;
+            background-color: #f4f4f9;
             color: #333;
         }
 
-        #about {
+        .container {
             width: 80%;
             margin: 50px auto;
-            background-color: #fff;
             padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
         }
 
         h2 {
-            color: #2c3e50;
+            color: #34495e;
             margin-bottom: 20px;
+            font-size: 2em;
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            display: inline-block;
+            padding-bottom: 10px;
         }
 
         p {
-            line-height: 1.6;
-            margin-bottom: 15px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            text-align: justify;
         }
 
-        p:last-child {
-            margin-bottom: 0;
+        .developer {
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #ecf0f1;
         }
 
-        footer {
-            background-color: #2c3e50;
+        .developer p {
+            margin: 5px 0;
+        }
+
+        .developer a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .developer a:hover {
+            color: #2980b9;
+        }
+
+         footer {
+            background-color: #34495e;
             color: #fff;
             padding: 20px 0;
             text-align: center;
-            position: fixed;
+            position: absolute;
             bottom: 0;
             width: 100%;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 <body>
 
-    <section id="about">
+    <section class="container" id="about">
         <h2>About E-patent</h2>
-        <p>Welcome to E-patent, your premier destination for cutting-edge patents in the field of artificial intelligence in education, analysis, visualization, and more. At E-patent, we are passionate about fostering innovation and driving progress in these crucial areas.</p>
+        <p>Welcome to E-patent, your top source for AI patents in education, analysis, and visualization. We aim to drive innovation in these key areas.</p>
 
-        <p>Our platform serves as a gateway to a wealth of patented technologies and ideas that are shaping the future of education and data analysis. Whether you're a researcher, educator, or industry professional, E-patent offers a diverse range of patents to explore, inspire, and leverage for your own projects and initiatives.</p>
+        <p>Our platform offers a wide range of patents that shape the future of education and data analysis. Whether you're a researcher, educator, or industry professional, explore our patents to inspire and advance your projects.</p>
 
-        <p>From AI-driven learning algorithms to advanced data visualization techniques, our collection of patents covers a broad spectrum of innovations that are revolutionizing how we teach, learn, and analyze information. By providing easy access to these patents, we aim to empower individuals and organizations to stay at the forefront of innovation in their respective fields.</p>
+        <p>From AI learning algorithms to advanced data visualization, our patents cover innovations that transform teaching, learning, and analysis. We provide easy access to these patents to help you stay ahead in your field.</p>
 
-        <p>At E-patent, we are committed to facilitating collaboration and knowledge exchange among innovators worldwide. Whether you're seeking inspiration for your next project or looking to showcase your own groundbreaking inventions, E-patent is here to support you every step of the way.</p>
+        <p>At E-patent, we support collaboration and knowledge exchange among innovators. Find inspiration for your projects or showcase your inventions with us.</p>
     </section>
 
-    <footer>
-        <p>&copy; 2024 E-patent. All rights reserved.</p>
-    </footer>
+    <section class="container" id="developers">
+        <h2>Developers</h2>
+        <div class="developer">
+            <p>Maghouti Aymane - Data and Software Engineer - <a href="https://www.linkedin.com/in/aymane-maghouti-86959a24a/">LinkedIn</a></p>
+        </div>
+        <div class="developer">
+            <p>Outamni Ossama - Machine Learning Engineer - <a href="https://www.linkedin.com/in/ossama-outmani/">LinkedIn</a></p>
+        </div>
+        <div class="developer">
+            <p>Elgharbaoui Abdelghafor - Data and Software Engineer - <a href="https://www.linkedin.com/in/abdelghafor-elgharbaoui-16a276202/">LinkedIn</a></p>
+        </div>
+        <div class="developer">
+            <p>Motassim Hamza - Data and Machine Learning Engineer - <a href="https://www.linkedin.com/in/hamza-motassim-a56801219/">LinkedIn</a></p>
+        </div>
+    </section>
+
+
+
 
 </body>
+
 </html>
